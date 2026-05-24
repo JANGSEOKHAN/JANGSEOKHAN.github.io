@@ -251,25 +251,25 @@ export const projects: Project[] = [
     visuals: [
       {
         title: '디지털 트윈 서비스 화면',
-        description: '운영 중인 디지털 트윈 서비스 대시보드 화면',
+        description: '제조 라인의 설비 상태, KPI, 가동률 등 운영 지표를 3D 디지털 트윈 화면에서 확인하는 서비스 화면',
         imageUrl: 'projects/dmf/digital-twin-service.png',
         alt: '디지털 트윈 서비스 운영 화면',
       },
       {
         title: '데이터 파이프라인 운영',
-        description: 'Edge Data, Kafka, Consumer, Database로 이어지는 운영 흐름',
+        description: 'MES/AGV/PLC Edge Data를 Producer, Kafka Broker, Consumer, Redis/MongoDB 저장소로 연결한 데이터 수집/처리 구조',
         imageUrl: 'projects/dmf/data-pipeline.png',
         alt: '디지털 트윈 서비스 데이터 파이프라인 운영 구조',
       },
       {
         title: 'CI/CD 전환 구조',
-        description: 'SFTP 수동 배포에서 PlasticSCM/Jenkins 기반 자동 배포로 전환',
+        description: '작업자 PC/SFTP 수동 배포 흐름을 PlasticSCM commit, Jenkins build, 배포 서버 자동 배포 구조로 개선한 전환 자료',
         imageUrl: 'projects/dmf/cicd-transition.png',
         alt: 'SFTP 방식에서 CI/CD 방식으로 전환한 배포 구조',
       },
       {
         title: '엑셈원 모니터링 / Kubernetes 컨테이너 관리',
-        description: 'Pod, Container, Kafka, DBMS 모니터링 기반 운영 상태 확인',
+        description: 'Kubernetes Pod/Container와 Kafka, DBMS 상태를 모니터링해 디지털 트윈 서비스 운영 상태를 점검하는 화면',
         imageUrl: 'projects/dmf/k8s-monitoring.png',
         alt: '디지털 트윈 서비스 Kubernetes 컨테이너 관리 및 모니터링 화면',
       },
@@ -339,19 +339,19 @@ export const projects: Project[] = [
     visuals: [
       {
         title: 'RAG 데이터 파이프라인 아키텍처',
-        description: 'MinerU OCR, Markdown/Image 파싱, Vector Store, FastAPI 응답 흐름',
+        description: 'PDF 매뉴얼을 OCR/Markdown으로 구조화하고 Qdrant Vector Store와 FastAPI/LLM 응답까지 연결한 RAG 아키텍처',
         imageUrl: 'projects/rag/rag-architecture.png',
         alt: '제조 장비 매뉴얼 RAG 데이터 파이프라인 아키텍처',
       },
       {
         title: '제조 장비 매뉴얼 RAG 챗봇 화면',
-        description: '제조 장비 매뉴얼과 API 정보를 기반으로 답변하는 PoC 챗봇 화면',
+        description: '제조 장비 매뉴얼 기반 질의에 대해 검색된 근거와 답변을 확인하는 RAG 챗봇 PoC 시연 화면',
         imageUrl: 'projects/rag/rag-chatbot-screen.png',
         alt: '제조 장비 매뉴얼 RAG PoC 챗봇 시연 화면',
       },
       {
         title: 'Dify SMD 챗봇 워크플로우',
-        description: '이미지/텍스트 입력 분기, 질문 분류, RAG 검색, 답변 생성으로 이어지는 Dify 워크플로우',
+        description: '질문 분류, 이미지/텍스트 분기, 지식 검색, 답변 생성 및 검증 단계를 구성한 Dify workflow',
         imageUrl: 'projects/rag/dify-chatbot-workflow.png',
         alt: '삼성 SMD 제조 장비 자산화 RAG 구축 POC Dify 챗봇 워크플로우',
       },
@@ -395,25 +395,25 @@ export const projects: Project[] = [
     visuals: [
       {
         title: 'SAN Zoning / WWN 구성',
-        description: '서버 HBA WWN과 스토리지 Port WWN을 기준으로 Zone 구성 및 구축 수행',
+        description: '서버 HBA WWN과 스토리지 Port WWN을 매핑해 Zone 구성을 설계하고 SAN 연결 경로를 정리한 자료',
         imageUrl: 'projects/datacenter/san-zoning-wwn-v2.png',
         alt: 'SAN Zoning 및 WWN 구성',
       },
       {
         title: 'vMotion 기반 스토리지 이관',
-        description: '기존 가상화 스토리지에서 신규 가상화 스토리지로 Datastore migration 수행',
+        description: '기존 스토리지의 VM 데이터를 신규 스토리지 Datastore로 이관하며 서비스 영향도를 줄인 migration 수행 자료',
         imageUrl: 'projects/datacenter/vmotion-storage-migration.png',
         alt: 'vMotion 기반 스토리지 이관',
       },
       {
         title: 'Datastore 인식 확인',
-        description: '이관 대상 Datastore 인식 상태, 용량, 연결 정상 여부 확인',
+        description: '이관 후 ESXi/vCenter에서 Datastore 용량, 연결 상태, 인식 여부를 확인한 점검 화면',
         imageUrl: 'projects/datacenter/datastore-recognition.png',
         alt: 'VMware vSphere Datastore 인식 확인',
       },
       {
         title: '신규 vCenter Datastore VM 등록',
-        description: '이관 후 신규 vCenter 환경에서 VM 파일과 Datastore 경로 확인 및 VM 등록 수행',
+        description: '신규 vCenter에서 Datastore 내 VM 파일 경로를 확인하고 VM 등록 및 기동 점검을 수행한 자료',
         imageUrl: 'projects/datacenter/vm-registration-datastore.png',
         alt: '신규 vCenter Datastore VM 등록 및 데이터 마이그레이션',
       },
@@ -555,31 +555,31 @@ export const projects: Project[] = [
     visuals: [
       {
         title: '서비스 시연',
-        description: '육아제품 추천과 가계부 주요 기능을 확인하는 서비스 시연 영상',
+        description: '육아제품 추천, 가계부, 영수증 OCR 등 사용자 기능과 AI 요약/추천 흐름을 확인하는 서비스 시연 영상',
         videoUrl: 'projects/aws-finalproject/service-demo.mp4',
         alt: '육아제품 추천 및 가계부 서비스 시연 영상',
       },
       {
         title: 'Cloud Architecture',
-        description: 'VPC, EKS, IRSA, 데이터 저장소로 이어지는 AWS 아키텍처 설계',
+        description: 'On-premise Kubernetes에서 AWS EKS로 확장하는 구조를 VPC, IAM/IRSA, EKS, 데이터 저장소 중심으로 설계한 아키텍처',
         imageUrl: 'projects/aws-finalproject/cloud-architecture.png',
         alt: '육아제품 추천 및 가계부 서비스 클라우드 아키텍처',
       },
       {
         title: 'Data Pipeline',
-        description: 'Python crawling, Kafka, Bedrock, MongoDB 저장 흐름을 확인하는 데이터 파이프라인 영상',
+        description: 'Python 크롤링 데이터를 Kafka Topic으로 전달하고 Bedrock 기반 AI 리뷰 요약, MongoDB/DynamoDB 저장소로 연결한 데이터 흐름',
         videoUrl: 'projects/aws-finalproject/data-pipeline-demo.mp4',
         alt: '육아제품 추천 서비스 데이터 파이프라인 시연 영상',
       },
       {
         title: 'Monitoring',
-        description: '서비스 메트릭과 운영 상태를 확인하는 모니터링 시연 영상',
+        description: 'Kiali와 LGTM 계열 도구로 서비스 메트릭, API 흐름, 로그를 확인하며 운영 상태를 점검하는 시연 영상',
         videoUrl: 'projects/aws-finalproject/monitoring-demo.mp4',
         alt: 'AWS Cloud School 프로젝트 모니터링 시연 영상',
       },
       {
         title: '영수증 OCR 지출 기능',
-        description: '영수증 OCR 결과를 지출 내역으로 연결하는 가계부 기능',
+        description: 'AI OCR로 영수증 항목과 금액을 추출하고 지출 카테고리/내역 등록으로 연결하는 가계부 자동화 기능',
         imageUrl: 'projects/aws-finalproject/receipt-ocr-expense.png',
         alt: '영수증 OCR 지출 기능 화면',
       },
