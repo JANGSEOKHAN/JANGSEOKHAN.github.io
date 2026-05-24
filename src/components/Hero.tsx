@@ -78,13 +78,13 @@ export default function Hero() {
               </div>
             </div>
 
-            <div>
+            <div className="min-w-0">
               <p className="inline-flex max-w-full rounded-full border border-signal-cyan/20 bg-sky-50 px-3 py-2 text-xs font-bold text-signal-cyan sm:px-4 sm:text-sm">
                 {profile.tagLine}
               </p>
               <h1 className="mt-5 text-4xl font-extrabold text-slate-950 sm:mt-6 sm:text-6xl lg:text-7xl">{profile.nameKo}</h1>
-              <p className="mt-4 text-xl font-bold text-slate-800 sm:mt-5 sm:text-3xl">{profile.role}</p>
-              <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600 sm:mt-5 sm:text-lg sm:leading-8">{profile.headline}</p>
+              <p className="mt-4 break-keep text-xl font-bold text-slate-800 sm:mt-5 sm:text-3xl">{profile.role}</p>
+              <p className="mt-4 max-w-3xl break-keep text-base leading-7 text-slate-600 sm:mt-5 sm:text-lg sm:leading-8">{profile.headline}</p>
 
               <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:flex-wrap">
                 <a
@@ -98,7 +98,7 @@ export default function Hero() {
                   href={profile.githubUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex min-h-11 w-full max-w-full items-center justify-center gap-2 rounded-md border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm outline-none transition hover:border-signal-green/60 hover:text-signal-green focus-visible:ring-2 focus-visible:ring-signal-cyan focus-visible:ring-offset-2 focus-visible:ring-white sm:w-auto"
+                  className="inline-flex min-h-11 w-full max-w-full min-w-0 items-center justify-center gap-2 rounded-md border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm outline-none transition hover:border-signal-green/60 hover:text-signal-green focus-visible:ring-2 focus-visible:ring-signal-cyan focus-visible:ring-offset-2 focus-visible:ring-white sm:w-auto"
                 >
                   <Github aria-hidden="true" size={17} />
                   <span className="break-all">{githubLabel}</span>
@@ -108,7 +108,7 @@ export default function Hero() {
                   href={profile.notesUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex min-h-11 w-full max-w-full items-center justify-center gap-2 rounded-md border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm outline-none transition hover:border-signal-cyan/60 hover:text-signal-cyan focus-visible:ring-2 focus-visible:ring-signal-cyan focus-visible:ring-offset-2 focus-visible:ring-white sm:w-auto"
+                  className="inline-flex min-h-11 w-full max-w-full min-w-0 items-center justify-center gap-2 rounded-md border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm outline-none transition hover:border-signal-cyan/60 hover:text-signal-cyan focus-visible:ring-2 focus-visible:ring-signal-cyan focus-visible:ring-offset-2 focus-visible:ring-white sm:w-auto"
                 >
                   <BookOpen aria-hidden="true" size={17} />
                   <span className="break-all">{blogLabel}</span>
