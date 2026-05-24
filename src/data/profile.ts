@@ -560,6 +560,12 @@ export const projects: Project[] = [
         alt: '육아제품 추천 및 가계부 서비스 클라우드 아키텍처',
       },
       {
+        title: '크롤링 데이터 파이프라인',
+        description: '육아제품/리뷰 데이터를 수집해 Kafka Producer와 Topic으로 전달하고 AI 요약 및 저장소 연계를 준비하는 데이터 수집 구조',
+        imageUrl: 'projects/aws-finalproject/crawling-data-pipeline.png',
+        alt: '육아제품 추천 서비스 크롤링 데이터 파이프라인 구조',
+      },
+      {
         title: 'Data Pipeline',
         description: 'Python 크롤링 데이터를 Kafka Topic으로 전달하고 Bedrock 기반 AI 리뷰 요약, MongoDB/DynamoDB 저장소로 연결한 데이터 흐름',
         videoUrl: 'projects/aws-finalproject/data-pipeline-demo.mp4',
@@ -650,35 +656,35 @@ export const certifications: CertificationItem[] = [
 
 export const notes: NoteItem[] = [
   {
-    title: 'Oracle Linux Upgrade & Ceph Storage Operations Guide',
+    title: 'Oracle Linux 업그레이드 및 Ceph 스토리지 운영 가이드',
     summary:
       'Oracle Linux 업그레이드, Linux 기본 설정, HAProxy/Keepalived, Ceph 스토리지 운영 체크포인트를 운영 가이드 형태로 정리했습니다.',
     status: 'GitHub',
     href: 'https://github.com/JANGSEOKHAN/os-upgrade-ceph-operations',
   },
   {
-    title: 'Kafka KRaft Migration 및 Broker Upgrade Runbook',
+    title: 'Kafka KRaft 마이그레이션 및 Broker 업그레이드 Runbook',
     summary:
       'ZooKeeper 기반 Kafka를 KRaft 구조로 전환하는 절차와 controller/broker cutover, Kafka 4.x 업그레이드 흐름을 정리했습니다.',
     status: 'GitHub',
     href: 'https://github.com/JANGSEOKHAN/kafka-kraft-migration',
   },
   {
-    title: 'Manufacturing Data RAG Pipeline PoC',
+    title: '제조 데이터 RAG 파이프라인 PoC',
     summary:
       '제조 문서를 OCR, chunking, metadata, vector search 흐름으로 전환해 RAG PoC에 활용한 구성 사례입니다.',
     status: 'GitHub',
     href: 'https://github.com/JANGSEOKHAN/manufacturing-data-rag-poc',
   },
   {
-    title: 'Multimodal RAG & vLLM Local Serving PoC',
+    title: '멀티모달 RAG 및 vLLM 로컬 서빙 PoC',
     summary:
       'GPU 기반 vLLM 로컬 서빙과 멀티모달 RAG 구성, 업무형 AI PoC 흐름을 인프라 관점에서 정리했습니다.',
     status: 'GitHub',
     href: 'https://github.com/JANGSEOKHAN/AI-Appliance-Pack-PoC',
   },
   {
-    title: 'LGTM Observability Stack 구축 가이드',
+    title: 'LGTM 관측성 스택 구축 가이드',
     summary:
       'Prometheus, Grafana, Loki, Tempo 중심으로 로그/메트릭/트레이싱 관측성 환경을 구성한 설치 가이드입니다.',
     status: 'Velog',

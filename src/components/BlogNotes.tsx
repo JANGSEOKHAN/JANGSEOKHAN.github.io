@@ -8,7 +8,7 @@ export default function BlogNotes() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div>
           <SectionTitle
-            eyebrow="Technical Notes"
+            eyebrow="기술 노트"
             title="운영 경험을 기술 노트로 정리합니다."
             watermark="Notes"
           />
