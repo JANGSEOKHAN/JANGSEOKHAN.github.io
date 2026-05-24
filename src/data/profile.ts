@@ -650,9 +650,9 @@ export const certifications: CertificationItem[] = [
 
 export const notes: NoteItem[] = [
   {
-    title: 'OS Upgrade 및 Ceph 스토리지 운영 기록',
+    title: 'Oracle Linux Upgrade & Ceph Storage Operations Guide',
     summary:
-      'Oracle Linux 업그레이드, Linux 기본 설정, HAProxy/Keepalived, Ceph 스토리지 운영 체크포인트를 공개용으로 정리했습니다.',
+      'Oracle Linux 업그레이드, Linux 기본 설정, HAProxy/Keepalived, Ceph 스토리지 운영 체크포인트를 운영 가이드 형태로 정리했습니다.',
     status: 'GitHub',
     href: 'https://github.com/JANGSEOKHAN/os-upgrade-ceph-operations',
   },
@@ -664,23 +664,23 @@ export const notes: NoteItem[] = [
     href: 'https://github.com/JANGSEOKHAN/kafka-kraft-migration',
   },
   {
-    title: '제조 데이터 자산화 RAG PoC 구축 기록',
+    title: 'Manufacturing Data RAG Pipeline PoC',
     summary:
-      '제조 문서를 OCR, chunking, metadata, vector search 흐름으로 전환해 RAG PoC에 활용한 구축 기록입니다.',
+      '제조 문서를 OCR, chunking, metadata, vector search 흐름으로 전환해 RAG PoC에 활용한 구성 사례입니다.',
     status: 'GitHub',
     href: 'https://github.com/JANGSEOKHAN/manufacturing-data-rag-poc',
   },
   {
-    title: 'Multimodal RAG 및 vLLM 로컬 서빙 구축 기록',
+    title: 'Multimodal RAG & vLLM Local Serving PoC',
     summary:
       'GPU 기반 vLLM 로컬 서빙과 멀티모달 RAG 구성, 업무형 AI PoC 흐름을 인프라 관점에서 정리했습니다.',
     status: 'GitHub',
     href: 'https://github.com/JANGSEOKHAN/AI-Appliance-Pack-PoC',
   },
   {
-    title: 'LGTM 기반 Observability Stack 구축 기록',
+    title: 'LGTM Observability Stack 구축 가이드',
     summary:
-      'Prometheus, Grafana, Loki, Tempo 중심으로 로그/메트릭/트레이싱 관측성 환경을 구성한 설치 기록입니다.',
+      'Prometheus, Grafana, Loki, Tempo 중심으로 로그/메트릭/트레이싱 관측성 환경을 구성한 설치 가이드입니다.',
     status: 'Velog',
     href: 'https://velog.io/@wkdtjrgks2/LGTM-%EC%84%A4%EC%B9%98',
   },

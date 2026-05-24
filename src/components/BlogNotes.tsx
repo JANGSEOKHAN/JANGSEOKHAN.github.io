@@ -11,7 +11,7 @@ export default function BlogNotes() {
         <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <SectionTitle
             eyebrow="Blog"
-            title="운영하며 배운 내용을 기록으로 남깁니다."
+            title="운영 경험을 기술 노트로 정리합니다."
             watermark="Blog"
           />
           <a
