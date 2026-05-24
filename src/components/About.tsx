@@ -15,7 +15,7 @@ export default function About() {
           {aboutParagraphs.map((paragraph, index) => (
             <article key={paragraph} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
               <p className="text-sm font-semibold text-signal-cyan">0{index + 1}</p>
-              <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">{paragraph}</p>
+              <p className="mt-3 break-all text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">{paragraph}</p>
             </article>
           ))}
         </div>

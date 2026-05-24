@@ -519,7 +519,7 @@ export const projects: Project[] = [
     title: '육아제품 추천 및 가계부 서비스',
     company: 'AWS Cloud School',
     period: '2025.01.17 ~ 2025.03.25',
-    mainRole: 'Ops(EKS 기반 인프라 구축) / Architecture 설계 / 팀장',
+    mainRole: 'Ops · EKS 인프라 구축 · Architecture 설계 · 팀장',
     role: 'On-premise Kubernetes 3-Tier 구성, AWS EKS 아키텍처 설계, 데이터 파이프라인 및 비용 관리',
     overview:
       '아기 정보를 기반으로 육아제품을 추천하고 지출을 관리하는 서비스를 Cloud Native 환경으로 설계/구축한 교육 프로젝트입니다.',
@@ -551,14 +551,8 @@ export const projects: Project[] = [
       '7개월간 AWS와 MSA 실무 교육을 통해 Kubernetes 기반 MSA 구조, 컨테이너 배포, CI/CD, 모니터링, AWS 인프라 설계에 대한 실무 기반을 다졌습니다. 프로젝트에서는 육아제품 추천 서비스의 데이터 수집, 리뷰 요약, 저장, 클라우드 전환까지 전체 흐름을 설계하고, 데이터 수집부터 AI 요약, 저장소 전환, EKS 배포가 연결되는 클라우드 기반 서비스 아키텍처를 구현했습니다. 이를 통해 온프레미스 Kubernetes 환경을 AWS EKS로 확장하고 VPC, IRSA, CloudFormation, DB 마이그레이션을 적용하는 Cloud Migration 및 MSA 운영 역량을 확보했습니다.',
     techStack: ['AWS', 'EKS', 'Kubernetes', 'Kafka', 'MongoDB', 'DynamoDB', 'Kubespray', 'Istio', 'CloudFormation', 'IRSA'],
     visualNote:
-      '서비스 시연 영상과 클라우드 아키텍처, 데이터 파이프라인, 모니터링 시연, 영수증 OCR 기능 자료를 함께 제공합니다.',
+      '클라우드 아키텍처, 데이터 파이프라인, 모니터링, AI OCR 지출 기능, 서비스 시연 자료를 함께 제공합니다.',
     visuals: [
-      {
-        title: '서비스 시연',
-        description: '육아제품 추천, 가계부, 영수증 OCR 등 사용자 기능과 AI 요약/추천 흐름을 확인하는 서비스 시연 영상',
-        videoUrl: 'projects/aws-finalproject/service-demo.mp4',
-        alt: '육아제품 추천 및 가계부 서비스 시연 영상',
-      },
       {
         title: 'Cloud Architecture',
         description: 'On-premise Kubernetes에서 AWS EKS로 확장하는 구조를 VPC, IAM/IRSA, EKS, 데이터 저장소 중심으로 설계한 아키텍처',
@@ -582,6 +576,12 @@ export const projects: Project[] = [
         description: 'AI OCR로 영수증 항목과 금액을 추출하고 지출 카테고리/내역 등록으로 연결하는 가계부 자동화 기능',
         imageUrl: 'projects/aws-finalproject/receipt-ocr-expense.png',
         alt: '영수증 OCR 지출 기능 화면',
+      },
+      {
+        title: '서비스 시연',
+        description: '육아제품 추천, 가계부, 영수증 OCR 등 사용자 기능과 AI 요약/추천 흐름을 확인하는 서비스 시연 영상',
+        videoUrl: 'projects/aws-finalproject/service-demo.mp4',
+        alt: '육아제품 추천 및 가계부 서비스 시연 영상',
       },
     ],
   },

@@ -20,7 +20,7 @@ export default function SectionTitle({ eyebrow, title, description, align = 'lef
         <p className="relative text-sm font-bold uppercase text-signal-cyan sm:text-base">{eyebrow}</p>
       ) : null}
       <h2 className="relative mt-3 break-keep text-3xl font-extrabold leading-tight text-slate-950 sm:mt-4 sm:text-5xl">{title}</h2>
-      {description ? <p className="relative mt-4 text-base leading-7 text-slate-600 sm:mt-5 sm:text-lg sm:leading-8">{description}</p> : null}
+      {description ? <p className="relative mt-4 break-all text-base leading-7 text-slate-600 sm:mt-5 sm:text-lg sm:leading-8">{description}</p> : null}
     </div>
   );
 }

@@ -38,7 +38,7 @@ export default function BlogNotes() {
               </span>
               <div className="min-w-0">
                 <div className="flex items-start gap-2">
-                  <h3 className="break-keep text-base font-bold leading-7 text-slate-950 transition group-hover:text-signal-cyan sm:text-lg">
+                  <h3 className="break-words text-base font-bold leading-7 text-slate-950 transition group-hover:text-signal-cyan sm:text-lg">
                     {note.title}
                   </h3>
                   <ExternalLink aria-hidden="true" className="mt-1 shrink-0 text-slate-300 transition group-hover:text-signal-cyan" size={15} />

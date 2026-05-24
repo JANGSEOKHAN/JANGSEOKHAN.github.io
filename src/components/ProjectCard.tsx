@@ -132,10 +132,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div>
         <div>
           <p className="mb-2 text-xs font-extrabold text-signal-cyan sm:text-sm">PROJECT</p>
-          <h3 className="break-keep text-xl font-semibold leading-7 text-slate-950 sm:text-2xl sm:leading-8">{project.title}</h3>
+          <h3 className="break-words text-xl font-semibold leading-7 text-slate-950 sm:text-2xl sm:leading-8">{project.title}</h3>
           <div className="mt-3 flex flex-wrap gap-2">
-            <span className="rounded-md bg-slate-100 px-3 py-1.5 text-sm font-semibold text-slate-700">{project.period}</span>
-            <span className="rounded-md bg-signal-green/10 px-3 py-1.5 text-sm font-semibold text-signal-green">{project.mainRole}</span>
+            <span className="max-w-full break-words rounded-md bg-slate-100 px-3 py-1.5 text-sm font-semibold leading-6 text-slate-700">{project.period}</span>
+            <span className="max-w-full break-words rounded-md bg-signal-green/10 px-3 py-1.5 text-sm font-semibold leading-6 text-signal-green">{project.mainRole}</span>
           </div>
           <p className="mt-4 max-w-5xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">{project.overview}</p>
         </div>

@@ -83,8 +83,8 @@ export default function Hero() {
                 {profile.tagLine}
               </p>
               <h1 className="mt-5 text-4xl font-extrabold text-slate-950 sm:mt-6 sm:text-6xl lg:text-7xl">{profile.nameKo}</h1>
-              <p className="mt-4 break-keep text-xl font-bold text-slate-800 sm:mt-5 sm:text-3xl">{profile.role}</p>
-              <p className="mt-4 max-w-3xl break-keep text-base leading-7 text-slate-600 sm:mt-5 sm:text-lg sm:leading-8">{profile.headline}</p>
+              <p className="mt-4 break-words text-xl font-bold text-slate-800 sm:mt-5 sm:text-3xl">{profile.role}</p>
+              <p className="mt-4 max-w-3xl break-all text-base leading-7 text-slate-600 sm:mt-5 sm:text-lg sm:leading-8">{profile.headline}</p>
 
               <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:flex-wrap">
                 <a
