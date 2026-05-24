@@ -1,19 +1,56 @@
-import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Maximize2, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import type { SyntheticEvent } from 'react';
 import type { Project } from '../data/profile';
 
 type ProjectCardProps = {
   project: Project;
 };
 
+type VideoTime = {
+  current: number;
+  duration: number;
+};
+
+const initialVideoTime: VideoTime = {
+  current: 0,
+  duration: 0,
+};
+
+const formatMediaTime = (seconds: number) => {
+  if (!Number.isFinite(seconds) || seconds <= 0) {
+    return '00:00';
+  }
+
+  const totalSeconds = Math.floor(seconds);
+  const minutes = Math.floor(totalSeconds / 60);
+  const remainingSeconds = totalSeconds % 60;
+
+  return `${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
+};
+
+const readVideoTime = (event: SyntheticEvent<HTMLVideoElement>): VideoTime => {
+  const video = event.currentTarget;
+  const duration = Number.isFinite(video.duration) ? video.duration : 0;
+
+  return {
+    current: video.currentTime,
+    duration,
+  };
+};
+
 export default function ProjectCard({ project }: ProjectCardProps) {
   const visuals = project.visuals ?? [];
   const [activeVisualIndex, setActiveVisualIndex] = useState(0);
   const [modalIndex, setModalIndex] = useState<number | null>(null);
+  const [activeVideoTime, setActiveVideoTime] = useState<VideoTime>(initialVideoTime);
+  const [modalVideoTime, setModalVideoTime] = useState<VideoTime>(initialVideoTime);
 
   const activeVisual = visuals[activeVisualIndex];
   const modalVisual = modalIndex === null ? null : visuals[modalIndex];
   const hasMultipleVisuals = visuals.length > 1;
+  const activeVideoRemaining = Math.max(activeVideoTime.duration - activeVideoTime.current, 0);
+  const modalVideoRemaining = Math.max(modalVideoTime.duration - modalVideoTime.current, 0);
 
   const showPreviousVisual = () => {
     if (visuals.length === 0) return;
@@ -44,7 +81,17 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   useEffect(() => {
     setActiveVisualIndex(0);
     setModalIndex(null);
+    setActiveVideoTime(initialVideoTime);
+    setModalVideoTime(initialVideoTime);
   }, [project.title]);
+
+  useEffect(() => {
+    setActiveVideoTime(initialVideoTime);
+  }, [activeVisualIndex]);
+
+  useEffect(() => {
+    setModalVideoTime(initialVideoTime);
+  }, [modalIndex]);
 
   useEffect(() => {
     if (modalIndex === null) return undefined;
@@ -109,39 +156,53 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           ) : null}
           <div className="rounded-2xl border border-slate-200 bg-slate-50 p-2 sm:p-4">
             <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-white">
-              <button
-                type="button"
-                onClick={() => (activeVisual.imageUrl || activeVisual.videoUrl) && setModalIndex(activeVisualIndex)}
-                disabled={!activeVisual.imageUrl && !activeVisual.videoUrl}
-                className="block w-full cursor-zoom-in outline-none disabled:cursor-default focus-visible:ring-2 focus-visible:ring-signal-cyan focus-visible:ring-offset-2"
-                aria-label={`${activeVisual.title} 크게 보기`}
-              >
-                {activeVisual.videoUrl ? (
+              {activeVisual.videoUrl ? (
+                <>
                   <video
                     key={activeVisual.videoUrl}
                     src={activeVisual.videoUrl}
-                    className="pointer-events-none aspect-[4/3] w-full object-contain p-1.5 sm:aspect-video sm:p-3"
-                    aria-label={`${activeVisual.title} 무음 영상`}
-                    autoPlay
-                    loop
+                    className="aspect-[4/3] w-full object-contain p-1.5 sm:aspect-video sm:p-3"
+                    aria-label={`${activeVisual.title} 영상`}
+                    controls
                     muted
                     playsInline
                     preload="metadata"
+                    onDurationChange={(event) => setActiveVideoTime(readVideoTime(event))}
+                    onLoadedMetadata={(event) => setActiveVideoTime(readVideoTime(event))}
+                    onTimeUpdate={(event) => setActiveVideoTime(readVideoTime(event))}
                   />
-                ) : activeVisual.imageUrl ? (
-                  <img
-                    src={activeVisual.imageUrl}
-                    alt={activeVisual.alt ?? activeVisual.title}
-                    className="aspect-[4/3] w-full object-contain p-1.5 sm:aspect-video sm:p-3"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                ) : (
-                  <div className="flex aspect-video w-full items-center justify-center text-sm font-bold text-slate-400">
-                    Media Slot {activeVisualIndex + 1}
-                  </div>
-                )}
-              </button>
+                  <button
+                    type="button"
+                    onClick={() => setModalIndex(activeVisualIndex)}
+                    className="absolute right-3 top-3 inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white/95 text-slate-700 shadow-sm outline-none transition hover:border-signal-cyan hover:text-signal-cyan focus-visible:ring-2 focus-visible:ring-signal-cyan"
+                    aria-label={`${activeVisual.title} 크게 보기`}
+                  >
+                    <Maximize2 aria-hidden="true" size={17} />
+                  </button>
+                </>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => activeVisual.imageUrl && setModalIndex(activeVisualIndex)}
+                  disabled={!activeVisual.imageUrl}
+                  className="block w-full cursor-zoom-in outline-none disabled:cursor-default focus-visible:ring-2 focus-visible:ring-signal-cyan focus-visible:ring-offset-2"
+                  aria-label={`${activeVisual.title} 크게 보기`}
+                >
+                  {activeVisual.imageUrl ? (
+                    <img
+                      src={activeVisual.imageUrl}
+                      alt={activeVisual.alt ?? activeVisual.title}
+                      className="aspect-[4/3] w-full object-contain p-1.5 sm:aspect-video sm:p-3"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ) : (
+                    <div className="flex aspect-video w-full items-center justify-center text-sm font-bold text-slate-400">
+                      Media Slot {activeVisualIndex + 1}
+                    </div>
+                  )}
+                </button>
+              )}
 
               {hasMultipleVisuals ? (
                 <>
@@ -168,6 +229,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             <div className="mt-4">
               <h5 className="text-sm font-extrabold text-slate-950 sm:text-base">{activeVisual.title}</h5>
               <p className="mt-1 text-xs font-semibold leading-5 text-slate-500 sm:text-sm sm:leading-6">{activeVisual.description}</p>
+              {activeVisual.videoUrl ? (
+                <p className="mt-2 text-xs font-semibold text-slate-400 sm:text-sm">
+                  {formatMediaTime(activeVideoTime.current)} / {formatMediaTime(activeVideoTime.duration)}
+                  <span className="mx-2 text-slate-300">·</span>
+                  남은 시간 {formatMediaTime(activeVideoRemaining)}
+                </p>
+              ) : null}
             </div>
           </div>
         </section>
@@ -230,12 +298,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                   key={modalVisual.videoUrl}
                   src={modalVisual.videoUrl}
                   className="max-h-[70vh] w-full object-contain sm:max-h-[78vh]"
-                  aria-label={`${modalVisual.title} 무음 영상`}
-                  autoPlay
-                  loop
+                  aria-label={`${modalVisual.title} 영상`}
+                  controls
                   muted
                   playsInline
                   preload="metadata"
+                  onDurationChange={(event) => setModalVideoTime(readVideoTime(event))}
+                  onLoadedMetadata={(event) => setModalVideoTime(readVideoTime(event))}
+                  onTimeUpdate={(event) => setModalVideoTime(readVideoTime(event))}
                 />
               ) : modalVisual.imageUrl ? (
                 <img
@@ -254,6 +324,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             <div className="mt-3 pr-12 sm:mt-4">
               <p className="text-base font-extrabold text-slate-950 sm:text-lg">{modalVisual.title}</p>
               <p className="mt-1 text-xs font-semibold leading-5 text-slate-500 sm:text-sm sm:leading-6">{modalVisual.description}</p>
+              {modalVisual.videoUrl ? (
+                <p className="mt-2 text-xs font-semibold text-slate-400 sm:text-sm">
+                  {formatMediaTime(modalVideoTime.current)} / {formatMediaTime(modalVideoTime.duration)}
+                  <span className="mx-2 text-slate-300">·</span>
+                  남은 시간 {formatMediaTime(modalVideoRemaining)}
+                </p>
+              ) : null}
             </div>
 
             {hasMultipleVisuals ? (
