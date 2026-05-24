@@ -516,7 +516,7 @@ export const projects: Project[] = [
     title: '육아제품 추천 및 가계부 서비스',
     company: 'AWS Cloud School',
     period: '2025.01.17 ~ 2025.03.25',
-    mainRole: 'Ops / Architecture 담당',
+    mainRole: 'Ops(EKS 기반 인프라 구축) / Architecture 설계 / 팀장',
     role: 'On-premise Kubernetes 3-Tier 구성, AWS EKS 아키텍처 설계, 데이터 파이프라인 및 비용 관리',
     overview:
       '아기 정보를 기반으로 육아제품을 추천하고 지출을 관리하는 서비스를 Cloud Native 환경으로 설계/구축한 교육 프로젝트입니다.',
