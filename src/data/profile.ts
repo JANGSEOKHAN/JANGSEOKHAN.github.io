@@ -332,7 +332,7 @@ export const projects: Project[] = [
       '제조 장비 PDF 매뉴얼을 OCR 기반 Markdown 구조로 변환하고, 청크·메타데이터·임베딩 자동화를 통해 QdrantDB 기반 지식베이스를 구축했습니다. 메타데이터 필터링, 유사도 검색, Qwen3-VL 검증, Redis 세션 저장을 적용해 텍스트/이미지 기반 멀티턴 RAG 챗봇 PoC에 기여했으며, 비정형 문서를 AI 서비스용 데이터 자산으로 전환하는 경험을 쌓았습니다.',
     techStack: ['Python', 'FastAPI', 'QdrantDB', 'RAG', 'Docker', 'LLM', 'CUDA', 'ReactAgent', 'VLLM', 'LangChain', 'Dify', 'Redis'],
     visualNote:
-      'RAG 데이터 파이프라인 아키텍처는 직접 설계한 자료이며, 챗봇 화면은 제조 장비 매뉴얼 RAG PoC 시연 화면입니다.',
+      'RAG 데이터 파이프라인 아키텍처와 Dify 챗봇 워크플로우는 직접 설계한 자료이며, 챗봇 화면은 제조 장비 매뉴얼 RAG PoC 시연 화면입니다.',
     visuals: [
       {
         title: 'RAG 데이터 파이프라인 아키텍처',
@@ -345,6 +345,12 @@ export const projects: Project[] = [
         description: '제조 장비 매뉴얼과 API 정보를 기반으로 답변하는 PoC 챗봇 화면',
         imageUrl: 'projects/rag/rag-chatbot-screen.png',
         alt: '제조 장비 매뉴얼 RAG PoC 챗봇 시연 화면',
+      },
+      {
+        title: 'Dify SMD 챗봇 워크플로우',
+        description: '이미지/텍스트 입력 분기, 질문 분류, RAG 검색, 답변 생성으로 이어지는 Dify 워크플로우',
+        imageUrl: 'projects/rag/dify-chatbot-workflow.png',
+        alt: '삼성 SMD 제조 장비 자산화 RAG 구축 POC Dify 챗봇 워크플로우',
       },
     ],
   },
