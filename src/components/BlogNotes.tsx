@@ -1,28 +1,17 @@
 import { BookOpen, ExternalLink } from 'lucide-react';
-import { notes, profile } from '../data/profile';
+import { notes } from '../data/profile';
 import SectionTitle from './SectionTitle';
 
 export default function BlogNotes() {
-  const blogLabel = profile.notesUrl.replace(/^https?:\/\//, '').replace(/\/$/, '');
-
   return (
-    <section id="blog" className="scroll-mt-20 py-12 sm:py-16">
+    <section id="notes" className="scroll-mt-20 py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+        <div>
           <SectionTitle
-            eyebrow="Blog"
+            eyebrow="Technical Notes"
             title="운영 경험을 기술 노트로 정리합니다."
-            watermark="Blog"
+            watermark="Notes"
           />
-          <a
-            href={profile.notesUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-md border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm outline-none transition hover:border-signal-cyan/60 hover:text-signal-cyan focus-visible:ring-2 focus-visible:ring-signal-cyan focus-visible:ring-offset-2 focus-visible:ring-white sm:w-auto"
-          >
-            <span className="break-all">{blogLabel}</span>
-            <ExternalLink aria-hidden="true" size={15} />
-          </a>
         </div>
         <div className="mt-7 grid gap-4 sm:mt-8 md:grid-cols-2 xl:grid-cols-3">
           {notes.map((note) => (

@@ -87,7 +87,7 @@ export const navItems: NavItem[] = [
   { label: 'Certifications', href: '#certifications' },
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
-  { label: 'Blog', href: '#blog' },
+  { label: 'Notes', href: '#notes' },
 ];
 
 export const aboutParagraphs = [
