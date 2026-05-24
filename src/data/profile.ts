@@ -670,6 +670,13 @@ export const notes: NoteItem[] = [
     href: 'https://github.com/JANGSEOKHAN/kafka-kraft-migration',
   },
   {
+    title: 'AWS Final Project HAMA MSA 구축 기록',
+    summary:
+      '육아제품 추천 및 가계부 서비스의 Frontend, Review API, Kustomize 배포 매니페스트를 정리하고 EKS 기반 MSA 운영 흐름을 담았습니다.',
+    status: 'GitHub',
+    href: 'https://github.com/JANGSEOKHAN/aws-finalproject-hama',
+  },
+  {
     title: '제조 데이터 RAG 파이프라인 PoC',
     summary:
       '제조 문서를 OCR, chunking, metadata, vector search 흐름으로 전환해 RAG PoC에 활용한 구성 사례입니다.',
