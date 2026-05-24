@@ -387,6 +387,34 @@ export const projects: Project[] = [
     result:
       'VMware vSphere 기반 신규 VM 구성, OS·네트워크 초기 설정, Datastore 마이그레이션 후 기동 점검을 수행하여 가상화 운영 환경을 안정화했습니다. Brocade SAN 스위치 이관 시 Config 백업, WWN 기반 Zone 정리, 약 150건의 SAN Zoning 및 LUN·Datastore 인식 점검을 수행하며 서버-스토리지 연동 및 가상화 인프라 운영 역량을 확보했습니다.',
     techStack: ['VMware vSphere', 'RHEL', 'Brocade SAN', 'Storage', 'Datastore', 'LUN'],
+    visualNote:
+      '보안상 실제 시스템명, 계정, IP, 세부 구성값은 제거 또는 블러 처리했으며, SAN Zoning부터 vMotion/Datastore 이관 흐름을 설명하기 위한 일부 화면만 사용했습니다.',
+    visuals: [
+      {
+        title: 'SAN Zoning / WWN 구성 정리',
+        description: '서버 HBA WWN과 스토리지 Port WWN을 기준으로 Zone 구성과 적용 절차를 정리한 화면',
+        imageUrl: 'projects/datacenter/san-zoning-wwn.png',
+        alt: 'SAN Zoning 및 WWN 구성 정리 화면',
+      },
+      {
+        title: 'vMotion 기반 스토리지 이관 흐름',
+        description: '기존 가상화 스토리지에서 신규 가상화 스토리지로 Datastore migration을 수행하는 구조',
+        imageUrl: 'projects/datacenter/vmotion-storage-migration.png',
+        alt: 'vMotion 기반 스토리지 이관 흐름도',
+      },
+      {
+        title: 'Datastore 인식 및 용량 확인',
+        description: '이관 대상 Datastore 인식 상태와 용량, 정상 연결 여부를 확인한 화면',
+        imageUrl: 'projects/datacenter/datastore-recognition.png',
+        alt: 'VMware vSphere Datastore 인식 및 용량 확인 화면',
+      },
+      {
+        title: '신규 vCenter Datastore VM 등록',
+        description: '이관 후 신규 vCenter 환경에서 VM 파일과 Datastore 경로를 확인하고 VM 등록을 진행한 화면',
+        imageUrl: 'projects/datacenter/vm-registration-datastore.png',
+        alt: '신규 vCenter Datastore VM 등록 및 데이터 마이그레이션 화면',
+      },
+    ],
   },
   {
     title: '2022년 서울특별시데이터센터 정보자원통합 사업',
