@@ -551,7 +551,7 @@ export const projects: Project[] = [
       '7개월간 AWS와 MSA 실무 교육을 통해 Kubernetes 기반 MSA 구조, 컨테이너 배포, CI/CD, 모니터링, AWS 인프라 설계에 대한 실무 기반을 다졌습니다. 프로젝트에서는 육아제품 추천 서비스의 데이터 수집, 리뷰 요약, 저장, 클라우드 전환까지 전체 흐름을 설계하고, 데이터 수집부터 AI 요약, 저장소 전환, EKS 배포가 연결되는 클라우드 기반 서비스 아키텍처를 구현했습니다. 이를 통해 온프레미스 Kubernetes 환경을 AWS EKS로 확장하고 VPC, IRSA, CloudFormation, DB 마이그레이션을 적용하는 Cloud Migration 및 MSA 운영 역량을 확보했습니다.',
     techStack: ['AWS', 'EKS', 'Kubernetes', 'Kafka', 'MongoDB', 'DynamoDB', 'Kubespray', 'Istio', 'CloudFormation', 'IRSA'],
     visualNote:
-      '교육 프로젝트 시연 자료이며, 영상은 브라우저 기본 컨트롤로 재생 위치를 이동할 수 있습니다.',
+      '서비스 시연 영상과 클라우드 아키텍처, 데이터 파이프라인, 모니터링 시연, 영수증 OCR 기능 자료를 함께 제공합니다.',
     visuals: [
       {
         title: '서비스 시연',
