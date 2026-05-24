@@ -393,7 +393,7 @@ export const projects: Project[] = [
       {
         title: 'SAN Zoning / WWN 구성',
         description: '서버 HBA WWN과 스토리지 Port WWN을 기준으로 Zone 구성 및 구축 수행',
-        imageUrl: 'projects/datacenter/san-zoning-wwn.png',
+        imageUrl: 'projects/datacenter/san-zoning-wwn-v2.png',
         alt: 'SAN Zoning 및 WWN 구성',
       },
       {
