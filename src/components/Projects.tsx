@@ -21,7 +21,7 @@ const companyGroups = [
     title: '교육 프로젝트',
     summary: '2024.08 ~ 2025.03 · 1050시간',
     description:
-      'Amazon AWS & MSA 환경 실무 교육에서 Kubernetes 자동화 배포, Private Registry, GitLab CI/CD, AWS 아키텍처 설계, 모니터링 환경 구축을 실습했습니다.',
+      'Amazon AWS & MSA 환경 실무 교육에서 Kubernetes 자동화 배포, Private Registry 운영, GitLab CI/CD를 실습했습니다.\nAWS 아키텍처 설계와 Prometheus/Grafana/Loki 기반 모니터링 환경 구축까지 다뤘습니다.',
     topics: [
       'Kubernetes',
       'Ansible',
@@ -52,7 +52,7 @@ export default function Projects() {
                   <div>
                     <p className="text-base font-extrabold text-signal-cyan sm:text-lg">{group.summary}</p>
                     <h3 className="mt-2 text-2xl font-extrabold text-slate-950 sm:text-4xl">{group.title}</h3>
-                    <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">{group.description}</p>
+                    <p className="mt-3 max-w-4xl whitespace-pre-line text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">{group.description}</p>
                     {'topics' in group && group.topics ? (
                       <div className="mt-4 flex flex-wrap gap-2">
                         {group.topics.map((topic) => (

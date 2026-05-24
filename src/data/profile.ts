@@ -44,6 +44,7 @@ export type Project = {
     title: string;
     description: string;
     imageUrl?: string;
+    videoUrl?: string;
     alt?: string;
   }[];
 };
@@ -547,10 +548,39 @@ export const projects: Project[] = [
     result:
       '7개월간 AWS와 MSA 실무 교육을 통해 Kubernetes 기반 MSA 구조, 컨테이너 배포, CI/CD, 모니터링, AWS 인프라 설계에 대한 실무 기반을 다졌습니다. 프로젝트에서는 육아제품 추천 서비스의 데이터 수집, 리뷰 요약, 저장, 클라우드 전환까지 전체 흐름을 설계하고, 데이터 수집부터 AI 요약, 저장소 전환, EKS 배포가 연결되는 클라우드 기반 서비스 아키텍처를 구현했습니다. 이를 통해 온프레미스 Kubernetes 환경을 AWS EKS로 확장하고 VPC, IRSA, CloudFormation, DB 마이그레이션을 적용하는 Cloud Migration 및 MSA 운영 역량을 확보했습니다.',
     techStack: ['AWS', 'EKS', 'Kubernetes', 'Kafka', 'MongoDB', 'DynamoDB', 'Kubespray', 'Istio', 'CloudFormation', 'IRSA'],
+    visualNote:
+      '교육 프로젝트 시연 자료이며, 영상은 공개 페이지에서 무음으로 재생되도록 구성했습니다.',
     visuals: [
-      { title: 'Data Pipeline', description: 'Python · Kafka · Bedrock' },
-      { title: 'Kubernetes 3-Tier', description: 'Kubespray · Istio · Kiali' },
-      { title: 'Cloud Migration', description: 'EKS · CloudFormation · IRSA' },
+      {
+        title: '서비스 시연',
+        description: '육아제품 추천과 가계부 주요 기능을 확인하는 무음 시연 영상',
+        videoUrl: 'projects/aws-finalproject/service-demo.mp4',
+        alt: '육아제품 추천 및 가계부 서비스 시연 영상',
+      },
+      {
+        title: 'Cloud Architecture',
+        description: 'VPC, EKS, IRSA, 데이터 저장소로 이어지는 AWS 아키텍처 설계',
+        imageUrl: 'projects/aws-finalproject/cloud-architecture.png',
+        alt: '육아제품 추천 및 가계부 서비스 클라우드 아키텍처',
+      },
+      {
+        title: 'Data Pipeline',
+        description: 'Python crawling, Kafka, Bedrock, MongoDB 저장 흐름을 확인하는 무음 영상',
+        videoUrl: 'projects/aws-finalproject/data-pipeline-demo.mp4',
+        alt: '육아제품 추천 서비스 데이터 파이프라인 시연 영상',
+      },
+      {
+        title: 'Monitoring',
+        description: '서비스 메트릭과 운영 상태를 확인하는 모니터링 시연 영상',
+        videoUrl: 'projects/aws-finalproject/monitoring-demo.mp4',
+        alt: 'AWS Cloud School 프로젝트 모니터링 시연 영상',
+      },
+      {
+        title: '영수증 OCR 지출 기능',
+        description: '영수증 OCR 결과를 지출 내역으로 연결하는 가계부 기능',
+        imageUrl: 'projects/aws-finalproject/receipt-ocr-expense.png',
+        alt: '영수증 OCR 지출 기능 화면',
+      },
     ],
   },
 ];

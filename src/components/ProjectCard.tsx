@@ -111,12 +111,24 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-white">
               <button
                 type="button"
-                onClick={() => activeVisual.imageUrl && setModalIndex(activeVisualIndex)}
-                disabled={!activeVisual.imageUrl}
+                onClick={() => (activeVisual.imageUrl || activeVisual.videoUrl) && setModalIndex(activeVisualIndex)}
+                disabled={!activeVisual.imageUrl && !activeVisual.videoUrl}
                 className="block w-full cursor-zoom-in outline-none disabled:cursor-default focus-visible:ring-2 focus-visible:ring-signal-cyan focus-visible:ring-offset-2"
                 aria-label={`${activeVisual.title} 크게 보기`}
               >
-                {activeVisual.imageUrl ? (
+                {activeVisual.videoUrl ? (
+                  <video
+                    key={activeVisual.videoUrl}
+                    src={activeVisual.videoUrl}
+                    className="pointer-events-none aspect-[4/3] w-full object-contain p-1.5 sm:aspect-video sm:p-3"
+                    aria-label={`${activeVisual.title} 무음 영상`}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                  />
+                ) : activeVisual.imageUrl ? (
                   <img
                     src={activeVisual.imageUrl}
                     alt={activeVisual.alt ?? activeVisual.title}
@@ -126,7 +138,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                   />
                 ) : (
                   <div className="flex aspect-video w-full items-center justify-center text-sm font-bold text-slate-400">
-                    Image Slot {activeVisualIndex + 1}
+                    Media Slot {activeVisualIndex + 1}
                   </div>
                 )}
               </button>
@@ -137,7 +149,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                     type="button"
                     onClick={showPreviousVisual}
                     className="absolute left-2 top-1/2 inline-flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-slate-200 bg-white/90 text-slate-700 shadow-sm outline-none transition hover:border-signal-cyan hover:text-signal-cyan focus-visible:ring-2 focus-visible:ring-signal-cyan sm:left-3 sm:h-10 sm:w-10"
-                    aria-label="이전 이미지 보기"
+                    aria-label="이전 자료 보기"
                   >
                     <ChevronLeft aria-hidden="true" size={22} />
                   </button>
@@ -145,7 +157,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                     type="button"
                     onClick={showNextVisual}
                     className="absolute right-2 top-1/2 inline-flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-slate-200 bg-white/90 text-slate-700 shadow-sm outline-none transition hover:border-signal-cyan hover:text-signal-cyan focus-visible:ring-2 focus-visible:ring-signal-cyan sm:right-3 sm:h-10 sm:w-10"
-                    aria-label="다음 이미지 보기"
+                    aria-label="다음 자료 보기"
                   >
                     <ChevronRight aria-hidden="true" size={22} />
                   </button>
@@ -199,7 +211,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/85 p-2 backdrop-blur-sm sm:p-4"
           role="dialog"
           aria-modal="true"
-          aria-label={`${modalVisual.title} 확대 이미지`}
+          aria-label={`${modalVisual.title} 확대 자료`}
           onClick={() => setModalIndex(null)}
         >
           <div className="relative w-full max-w-6xl rounded-2xl border border-white/10 bg-white p-2 shadow-2xl sm:p-4" onClick={(event) => event.stopPropagation()}>
@@ -213,7 +225,19 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             </button>
 
             <div className="flex max-h-[70vh] items-center justify-center overflow-hidden rounded-xl bg-slate-50 sm:max-h-[78vh]">
-              {modalVisual.imageUrl ? (
+              {modalVisual.videoUrl ? (
+                <video
+                  key={modalVisual.videoUrl}
+                  src={modalVisual.videoUrl}
+                  className="max-h-[70vh] w-full object-contain sm:max-h-[78vh]"
+                  aria-label={`${modalVisual.title} 무음 영상`}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                />
+              ) : modalVisual.imageUrl ? (
                 <img
                   src={modalVisual.imageUrl}
                   alt={modalVisual.alt ?? modalVisual.title}
@@ -222,7 +246,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 />
               ) : (
                 <div className="flex aspect-video w-full items-center justify-center text-sm font-bold text-slate-400">
-                  Image Slot {(modalIndex ?? 0) + 1}
+                  Media Slot {(modalIndex ?? 0) + 1}
                 </div>
               )}
             </div>
@@ -238,7 +262,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                   type="button"
                   onClick={showPreviousModalVisual}
                   className="absolute left-3 top-1/2 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-slate-950/80 text-white outline-none transition hover:bg-slate-800 focus-visible:ring-2 focus-visible:ring-signal-cyan sm:left-5 sm:h-11 sm:w-11"
-                  aria-label="이전 확대 이미지 보기"
+                  aria-label="이전 확대 자료 보기"
                 >
                   <ChevronLeft aria-hidden="true" size={24} />
                 </button>
@@ -246,7 +270,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                   type="button"
                   onClick={showNextModalVisual}
                   className="absolute right-3 top-1/2 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-slate-950/80 text-white outline-none transition hover:bg-slate-800 focus-visible:ring-2 focus-visible:ring-signal-cyan sm:right-5 sm:h-11 sm:w-11"
-                  aria-label="다음 확대 이미지 보기"
+                  aria-label="다음 확대 자료 보기"
                 >
                   <ChevronRight aria-hidden="true" size={24} />
                 </button>
