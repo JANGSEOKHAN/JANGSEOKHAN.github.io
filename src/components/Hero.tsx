@@ -45,7 +45,7 @@ export default function Hero() {
                             <img
                               src={profile.photoUrl}
                               alt={`${profile.nameKo} 증명사진`}
-                              className="aspect-[3/4] w-full object-cover"
+                              className="aspect-[3/4] w-full origin-center scale-[1.035] object-cover"
                               decoding="async"
                               onError={() => setIsPhotoVisible(false)}
                             />
