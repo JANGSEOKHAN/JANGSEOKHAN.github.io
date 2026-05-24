@@ -26,7 +26,7 @@ const proofStories = [
 
 export default function ProofPoints() {
   return (
-    <section className="py-12 sm:py-16">
+    <section id="proof" className="py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="relative">
           <span className="pointer-events-none absolute -top-10 left-0 hidden text-8xl font-black uppercase text-slate-900/[0.045] sm:block lg:text-9xl">
