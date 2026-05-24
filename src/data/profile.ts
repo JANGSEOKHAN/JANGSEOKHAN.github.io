@@ -408,7 +408,8 @@ export const projects: Project[] = [
         ],
       },
     ],
-    result: '스토리지 이관 과정에서 서버 연결과 VM 기동 상태를 확인하며 운영 안정성을 지원했습니다.',
+    result:
+      '신규 스토리지 도입에 따라 서버별 LUN 할당 확인과 VM Datastore 마이그레이션을 수행하여 기존 가상화 서버의 스토리지 이관을 안정적으로 지원했습니다. 또한 CentOS 7 기반 서버 초기 환경 구성과 공공기관 약 70여 대 서버의 CPU·트랜잭션·응답속도 모니터링을 통해 데이터센터 운영 안정화 및 장애 예방 역량을 확보했습니다.',
     techStack: ['VMware vSphere', 'RHEL', 'CentOS 7', 'SAN', 'Storage', 'Datastore'],
     visuals: [
       { title: 'Storage Migration', description: 'LUN · Datastore · VM' },
