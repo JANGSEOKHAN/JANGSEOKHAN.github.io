@@ -57,8 +57,9 @@ export type SkillCategory = {
 
 export type NoteItem = {
   title: string;
-  status: '준비 중';
-  href?: string;
+  summary: string;
+  status: 'GitHub' | 'Velog';
+  href: string;
 };
 
 export type CertificationItem = {
@@ -86,6 +87,7 @@ export const navItems: NavItem[] = [
   { label: 'Certifications', href: '#certifications' },
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
+  { label: 'Blog', href: '#blog' },
 ];
 
 export const aboutParagraphs = [
@@ -648,19 +650,38 @@ export const certifications: CertificationItem[] = [
 
 export const notes: NoteItem[] = [
   {
-    title: 'Kubernetes Pod Pending 원인 분석과 request/limit 재산정',
-    status: '준비 중',
+    title: 'OS Upgrade 및 Ceph 스토리지 운영 기록',
+    summary:
+      'Oracle Linux 업그레이드, Linux 기본 설정, HAProxy/Keepalived, Ceph 스토리지 운영 체크포인트를 공개용으로 정리했습니다.',
+    status: 'GitHub',
+    href: 'https://github.com/JANGSEOKHAN/os-upgrade-ceph-operations',
   },
   {
-    title: 'Jenkins/PlasticSCM 기반 Unity Build 자동화',
-    status: '준비 중',
+    title: 'Kafka KRaft Migration 및 Broker Upgrade Runbook',
+    summary:
+      'ZooKeeper 기반 Kafka를 KRaft 구조로 전환하는 절차와 controller/broker cutover, Kafka 4.x 업그레이드 흐름을 정리했습니다.',
+    status: 'GitHub',
+    href: 'https://github.com/JANGSEOKHAN/kafka-kraft-migration',
   },
   {
-    title: 'Kafka SCRAM/ACL 적용 기록',
-    status: '준비 중',
+    title: '제조 데이터 자산화 RAG PoC 구축 기록',
+    summary:
+      '제조 문서를 OCR, chunking, metadata, vector search 흐름으로 전환해 RAG PoC에 활용한 구축 기록입니다.',
+    status: 'GitHub',
+    href: 'https://github.com/JANGSEOKHAN/manufacturing-data-rag-poc',
   },
   {
-    title: 'VLLM 기반 로컬 LLM 서빙 전환기',
-    status: '준비 중',
+    title: 'Multimodal RAG 및 vLLM 로컬 서빙 구축 기록',
+    summary:
+      'GPU 기반 vLLM 로컬 서빙과 멀티모달 RAG 구성, 업무형 AI PoC 흐름을 인프라 관점에서 정리했습니다.',
+    status: 'GitHub',
+    href: 'https://github.com/JANGSEOKHAN/AI-Appliance-Pack-PoC',
+  },
+  {
+    title: 'LGTM 기반 Observability Stack 구축 기록',
+    summary:
+      'Prometheus, Grafana, Loki, Tempo 중심으로 로그/메트릭/트레이싱 관측성 환경을 구성한 설치 기록입니다.',
+    status: 'Velog',
+    href: 'https://velog.io/@wkdtjrgks2/LGTM-%EC%84%A4%EC%B9%98',
   },
 ];

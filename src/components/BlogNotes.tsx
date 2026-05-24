@@ -24,19 +24,31 @@ export default function BlogNotes() {
             <ExternalLink aria-hidden="true" size={15} />
           </a>
         </div>
-        <div className="mt-7 grid gap-4 sm:mt-8 md:grid-cols-2">
+        <div className="mt-7 grid gap-4 sm:mt-8 md:grid-cols-2 xl:grid-cols-3">
           {notes.map((note) => (
-            <article key={note.title} className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:gap-4 sm:p-5">
+            <a
+              key={note.title}
+              href={note.href}
+              target="_blank"
+              rel="noreferrer"
+              className="group flex h-full items-start gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm outline-none transition hover:-translate-y-0.5 hover:border-signal-cyan/50 hover:shadow-md focus-visible:ring-2 focus-visible:ring-signal-cyan focus-visible:ring-offset-2 focus-visible:ring-white sm:gap-4 sm:p-5"
+            >
               <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-violet-50 text-signal-violet">
                 <BookOpen aria-hidden="true" size={20} />
               </span>
-              <div>
-                <h3 className="text-base font-bold leading-7 text-slate-950 sm:text-lg">{note.title}</h3>
-                <span className="mt-3 inline-flex rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-semibold text-signal-amber">
+              <div className="min-w-0">
+                <div className="flex items-start gap-2">
+                  <h3 className="break-keep text-base font-bold leading-7 text-slate-950 transition group-hover:text-signal-cyan sm:text-lg">
+                    {note.title}
+                  </h3>
+                  <ExternalLink aria-hidden="true" className="mt-1 shrink-0 text-slate-300 transition group-hover:text-signal-cyan" size={15} />
+                </div>
+                <p className="mt-2 text-sm leading-6 text-slate-600">{note.summary}</p>
+                <span className="mt-4 inline-flex rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-600">
                   {note.status}
                 </span>
               </div>
-            </article>
+            </a>
           ))}
         </div>
       </div>
