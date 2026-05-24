@@ -447,7 +447,8 @@ export const projects: Project[] = [
         ],
       },
     ],
-    result: '서버 초기 구성부터 물리 인프라 작업까지 데이터센터 운영의 기본기를 다졌습니다.',
+    result:
+      'Linux 기반 신규 서버의 IP, 계정 정책, 권한 설정 등 초기 운영 환경을 구성하고 KISA 보안 가이드 기반 취약점 조치를 수행하여 서버 운영 기준을 정비했습니다. 또한 노후 랙 교체, 장비 재배치, 케이블 포설 및 라벨링 작업을 통해 데이터센터 물리 인프라 운영과 하드웨어 구축 지원 역량을 확보했습니다.',
     techStack: ['RHEL', 'Linux', 'Data Center', 'Rack', 'Cabling', 'Security'],
   },
   {
@@ -469,7 +470,8 @@ export const projects: Project[] = [
         ],
       },
     ],
-    result: '망분리 환경에서 사용자 단말 보안 솔루션 구축과 초기 운영 지원을 수행했습니다.',
+    result:
+      'Windows PC 설치와 Active Directory 도메인 연동, NAC·DRM 보안 솔루션 설치 및 점검을 수행하여 망분리 환경의 단말 보안 정책 적용을 지원했습니다. 사용자 PC 환경 설정과 헬프데스크 대응을 통해 Windows 기반 사용자 지원 및 보안 솔루션 운영 경험을 확보했습니다.',
     techStack: ['Windows', 'Active Directory', 'NAC', 'DRM', 'Helpdesk'],
   },
   {
