@@ -15,7 +15,7 @@ export default function Header() {
           className="rounded-md text-base font-bold text-slate-950 outline-none transition hover:text-signal-cyan focus-visible:ring-2 focus-visible:ring-signal-cyan focus-visible:ring-offset-2 focus-visible:ring-white"
           onClick={closeMenu}
         >
-          <span className="text-signal-cyan">J</span>ang Seokhan
+          Jang Seokhan
         </a>
 
         <div className="hidden items-center gap-1 lg:flex">
