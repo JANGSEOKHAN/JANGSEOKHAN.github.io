@@ -362,26 +362,25 @@ export const projects: Project[] = [
       {
         title: '가상화 서버 구축 및 운영 지원',
         items: [
-          'VMware vSphere 기반 신규 VM 생성, OS/네트워크/패키지 초기 구성 수행',
-          'RHEL 계정/권한 보안 조치와 Datastore migration 이후 VM 기동 상태 점검',
+          'VMware vSphere 기반 신규 VM 생성 및 가상화 서버 운영 환경 구성',
+          '신규 VM 대상 OS 기본 설정, 네트워크 설정, 기본 패키지 설치 등 서버 초기 구성 수행',
+          'RHEL 운영 기준에 따른 계정 정책, 권한 설정 등 보안 취약점 조치 수행',
+          'VM Datastore migration 수행 후 VM 기동 상태와 서비스 영향 여부 점검',
         ],
       },
       {
         title: 'SAN 스위치 이관 및 Zoning 작업',
         items: [
-          'Brocade SAN 스위치 교체에 따른 Zone 구성 정리와 Config 백업 수행',
-          'SAN Zoning 약 150건 반영 후 LUN/Datastore/서버-스토리지 연결 상태 점검',
+          '기존 SAN 스위치의 서버-스토리지 연결 구성 확인 및 Config 백업 수행',
+          '서버 HBA WWN, 스토리지 Port WWN, 기존 Zone 구성 정보를 기준으로 이관 대상 정리',
+          'Brocade SAN 스위치 교체에 따른 신규 SAN Zoning 약 150건 수행',
+          'Zoning 반영 후 LUN 인식, VMware Datastore 인식, 서버-스토리지 연결 정상 여부 점검',
         ],
       },
     ],
     result:
       'VMware vSphere 기반 신규 VM 구성, OS·네트워크 초기 설정, Datastore 마이그레이션 후 기동 점검을 수행하여 가상화 운영 환경을 안정화했습니다. Brocade SAN 스위치 이관 시 Config 백업, WWN 기반 Zone 정리, 약 150건의 SAN Zoning 및 LUN·Datastore 인식 점검을 수행하며 서버-스토리지 연동 및 가상화 인프라 운영 역량을 확보했습니다.',
     techStack: ['VMware vSphere', 'RHEL', 'Brocade SAN', 'Storage', 'Datastore', 'LUN'],
-    visuals: [
-      { title: 'VM Build', description: 'vSphere · RHEL · Initial Config' },
-      { title: 'SAN Zoning', description: 'Brocade · WWN · Zone Config' },
-      { title: 'Migration Check', description: 'Datastore · LUN · Boot Status' },
-    ],
   },
   {
     title: '2022년 서울특별시데이터센터 정보자원통합 사업',
@@ -397,25 +396,23 @@ export const projects: Project[] = [
       {
         title: '가상화 서버 구축 및 스토리지 이관',
         items: [
-          '서버와 신규 스토리지 간 SAN Zoning, LUN 할당 확인, VM Datastore migration 수행',
-          'CentOS 7 기반 IP 설정과 파일시스템 등 서버 기본 환경 구성',
+          '서버와 신규 스토리지 간 SAN Zoning 작업 수행',
+          '스토리지 엔지니어와 협의하여 서버별 LUN 할당 및 인식 상태 확인',
+          '기존 VM 대상 Datastore migration 수행 및 이관 후 VM 기동 상태 점검',
+          'CentOS 7 기반 IP 설정, 파일시스템 구성 등 서버 기본 환경 구성',
         ],
       },
       {
         title: '서버 모니터링 및 관제',
         items: [
-          '70여 개 서버의 트랜잭션, 응답속도, CPU 등 운영 지표 관제/분석',
+          '공공기관 약 70여 대 서버의 트랜잭션, 응답속도, CPU 등 운영 지표 모니터링',
+          '관제 지표를 기반으로 이상 징후를 확인하고 데이터센터 서버 안정 관리 지원',
         ],
       },
     ],
     result:
       '신규 스토리지 도입에 따라 서버별 LUN 할당 확인과 VM Datastore 마이그레이션을 수행하여 기존 가상화 서버의 스토리지 이관을 안정적으로 지원했습니다. 또한 CentOS 7 기반 서버 초기 환경 구성과 공공기관 약 70여 대 서버의 CPU·트랜잭션·응답속도 모니터링을 통해 데이터센터 운영 안정화 및 장애 예방 역량을 확보했습니다.',
     techStack: ['VMware vSphere', 'RHEL', 'CentOS 7', 'SAN', 'Storage', 'Datastore'],
-    visuals: [
-      { title: 'Storage Migration', description: 'LUN · Datastore · VM' },
-      { title: 'Server Monitoring', description: 'CPU · Response · Transaction' },
-      { title: 'CentOS Setup', description: 'IP · File System · Packages' },
-    ],
   },
   {
     title: '2021년 서울특별시데이터센터 정보자원통합 사업',
@@ -431,19 +428,23 @@ export const projects: Project[] = [
       {
         title: 'Linux 기반 신규 서버 구축 및 초기 운영 환경 구성',
         items: [
-          '서버 IP, 계정 정책, 권한, 운영 Tool 등 Linux 신규 서버 기본 설정 수행',
+          'Linux 기반 신규 서버의 IP 설정, 계정 정책, 권한 설정 등 초기 운영 환경 구성',
+          '운영에 필요한 Tool 설치와 기본 설정을 수행해 서버 인수 후 운영 가능한 상태로 정리',
         ],
       },
       {
         title: '보안 취약점 조치',
         items: [
-          'KISA 보안 가이드 기준 Linux 서버 취약점 점검 및 계정/권한 조치',
+          'KISA 보안 가이드 기준 Linux 서버 취약점 점검 및 조치 수행',
+          '계정 정책, 권한 설정, 불필요 설정 점검 등 서버 운영 기준 정비 지원',
         ],
       },
       {
         title: '데이터센터 노후 랙 교체 및 신규 랙 이전 작업',
         items: [
-          '서버, 스토리지, 스위치 재배치와 케이블 포설, 라벨링 등 물리 인프라 운영 지원',
+          '서버, 스토리지, 스위치 등 주요 장비 재배치 작업 지원',
+          '신규 서버 및 스위치 연결을 위한 케이블 포설 작업 수행',
+          '장비 위치, 포트 연결, 케이블 라벨링 등 물리 인프라 운영 지원',
         ],
       },
     ],
@@ -465,8 +466,10 @@ export const projects: Project[] = [
       {
         title: '보안 솔루션 구축 및 사용자 환경 지원',
         items: [
-          'Windows Active Directory 도메인 연동과 NAC/DRM 보안 솔루션 설치 점검',
-          '사용자 PC 환경 설정, 장애 접수 처리, 망분리 단말 보안 정책 적용 지원',
+          'Windows PC 설치 및 Active Directory 도메인 연동 작업 수행',
+          'NAC, DRM 등 보안 솔루션 설치 및 정상 동작 여부 점검',
+          '사용자 PC 환경 설정, 장애 접수 및 처리 등 헬프데스크 업무 수행',
+          '망분리 환경 내 사용자 단말 보안 정책 적용 및 운영 지원',
         ],
       },
     ],
