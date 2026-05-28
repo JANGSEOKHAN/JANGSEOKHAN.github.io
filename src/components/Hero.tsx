@@ -82,7 +82,7 @@ export default function Hero() {
               <p className="inline-flex max-w-full rounded-full border border-signal-cyan/20 bg-sky-50 px-3 py-2 text-xs font-bold text-signal-cyan sm:px-4 sm:text-sm">
                 {profile.tagLine}
               </p>
-              <h1 className="mt-5 text-4xl font-extrabold text-slate-950 sm:mt-6 sm:text-6xl lg:text-7xl">{profile.nameKo}</h1>
+              <h1 className="mt-5 text-4xl font-extrabold text-slate-950 sm:mt-6 sm:text-5xl lg:text-6xl">{profile.nameKo}</h1>
               <p className="mt-4 break-words text-xl font-bold text-slate-800 sm:mt-5 sm:text-3xl">{profile.role}</p>
               <p className="mt-4 max-w-3xl break-all text-base leading-7 text-slate-600 sm:mt-5 sm:text-lg sm:leading-8">{profile.headline}</p>
 
