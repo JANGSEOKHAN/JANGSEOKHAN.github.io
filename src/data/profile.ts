@@ -262,10 +262,10 @@ export const projects: Project[] = [
         alt: '디지털 트윈 서비스 데이터 파이프라인 운영 구조',
       },
       {
-        title: 'CI/CD 전환 구조',
+        title: 'SFTP를 CI/CD 자동화 배포로 전환',
         description: '작업자 PC/SFTP 수동 배포를 PlasticSCM commit, Jenkins build, 배포 서버 자동 배포 흐름으로 전환',
         imageUrl: 'projects/dmf/cicd-transition.png',
-        alt: 'SFTP 방식에서 CI/CD 방식으로 전환한 배포 구조',
+        alt: 'SFTP 수동 배포를 CI/CD 자동화 배포로 전환',
       },
       {
         title: '엑셈원 모니터링 / Kubernetes 컨테이너 관리',
