@@ -247,29 +247,29 @@ export const projects: Project[] = [
       '디지털 트윈 서비스 SFTP 수작업 배포를 CI/CD로 전환하여 2GB 기준 배포 시간을 30분 이상에서 약 5분으로 단축했습니다. MSA 운영 환경에서 디지털트윈 Backend Pod, ConfigMap/Secret, PVC 및 데이터 파이프라인 상태를 점검하고 해외 23개 법인의 운영 로그 확인 체계를 구축하여 디지털트윈 서비스 안정화에 기여했습니다.',
     techStack: ['Linux', 'Kubernetes', 'Docker', 'Kafka', 'MongoDB', 'Jenkins', 'PlasticSCM', 'GitHub', 'Ceph', 'Nginx', 'HAProxy'],
     visualNote:
-      '디지털 트윈 서비스 화면과 엑셈원 모니터링 이미지는 공식 홈페이지/브로셔 제공 자료를 활용했고, 아키텍처는 직접 설계한 자료입니다.',
+      '디지털 트윈 서비스 화면과 엑셈원 모니터링 이미지는 공식 홈페이지/브로셔 제공 자료를 활용했고, 아키텍처는 직접 설계했습니다.',
     visuals: [
       {
         title: '디지털 트윈 서비스 화면',
-        description: '제조 라인의 설비 상태, KPI, 가동률 등 운영 지표를 3D 디지털 트윈 화면에서 확인하는 서비스 화면',
+        description: '제조 라인의 설비 상태, KPI, 가동률 등 운영 지표를 3D 디지털 트윈 환경에서 확인하며 운영 상태 점검',
         imageUrl: 'projects/dmf/digital-twin-service.png',
         alt: '디지털 트윈 서비스 운영 화면',
       },
       {
         title: '데이터 파이프라인 운영',
-        description: 'MES/AGV/PLC Edge Data를 Producer, Kafka Broker, Consumer, Redis/MongoDB 저장소로 연결한 데이터 수집/처리 구조',
+        description: 'MES/AGV/PLC Edge Data를 Producer, Kafka Broker, Consumer, Redis/MongoDB 저장소로 연결해 데이터 수집/처리 흐름 구성',
         imageUrl: 'projects/dmf/data-pipeline.png',
         alt: '디지털 트윈 서비스 데이터 파이프라인 운영 구조',
       },
       {
         title: 'CI/CD 전환 구조',
-        description: '작업자 PC/SFTP 수동 배포 흐름을 PlasticSCM commit, Jenkins build, 배포 서버 자동 배포 구조로 개선한 전환 자료',
+        description: '작업자 PC/SFTP 수동 배포를 PlasticSCM commit, Jenkins build, 배포 서버 자동 배포 흐름으로 전환',
         imageUrl: 'projects/dmf/cicd-transition.png',
         alt: 'SFTP 방식에서 CI/CD 방식으로 전환한 배포 구조',
       },
       {
         title: '엑셈원 모니터링 / Kubernetes 컨테이너 관리',
-        description: 'Kubernetes Pod/Container와 Kafka, DBMS 상태를 모니터링해 디지털 트윈 서비스 운영 상태를 점검하는 화면',
+        description: 'Kubernetes Pod/Container와 Kafka, DBMS 상태를 모니터링하며 디지털 트윈 서비스 운영 상태 점검',
         imageUrl: 'projects/dmf/k8s-monitoring.png',
         alt: '디지털 트윈 서비스 Kubernetes 컨테이너 관리 및 모니터링 화면',
       },
@@ -335,17 +335,17 @@ export const projects: Project[] = [
       '제조 장비 PDF 매뉴얼을 OCR 기반 Markdown 구조로 변환하고, 청크·메타데이터·임베딩 자동화를 통해 QdrantDB 기반 지식베이스를 구축했습니다. 메타데이터 필터링, 유사도 검색, Qwen3-VL 검증, Redis 세션 저장을 적용해 텍스트/이미지 기반 멀티턴 RAG 챗봇 PoC에 기여했으며, 비정형 문서를 AI 서비스용 데이터 자산으로 전환하는 경험을 쌓았습니다.',
     techStack: ['Python', 'FastAPI', 'QdrantDB', 'RAG', 'Docker', 'LLM', 'CUDA', 'ReactAgent', 'VLLM', 'LangChain', 'Dify', 'Redis'],
     visualNote:
-      'RAG 데이터 파이프라인 아키텍처와 Dify 챗봇 워크플로우는 직접 설계한 자료이며, 챗봇 화면은 제조 장비 매뉴얼 RAG PoC 시연 화면입니다.',
+      'RAG 데이터 파이프라인 아키텍처와 Dify 챗봇 워크플로우는 직접 설계했으며, 챗봇은 제조 장비 매뉴얼 기반 RAG 응답 검증 과정입니다.',
     visuals: [
       {
         title: 'RAG 데이터 파이프라인 아키텍처',
-        description: 'PDF 매뉴얼을 OCR/Markdown으로 구조화하고 Qdrant Vector Store와 FastAPI/LLM 응답까지 연결한 RAG 아키텍처',
+        description: 'PDF 매뉴얼을 OCR/Markdown으로 변환하고 Qdrant Vector Store와 FastAPI/LLM 응답까지 이어지는 RAG 흐름 구성',
         imageUrl: 'projects/rag/rag-architecture.png',
         alt: '제조 장비 매뉴얼 RAG 데이터 파이프라인 아키텍처',
       },
       {
         title: '제조 장비 매뉴얼 RAG 챗봇 화면',
-        description: '제조 장비 매뉴얼 기반 질의에 대해 검색된 근거와 답변을 확인하는 RAG 챗봇 PoC 시연 화면',
+        description: '제조 장비 매뉴얼 기반 질의에 대해 검색 근거와 답변 품질을 확인하는 RAG 챗봇 PoC 수행',
         imageUrl: 'projects/rag/rag-chatbot-screen.png',
         alt: '제조 장비 매뉴얼 RAG PoC 챗봇 시연 화면',
       },
@@ -395,25 +395,25 @@ export const projects: Project[] = [
     visuals: [
       {
         title: 'SAN Zoning / WWN 구성',
-        description: '서버 HBA WWN과 스토리지 Port WWN을 매핑해 Zone 구성을 설계하고 SAN 연결 경로를 정리한 자료',
+        description: '서버 HBA WWN과 스토리지 Port WWN을 기준으로 Zone 구성 및 SAN 연결 경로 구축 수행',
         imageUrl: 'projects/datacenter/san-zoning-wwn-v2.png',
         alt: 'SAN Zoning 및 WWN 구성',
       },
       {
         title: 'vMotion 기반 스토리지 이관',
-        description: '기존 스토리지의 VM 데이터를 신규 스토리지 Datastore로 이관하며 서비스 영향도를 줄인 migration 수행 자료',
+        description: '기존 스토리지의 VM 데이터를 신규 스토리지 Datastore로 이관하며 서비스 영향도를 줄인 migration 수행',
         imageUrl: 'projects/datacenter/vmotion-storage-migration.png',
         alt: 'vMotion 기반 스토리지 이관',
       },
       {
         title: 'Datastore 인식 확인',
-        description: '이관 후 ESXi/vCenter에서 Datastore 용량, 연결 상태, 인식 여부를 확인한 점검 화면',
+        description: '이관 후 ESXi/vCenter에서 Datastore 용량, 연결 상태, 인식 여부 점검 수행',
         imageUrl: 'projects/datacenter/datastore-recognition.png',
         alt: 'VMware vSphere Datastore 인식 확인',
       },
       {
         title: '신규 vCenter Datastore VM 등록',
-        description: '신규 vCenter에서 Datastore 내 VM 파일 경로를 확인하고 VM 등록 및 기동 점검을 수행한 자료',
+        description: '신규 vCenter에서 Datastore 내 VM 파일 경로 확인, VM 등록, 기동 점검 수행',
         imageUrl: 'projects/datacenter/vm-registration-datastore.png',
         alt: '신규 vCenter Datastore VM 등록 및 데이터 마이그레이션',
       },
@@ -551,17 +551,17 @@ export const projects: Project[] = [
       '7개월간 AWS와 MSA 실무 교육을 통해 Kubernetes 기반 MSA 구조, 컨테이너 배포, CI/CD, 모니터링, AWS 인프라 설계에 대한 실무 기반을 다졌습니다. 프로젝트에서는 육아제품 추천 서비스의 데이터 수집, 리뷰 요약, 저장, 클라우드 전환까지 전체 흐름을 설계하고, 데이터 수집부터 AI 요약, 저장소 전환, EKS 배포가 연결되는 클라우드 기반 서비스 아키텍처를 구현했습니다. 이를 통해 온프레미스 Kubernetes 환경을 AWS EKS로 확장하고 VPC, IRSA, CloudFormation, DB 마이그레이션을 적용하는 Cloud Migration 및 MSA 운영 역량을 확보했습니다.',
     techStack: ['AWS', 'EKS', 'Kubernetes', 'Kafka', 'MongoDB', 'DynamoDB', 'Kubespray', 'Istio', 'CloudFormation', 'IRSA'],
     visualNote:
-      '클라우드 아키텍처, 데이터 파이프라인, 모니터링, AI OCR 지출 기능, 서비스 시연 자료를 함께 제공합니다.',
+      '클라우드 아키텍처, 데이터 파이프라인, 모니터링, AI OCR 지출 기능, 서비스 시연 흐름을 함께 제공합니다.',
     visuals: [
       {
         title: 'Cloud Architecture',
-        description: 'On-premise Kubernetes에서 AWS EKS로 확장하는 구조를 VPC, IAM/IRSA, EKS, 데이터 저장소 중심으로 설계한 아키텍처',
+        description: 'On-premise Kubernetes에서 AWS EKS로 확장하는 VPC, IAM/IRSA, EKS, 데이터 저장소 중심 아키텍처 설계',
         imageUrl: 'projects/aws-finalproject/cloud-architecture.png',
         alt: '육아제품 추천 및 가계부 서비스 클라우드 아키텍처',
       },
       {
         title: '크롤링 데이터 파이프라인',
-        description: '육아제품/리뷰 데이터를 수집해 Kafka Producer와 Topic으로 전달하고 AI 요약 및 저장소 연계를 준비하는 데이터 수집 구조',
+        description: '육아제품/리뷰 데이터를 수집해 Kafka Producer와 Topic으로 전달하고 AI 요약 및 저장소 연계 흐름 구성',
         imageUrl: 'projects/aws-finalproject/crawling-data-pipeline.png',
         alt: '육아제품 추천 서비스 크롤링 데이터 파이프라인 구조',
       },
@@ -573,7 +573,7 @@ export const projects: Project[] = [
       },
       {
         title: 'Monitoring',
-        description: 'Kiali와 LGTM 계열 도구로 서비스 메트릭, API 흐름, 로그를 확인하며 운영 상태를 점검하는 시연 영상',
+        description: 'Kiali와 LGTM 계열 도구로 서비스 메트릭, API 흐름, 로그를 확인하며 운영 상태 점검',
         videoUrl: 'projects/aws-finalproject/monitoring-demo.mp4',
         alt: 'AWS Cloud School 프로젝트 모니터링 시연 영상',
       },
@@ -585,7 +585,7 @@ export const projects: Project[] = [
       },
       {
         title: '서비스 시연',
-        description: '육아제품 추천, 가계부, 영수증 OCR 등 사용자 기능과 AI 요약/추천 흐름을 확인하는 서비스 시연 영상',
+        description: '육아제품 추천, 가계부, 영수증 OCR 등 사용자 기능과 AI 요약/추천 흐름 검증',
         videoUrl: 'projects/aws-finalproject/service-demo.mp4',
         alt: '육아제품 추천 및 가계부 서비스 시연 영상',
       },
