@@ -8,7 +8,6 @@ export default function About() {
         <SectionTitle
           eyebrow="About"
           title="About Me"
-          description="'운영 경험'을 바탕으로 자동화와 안정성을 함께 고민하는 Infrastructure / DevOps Engineer입니다."
           watermark="About"
         />
         <div className="mt-7 grid gap-4 sm:mt-8 lg:grid-cols-3">

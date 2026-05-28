@@ -73,7 +73,7 @@ export const profile = {
   nameEn: 'Seokhan Jang',
   role: 'Infrastructure / DevOps Engineer',
   headline:
-    'Kubernetes 기반 운영 환경, CI/CD 자동화, Kafka 데이터 파이프라인, AI 인프라 구축 경험을 바탕으로 안정적인 서비스 운영 구조를 만드는 엔지니어입니다.',
+    '온프레미스 구축부터 MSA 운영, AI 인프라까지 경험을 확장하며 새로운 기술을 탐구하고 이를 서비스 안정화와 운영 고도화로 연결하는 엔지니어입니다.',
   tagLine: 'Infrastructure / DevOps / Cloud / AI Infra',
   photoUrl: 'profile-photo.jpg',
   githubUrl: 'https://github.com/JANGSEOKHAN',
