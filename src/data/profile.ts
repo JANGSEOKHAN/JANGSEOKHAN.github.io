@@ -210,7 +210,7 @@ export const projects: Project[] = [
     mainRole: 'DevOps 운영 파트',
     role: 'Linux 서버/스토리지 운영, CI/CD 구축/운영, Kubernetes MSA 운영, Kafka 클러스터 운영 및 보안 고도화',
     overview:
-      '제조 DX 환경에서 디지털 트윈 솔루션의 서버, 배포, 컨테이너, Kafka 데이터 파이프라인을 운영하며 수동 배포를 자동화 가능한 구조로 전환했습니다.',
+      '제조 DX 환경에서 디지털 트윈 솔루션 서버, 배포, 컨테이너, Kafka 데이터 파이프라인을 운영하고 SFTP 수동 배포를 CI/CD 자동화 배포 구조로 전환',
     publicNote: '공개 포트폴리오용으로 고객사명과 내부 시스템명은 익명화했습니다.',
     highlights: ['2GB 기준 배포 시간 30분 이상 → 약 5분', '해외 23개 법인 운영 점검', 'Kafka 64개 Broker 운영/업그레이드'],
     detailSections: [
@@ -270,7 +270,8 @@ export const projects: Project[] = [
       },
       {
         title: '엑셈원 모니터링 / Kubernetes 컨테이너 관리',
-        description: '디지털 트윈 기반 K8s 클러스터 리소스와 Kafka, DBMS 상태를 함께 모니터링해 장애 징후와 리소스 이상 여부를 조기에 확인하여 시스템 안정화',
+        description:
+          '디지털 트윈 기반 K8s 클러스터 리소스와 Kafka, DBMS 상태를 함께 모니터링해 장애 징후와 리소스 이상 여부를 조기에 확인하여 시스템 안정화. (사진은 엑셈원 브로셔 제공 자료)',
         imageUrl: 'projects/dmf/k8s-monitoring.png',
         alt: '디지털 트윈 서비스 Kubernetes 컨테이너 관리 및 모니터링 수행',
       },
@@ -283,7 +284,7 @@ export const projects: Project[] = [
     mainRole: 'AI 인프라 구축 담당',
     role: 'GPU 서버 운영, vLLM 로컬 서빙, Neo4j 기반 API 메타데이터 Graph DB 및 MCP 연계 흐름 구축',
     overview:
-      '제조 설비와 API 메타데이터를 활용하는 업무형 챗봇 PoC에서 GPU 서버와 로컬 LLM 서빙 환경, API 관계 조회 흐름을 구성했습니다.',
+      '제조 설비와 API 메타데이터를 활용한 업무형 챗봇 PoC에서 GPU 서버, 로컬 LLM 서빙 환경, API 관계 조회 흐름 구성',
     publicNote: '사업장명과 내부 API 명칭은 공개용으로 익명화했습니다.',
     highlights: ['H100 GPU 서버 기반 PoC', 'Ollama → VLLM 전환', 'Neo4j + MCP 기반 API 응답 흐름 구성'],
     detailSections: [
@@ -316,7 +317,7 @@ export const projects: Project[] = [
     mainRole: 'RAG 구축 개발/인프라 담당',
     role: '문서 OCR/Markdown 변환, QdrantDB 기반 하이브리드 검색, VLLM/LLM 검증, 멀티턴 챗봇 구성',
     overview:
-      '제조 장비 매뉴얼과 비정형 데이터를 검색 가능한 지식 베이스로 구성하고, 검색/검증/대화 흐름을 갖춘 RAG PoC를 구축했습니다.',
+      '제조 장비 매뉴얼과 비정형 데이터를 검색 가능한 지식 베이스로 구성하고 검색, 검증, 대화 흐름을 갖춘 RAG PoC 구축',
     publicNote: '제조 장비명과 원본 매뉴얼 세부 정보는 공개하지 않았습니다.',
     highlights: ['Dify RAG 자동화 파이프라인', 'QdrantDB hybrid search', 'Qwen3-VL 기반 답변 검증'],
     detailSections: [
@@ -381,7 +382,7 @@ export const projects: Project[] = [
     mainRole: '서버/스토리지 지원',
     role: 'VMware vSphere 기반 VM 구축/이관, RHEL 서버 초기 구성, SAN Switch Zoning 및 Datastore 인식 점검',
     overview:
-      '서울특별시데이터센터 환경에서 가상화 서버 구축과 SAN 스위치 이관, Datastore migration을 지원했습니다.',
+      '서울특별시데이터센터 환경에서 가상화 서버 구축, SAN 스위치 이관, Datastore migration 지원',
     publicNote: '공공기관명과 상세 시스템명은 공개용으로 익명화했습니다.',
     highlights: ['SAN Zoning 약 150건', 'VM Datastore migration', 'RHEL 보안 취약점 조치'],
     detailSections: [
@@ -440,7 +441,7 @@ export const projects: Project[] = [
     mainRole: '서버/스토리지 지원',
     role: '가상화 서버 구축, 스토리지 이관, SAN Zoning, Datastore migration, 서버 관제',
     overview:
-      '스토리지 이관과 가상화 서버 운영 지원을 담당하며 서버와 신규 스토리지 간 연결 상태를 확인했습니다.',
+      '스토리지 이관과 가상화 서버 운영을 지원하고 서버와 신규 스토리지 간 연결 상태 확인',
     publicNote: '공공기관명과 상세 시스템명은 공개용으로 익명화했습니다.',
     highlights: ['SAN Zoning 작업', 'VM Datastore migration', '70여 개 서버 모니터링'],
     detailSections: [
@@ -473,7 +474,7 @@ export const projects: Project[] = [
     mainRole: '기반 시설 관리 및 서버 지원',
     role: 'Linux 신규 서버 구축, 보안 취약점 조치, 데이터센터 랙 교체 및 물리 인프라 운영 지원',
     overview:
-      '데이터센터 기반 시설 관리와 Linux 서버 초기 구성, 보안 취약점 조치, 물리 장비 재배치 작업을 지원했습니다.',
+      '데이터센터 기반 시설 관리, Linux 서버 초기 구성, 보안 취약점 조치, 물리 장비 재배치 지원',
     publicNote: '공공기관명과 상세 시스템명은 공개용으로 익명화했습니다.',
     highlights: ['Linux 신규 서버 초기 구성', 'KISA 보안 가이드 기반 조치', '랙 교체 및 케이블링 지원'],
     detailSections: [
@@ -511,7 +512,7 @@ export const projects: Project[] = [
     mainRole: 'Windows PC 설치 및 Active Directory 연동',
     role: 'Windows 단말 구성, AD 도메인 연동, NAC/DRM 보안 솔루션 설치 및 운영 지원',
     overview:
-      '망분리 환경에서 사용자 단말 보안 솔루션 설치와 Active Directory 연동, 헬프데스크 업무를 지원했습니다.',
+      '망분리 환경에서 사용자 단말 보안 솔루션 설치, Active Directory 연동, 초기 운영 지원',
     publicNote: '고객사명과 내부 보안 정책 상세값은 공개용으로 익명화했습니다.',
     highlights: ['Active Directory 도메인 연동', 'NAC/DRM 설치 점검', '사용자 단말 보안 정책 적용 지원'],
     detailSections: [
@@ -536,7 +537,7 @@ export const projects: Project[] = [
     mainRole: 'Ops, EKS 인프라 구축, Architecture 설계, 팀장',
     role: 'On-premise Kubernetes 3-Tier 구성, AWS EKS 아키텍처 설계, 데이터 파이프라인 및 비용 관리',
     overview:
-      '아기 정보를 기반으로 육아제품을 추천하고 지출을 관리하는 서비스를 Cloud Native 환경으로 설계/구축한 교육 프로젝트입니다.',
+      '아기 정보 기반 육아제품 추천과 지출 관리 서비스를 Cloud Native 환경으로 설계/구축한 교육 프로젝트',
     highlights: ['Kafka 기반 크롤링 데이터 파이프라인', 'Kubespray 기반 Kubernetes 3-Tier', 'EKS/CloudFormation/IRSA 기반 Cloud Migration'],
     detailSections: [
       {
