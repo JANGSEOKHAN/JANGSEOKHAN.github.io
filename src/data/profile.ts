@@ -93,7 +93,7 @@ export const navItems: NavItem[] = [
 export const aboutParagraphs = [
   'Linux, VMware/SAN, 데이터센터 운영 경험을 기반으로 서버와 스토리지, 네트워크 연결 구조를 함께 이해하는 인프라 엔지니어입니다.',
   'Kubernetes MSA 운영, Jenkins/PlasticSCM CI/CD, Kafka 클러스터 운영을 맡으며 반복 배포와 장애 징후 확인 과정을 자동화해 왔습니다.',
-  '최근에는 H100 GPU 기반 VLLM 로컬 서빙, QdrantDB/Neo4j 기반 RAG PoC를 수행하며 DevOps 경험을 AI Infra 영역으로 확장하고 있습니다.',
+  '최근에는 H100 GPU 기반 vLLM 로컬 서빙, QdrantDB/Neo4j 기반 RAG PoC를 수행하며 DevOps 경험을 AI Infra 영역으로 확장하고 있으며, 사내 DGX Spark 클러스터 환경을 활용한 메타넷 디지털 트윈 AI 내재화 구축에 기여하고 있습니다.',
 ];
 
 export const proofPoints: ProofPoint[] = [
