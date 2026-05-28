@@ -577,6 +577,12 @@ export const projects: Project[] = [
         alt: '육아제품 추천 서비스 크롤링 데이터 파이프라인 구조',
       },
       {
+        title: '영수증 OCR 지출 기능',
+        description: 'AI OCR로 영수증 항목과 금액을 추출하고 지출 카테고리/내역 등록으로 연결하는 가계부 자동화 기능',
+        imageUrl: 'projects/aws-finalproject/receipt-ocr-expense.png',
+        alt: '영수증 OCR 지출 기능 화면',
+      },
+      {
         title: 'Data Pipeline',
         description: 'Python 크롤링 데이터를 Kafka Topic으로 전달하고 Bedrock 기반 AI 리뷰 요약, MongoDB/DynamoDB 저장소로 연결한 데이터 흐름',
         videoUrl: 'projects/aws-finalproject/data-pipeline-demo.mp4',
@@ -587,12 +593,6 @@ export const projects: Project[] = [
         description: 'Kiali와 LGTM 계열 도구로 서비스 메트릭, API 흐름, 로그를 확인하며 운영 상태 점검',
         videoUrl: 'projects/aws-finalproject/monitoring-demo.mp4',
         alt: 'AWS Cloud School 프로젝트 모니터링 시연 영상',
-      },
-      {
-        title: '영수증 OCR 지출 기능',
-        description: 'AI OCR로 영수증 항목과 금액을 추출하고 지출 카테고리/내역 등록으로 연결하는 가계부 자동화 기능',
-        imageUrl: 'projects/aws-finalproject/receipt-ocr-expense.png',
-        alt: '영수증 OCR 지출 기능 화면',
       },
       {
         title: '서비스 시연',
