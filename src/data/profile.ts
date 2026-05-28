@@ -280,9 +280,9 @@ export const projects: Project[] = [
     company: '메타넷디지털 주식회사',
     period: '2025.12.15 ~ 2026.01.24',
     mainRole: 'AI 인프라 구축 담당',
-    role: 'GPU 서버 운영, VLLM 로컬 서빙 환경 구성, API 메타데이터 Graph DB 및 MCP 연계 흐름 구축',
+    role: 'GPU 서버 운영, vLLM 로컬 서빙, Neo4j 기반 API 메타데이터 Graph DB 및 MCP 연계 흐름 구축',
     overview:
-      '제조 설비와 API 메타데이터를 활용하는 업무형 챗봇 PoC에서 GPU 서버와 로컬 LLM 서빙 환경을 구성했습니다.',
+      '제조 설비와 API 메타데이터를 활용하는 업무형 챗봇 PoC에서 GPU 서버와 로컬 LLM 서빙 환경, API 관계 조회 흐름을 구성했습니다.',
     publicNote: '사업장명과 내부 API 명칭은 공개용으로 익명화했습니다.',
     highlights: ['H100 GPU 서버 기반 PoC', 'Ollama → VLLM 전환', 'Neo4j + MCP 기반 API 응답 흐름 구성'],
     detailSections: [
@@ -294,10 +294,28 @@ export const projects: Project[] = [
           'Neo4j Graph DB와 MCP 서버를 연계해 API 메타데이터 기반 답변 흐름 구성',
         ],
       },
+      {
+        title: 'Neo4j Graph DB 기반 API 메타데이터 연계',
+        items: [
+          '단순 문서 검색으로 파악하기 어려운 유사 API, 선행/후속 API, 의존 관계를 Graph DB로 모델링',
+          'API 메타데이터, 호출 관계, 카테고리, 사용 목적을 Neo4j 노드와 관계로 저장',
+          'MCP 서버와 연계해 LLM이 질의 목적에 맞는 API 흐름을 조회하고 답변 생성',
+        ],
+      },
     ],
     result:
-      'H100 GPU 서버에 CUDA와 vLLM 기반 로컬 LLM 서빙 환경을 구축하고, Qwen3 72B 모델을 안정적으로 구동할 수 있도록 구성했습니다. 기존 Ollama 환경을 vLLM으로 전환하고 tensor parallel 및 토큰 설정을 최적화하여 답변 속도를 개선했으며, Neo4j 기반 API 메타데이터와 MCP 서버 연동 로직을 적용해 설비 질문 시 필요한 API 값을 추출·응답하는 업무형 디지털트윈 챗봇 환경을 구현했습니다.',
+      'H100 GPU 서버에 CUDA와 vLLM 기반 로컬 LLM 서빙 환경을 구축하고, Qwen3 72B 모델을 안정적으로 구동할 수 있도록 구성했습니다. 기존 Ollama 환경을 vLLM으로 전환하고 tensor parallel 및 토큰 설정을 최적화하여 답변 속도를 개선했으며, Neo4j 기반 API 메타데이터와 MCP 서버 연동 로직을 적용해 설비 질문 시 필요한 API 흐름과 값을 추출·응답하는 업무형 디지털트윈 챗봇 환경을 구현했습니다.',
     techStack: ['Python', 'FastAPI', 'Docker', 'VLLM', 'CUDA', 'ReactAgent', 'Neo4j', 'MCP', 'Hugging Face'],
+    visualNote:
+      'Neo4j 화면은 PoC 테스트 환경에서 API 메타데이터 관계 모델링을 설명하기 위해 재구성한 화면입니다.',
+    visuals: [
+      {
+        title: 'Neo4j API 메타데이터 Graph',
+        description: 'API 메타데이터를 노드와 관계로 모델링해 유사 API, 선행/후속 API, 의존 관계를 LLM이 문맥에 맞게 조회할 수 있도록 구성',
+        imageUrl: 'projects/chatbot/neo4j-api-graph.png',
+        alt: 'Neo4j Graph DB 기반 API 메타데이터 관계 모델링',
+      },
+    ],
   },
   {
     title: '삼성 SMD 제조 장비 자산화 RAG 구축 POC',
