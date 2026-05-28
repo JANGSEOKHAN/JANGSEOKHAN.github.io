@@ -269,10 +269,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className="mt-4 grid gap-3 lg:grid-cols-2">
           {project.detailSections.map((section) => (
             <div key={section.title} className="rounded-md border border-slate-200 bg-white p-3 shadow-sm">
-              <p className="text-sm font-bold text-slate-950 sm:text-base">{section.title}</p>
+              <p className="break-keep text-sm font-bold leading-6 text-slate-950 sm:text-base sm:leading-7">{section.title}</p>
               <ul className="mt-2 space-y-1.5">
                 {section.items.map((item) => (
-                  <li key={item} className="text-sm leading-6 text-slate-600">
+                  <li key={item} className="break-keep text-sm leading-6 text-slate-600 sm:leading-7">
                     {item}
                   </li>
                 ))}
