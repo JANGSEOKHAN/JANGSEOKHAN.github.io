@@ -10,14 +10,14 @@ const visualSlots = [
   {
     key: 'architecture',
     title: 'Architecture',
-    description: 'CI/CD · Kubernetes',
+    description: 'CI/CD / Kubernetes',
     type: 'placeholder',
     icon: Workflow,
   },
   {
     key: 'operations',
     title: 'Operations',
-    description: 'Kafka · AI Infra',
+    description: 'Kafka / AI Infra',
     type: 'placeholder',
     icon: Server,
   },

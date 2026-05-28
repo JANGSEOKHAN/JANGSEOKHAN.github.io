@@ -74,7 +74,7 @@ export const profile = {
   role: 'Infrastructure / DevOps Engineer',
   headline:
     'Kubernetes 기반 운영 환경, CI/CD 자동화, Kafka 데이터 파이프라인, AI 인프라 구축 경험을 바탕으로 안정적인 서비스 운영 구조를 만드는 엔지니어입니다.',
-  tagLine: 'Infrastructure · DevOps · Cloud · AI Infra',
+  tagLine: 'Infrastructure / DevOps / Cloud / AI Infra',
   photoUrl: 'profile-photo.jpg',
   githubUrl: 'https://github.com/JANGSEOKHAN',
   linkedinUrl: 'https://www.linkedin.com/in/your-linkedin-id',
@@ -206,7 +206,7 @@ export const projects: Project[] = [
   {
     title: '삼성전자 DX MES 디지털 트윈 운영 사업',
     company: '메타넷디지털 주식회사',
-    period: '2025.04 ~ 2026.05 · 진행중',
+    period: '2025.04 ~ 2026.05, 진행중',
     mainRole: 'DevOps 운영 파트',
     role: 'Linux 서버/스토리지 운영, CI/CD 구축/운영, Kubernetes MSA 운영, Kafka 클러스터 운영 및 보안 고도화',
     overview:
@@ -304,7 +304,7 @@ export const projects: Project[] = [
       },
     ],
     result:
-      'H100 GPU 서버에 CUDA와 vLLM 기반 로컬 LLM 서빙 환경을 구축하고, Qwen3 72B 모델을 안정적으로 구동할 수 있도록 구성했습니다. 기존 Ollama 환경을 vLLM으로 전환하고 tensor parallel 및 토큰 설정을 최적화하여 답변 속도를 개선했으며, Neo4j 기반 API 메타데이터와 MCP 서버 연동 로직을 적용해 설비 질문 시 필요한 API 흐름과 값을 추출·응답하는 업무형 디지털트윈 챗봇 환경을 구현했습니다.',
+      'H100 GPU 서버에 CUDA와 vLLM 기반 로컬 LLM 서빙 환경을 구축하고, Qwen3 72B 모델을 안정적으로 구동할 수 있도록 구성했습니다. 기존 Ollama 환경을 vLLM으로 전환하고 tensor parallel 및 토큰 설정을 최적화하여 답변 속도를 개선했으며, Neo4j 기반 API 메타데이터와 MCP 서버 연동 로직을 적용해 설비 질문 시 필요한 API 흐름과 값을 추출하고 응답하는 업무형 디지털트윈 챗봇 환경을 구현했습니다.',
     techStack: ['Python', 'FastAPI', 'Docker', 'VLLM', 'CUDA', 'ReactAgent', 'Neo4j', 'MCP', 'Hugging Face'],
     visualNote:
       'Neo4j 화면은 PoC 테스트 환경에서 API 메타데이터 관계 모델링을 설명하기 위해 재구성한 화면입니다.',
@@ -350,7 +350,7 @@ export const projects: Project[] = [
       },
     ],
     result:
-      '제조 장비 PDF 매뉴얼을 OCR 기반 Markdown 구조로 변환하고, 청크·메타데이터·임베딩 자동화를 통해 QdrantDB 기반 지식베이스를 구축했습니다. 메타데이터 필터링, 유사도 검색, Qwen3-VL 검증, Redis 세션 저장을 적용해 텍스트/이미지 기반 멀티턴 RAG 챗봇 PoC에 기여했으며, 비정형 문서를 AI 서비스용 데이터 자산으로 전환하는 경험을 쌓았습니다.',
+      '제조 장비 PDF 매뉴얼을 OCR 기반 Markdown 구조로 변환하고, 청크, 메타데이터, 임베딩 자동화를 통해 QdrantDB 기반 지식베이스를 구축했습니다. 메타데이터 필터링, 유사도 검색, Qwen3-VL 검증, Redis 세션 저장을 적용해 텍스트/이미지 기반 멀티턴 RAG 챗봇 PoC에 기여했으며, 비정형 문서를 AI 서비스용 데이터 자산으로 전환하는 경험을 쌓았습니다.',
     techStack: ['QdrantDB', 'RAG', 'Docker', 'LLM', 'CUDA', 'VLLM', 'LangChain', 'Dify', 'Redis'],
     visualNote:
       'Dify는 OCR/검색/답변/검증 흐름을 빠르게 조합하고 반복 개선하기 위해 사용했고, QdrantDB는 메타데이터 필터링과 벡터 검색을 함께 적용하기 위해 구성했습니다.',
@@ -384,7 +384,7 @@ export const projects: Project[] = [
   {
     title: '2023년 서울특별시데이터센터 정보자원통합 사업',
     company: '대신정보통신',
-    period: '2023.07 ~ 2024.03 · 9개월',
+    period: '2023.07 ~ 2024.03, 9개월',
     mainRole: '서버/스토리지 지원',
     role: 'VMware vSphere 기반 VM 구축/이관, RHEL 서버 초기 구성, SAN Switch Zoning 및 Datastore 인식 점검',
     overview:
@@ -412,7 +412,7 @@ export const projects: Project[] = [
       },
     ],
     result:
-      'VMware vSphere 기반 신규 VM 구성, OS·네트워크 초기 설정, Datastore 마이그레이션 후 기동 점검을 수행하여 가상화 운영 환경을 안정화했습니다. Brocade SAN 스위치 이관 시 Config 백업, WWN 기반 Zone 정리, 약 150건의 SAN Zoning 및 LUN·Datastore 인식 점검을 수행하며 서버-스토리지 연동 및 가상화 인프라 운영 역량을 확보했습니다.',
+      'VMware vSphere 기반 신규 VM 구성, OS 및 네트워크 초기 설정, Datastore 마이그레이션 후 기동 점검까지 수행해 가상화 운영 환경을 안정화했습니다. Brocade SAN 스위치 이관 과정에서는 Config 백업, WWN 기반 Zone 정리, 약 150건의 SAN Zoning, LUN 및 Datastore 인식 점검을 담당하며 서버와 스토리지 연동 상태를 끝까지 확인했습니다.',
     techStack: ['VMware vSphere', 'RHEL', 'SAN Storage'],
     visualNote:
       '보안상 실제 시스템명, 계정, IP 등은 제거 또는 블러 처리했으며, 이관 작업 일부만 공개했습니다.',
@@ -446,7 +446,7 @@ export const projects: Project[] = [
   {
     title: '2022년 서울특별시데이터센터 정보자원통합 사업',
     company: '대신정보통신',
-    period: '2022.07 ~ 2023.03 · 9개월',
+    period: '2022.07 ~ 2023.03, 9개월',
     mainRole: '서버/스토리지 지원',
     role: '가상화 서버 구축, 스토리지 이관, SAN Zoning, Datastore migration, 서버 관제',
     overview:
@@ -473,13 +473,13 @@ export const projects: Project[] = [
       },
     ],
     result:
-      '신규 스토리지 도입에 따라 서버별 LUN 할당 확인과 VM Datastore 마이그레이션을 수행하여 기존 가상화 서버의 스토리지 이관을 안정적으로 지원했습니다. 또한 CentOS 7 기반 서버 초기 환경 구성과 공공기관 약 70여 대 서버의 CPU·트랜잭션·응답속도 모니터링을 통해 데이터센터 운영 안정화 및 장애 예방 역량을 확보했습니다.',
+      '신규 스토리지 도입 과정에서 서버별 LUN 할당 확인과 VM Datastore 마이그레이션을 수행해 기존 가상화 서버의 스토리지 이관을 안정적으로 지원했습니다. CentOS 7 서버 초기 구성과 공공기관 약 70여 대 서버의 CPU, 트랜잭션, 응답속도 모니터링을 병행하며 데이터센터 운영 안정화와 장애 예방에 기여했습니다.',
     techStack: ['VMware vSphere', 'RHEL', 'CentOS 7', 'SAN Storage'],
   },
   {
     title: '2021년 서울특별시데이터센터 정보자원통합 사업',
     company: '대신정보통신',
-    period: '2021.07 ~ 2022.05 · 11개월',
+    period: '2021.07 ~ 2022.05, 11개월',
     mainRole: '기반 시설 관리 및 서버 지원',
     role: 'Linux 신규 서버 구축, 보안 취약점 조치, 데이터센터 랙 교체 및 물리 인프라 운영 지원',
     overview:
@@ -511,7 +511,7 @@ export const projects: Project[] = [
       },
     ],
     result:
-      'Linux 기반 신규 서버의 IP, 계정 정책, 권한 설정 등 초기 운영 환경을 구성하고 KISA 보안 가이드 기반 취약점 조치를 수행하여 서버 운영 기준을 정비했습니다. 또한 노후 랙 교체, 장비 재배치, 케이블 포설 및 라벨링 작업을 통해 데이터센터 물리 인프라 운영과 하드웨어 구축 지원 역량을 확보했습니다.',
+      'Linux 기반 신규 서버의 IP, 계정 정책, 권한 설정 등 초기 운영 환경을 구성하고 KISA 보안 가이드 기반 취약점 조치로 서버 운영 기준을 정비했습니다. 노후 랙 교체, 장비 재배치, 케이블 포설 및 라벨링 작업도 함께 수행하며 데이터센터 물리 인프라 운영을 지원했습니다.',
     techStack: ['RHEL', 'Linux', 'Data Center', 'Rack', 'Cabling', 'Security'],
   },
   {
@@ -536,14 +536,14 @@ export const projects: Project[] = [
       },
     ],
     result:
-      'Windows PC 설치와 Active Directory 도메인 연동, NAC·DRM 보안 솔루션 설치 및 점검을 수행하여 망분리 환경의 단말 보안 정책 적용을 지원했습니다. 사용자 PC 환경 설정과 헬프데스크 대응을 통해 Windows 기반 사용자 지원 및 보안 솔루션 운영 경험을 확보했습니다.',
+      'Windows PC 설치와 Active Directory 도메인 연동, NAC/DRM 보안 솔루션 설치 및 점검을 수행해 망분리 환경의 단말 보안 정책 적용을 지원했습니다. 사용자 PC 환경 설정과 장애 접수 대응까지 맡아 초기 운영 안정화에 기여했습니다.',
     techStack: ['Windows', 'Active Directory', 'NAC', 'DRM'],
   },
   {
     title: '육아제품 추천 및 가계부 서비스',
     company: 'AWS Cloud School',
     period: '2025.01.17 ~ 2025.03.25',
-    mainRole: 'Ops · EKS 인프라 구축 · Architecture 설계 · 팀장',
+    mainRole: 'Ops, EKS 인프라 구축, Architecture 설계, 팀장',
     role: 'On-premise Kubernetes 3-Tier 구성, AWS EKS 아키텍처 설계, 데이터 파이프라인 및 비용 관리',
     overview:
       '아기 정보를 기반으로 육아제품을 추천하고 지출을 관리하는 서비스를 Cloud Native 환경으로 설계/구축한 교육 프로젝트입니다.',
@@ -572,7 +572,7 @@ export const projects: Project[] = [
       },
     ],
     result:
-      '7개월간 AWS와 MSA 실무 교육을 통해 Kubernetes 기반 MSA 구조, 컨테이너 배포, CI/CD, 모니터링, AWS 인프라 설계에 대한 실무 기반을 다졌습니다. 프로젝트에서는 육아제품 추천 서비스의 데이터 수집, 리뷰 요약, 저장, 클라우드 전환까지 전체 흐름을 설계하고, 데이터 수집부터 AI 요약, 저장소 전환, EKS 배포가 연결되는 클라우드 기반 서비스 아키텍처를 구현했습니다. 이를 통해 온프레미스 Kubernetes 환경을 AWS EKS로 확장하고 VPC, IRSA, CloudFormation, DB 마이그레이션을 적용하는 Cloud Migration 및 MSA 운영 역량을 확보했습니다.',
+      '7개월간 AWS와 MSA 실무 교육을 통해 Kubernetes 기반 MSA 구조, 컨테이너 배포, CI/CD, 모니터링, AWS 인프라 설계에 대한 실무 기반을 다졌습니다. 프로젝트에서는 육아제품 추천 서비스의 데이터 수집, 리뷰 요약, 저장, 클라우드 전환까지 전체 흐름을 설계하고, 데이터 수집부터 AI 요약, 저장소 전환, EKS 배포가 연결되는 클라우드 기반 서비스 아키텍처를 구현했습니다. 온프레미스 Kubernetes 환경을 AWS EKS로 확장하고 VPC, IRSA, CloudFormation, DB 마이그레이션을 적용하며 Cloud Migration과 MSA 운영 흐름을 실습했습니다.',
     techStack: ['AWS', 'EKS', 'Kubernetes', 'Kafka', 'MongoDB', 'DynamoDB', 'Kubespray', 'Istio', 'CloudFormation', 'IRSA'],
     visualNote:
       '클라우드 아키텍처, 데이터 파이프라인, 모니터링, AI OCR 지출 기능, 서비스 시연 흐름을 함께 제공합니다.',

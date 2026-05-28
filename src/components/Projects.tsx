@@ -5,7 +5,7 @@ const companyGroups = [
   {
     company: '메타넷디지털 주식회사',
     title: '메타넷디지털',
-    summary: '총 1년 2개월 · 재직중',
+    summary: '총 1년 2개월, 재직중',
     description:
       'DevOps 운영 파트에서 Linux/Kubernetes/Kafka/CI/CD 운영과 AI Infra/RAG PoC를 담당했습니다.',
   },
@@ -19,7 +19,7 @@ const companyGroups = [
   {
     company: 'AWS Cloud School',
     title: '교육 프로젝트',
-    summary: '2024.08 ~ 2025.03 · 7개월 · 1050시간',
+    summary: '2024.08 ~ 2025.03, 7개월, 1050시간',
     description:
       'Amazon AWS & MSA 환경 실무 교육에서 Kubernetes 자동화 배포, Private Registry 운영, GitLab CI/CD를 실습했습니다.\nAWS 아키텍처 설계와 Prometheus/Grafana/Loki 기반 모니터링 환경 구축까지 다뤘습니다.',
     topics: [

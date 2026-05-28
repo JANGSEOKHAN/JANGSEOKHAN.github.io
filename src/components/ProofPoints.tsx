@@ -2,7 +2,7 @@ const proofStories = [
   {
     kicker: 'Platform Operations',
     value: '4년 7개월+',
-    title: '서버·스토리지 기반에서 MSA 플랫폼 운영까지',
+    title: '서버/스토리지 기반에서 MSA 플랫폼 운영까지',
     description:
       'VMware/SAN과 데이터센터 이관으로 다진 인프라 기본기를 Kubernetes MSA, Kafka, CI/CD 운영으로 확장해 왔습니다.',
     bullets: ['250개+ API Pod 운영', '200개 VM 이관 지원', '23개 해외 법인 운영 점검'],

@@ -253,7 +253,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               {activeVisual.videoUrl ? (
                 <p className="mt-2 text-xs font-semibold text-slate-400 sm:text-sm">
                   {formatMediaTime(activeVideoTime.current)} / {formatMediaTime(activeVideoTime.duration)}
-                  <span className="mx-2 text-slate-300">·</span>
+                  <span className="mx-2 text-slate-300">/</span>
                   남은 시간 {formatMediaTime(activeVideoRemaining)}
                 </p>
               ) : null}
@@ -348,7 +348,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               {modalVisual.videoUrl ? (
                 <p className="mt-2 text-xs font-semibold text-slate-400 sm:text-sm">
                   {formatMediaTime(modalVideoTime.current)} / {formatMediaTime(modalVideoTime.duration)}
-                  <span className="mx-2 text-slate-300">·</span>
+                  <span className="mx-2 text-slate-300">/</span>
                   남은 시간 {formatMediaTime(modalVideoRemaining)}
                 </p>
               ) : null}
