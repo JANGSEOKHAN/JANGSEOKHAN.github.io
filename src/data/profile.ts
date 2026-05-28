@@ -252,7 +252,7 @@ export const projects: Project[] = [
       {
         title: '디지털 트윈 서비스 화면',
         description:
-          '실제 제조 라인을 3D 가상 공장으로 표현하고 설비 상태, KPI, 가동률 등 운영 지표를 시각화하는 화면입니다. 공식 홈페이지에서 제공된 예시 이미지를 활용했습니다.',
+          '실제 제조 라인을 3D 가상 공장으로 표현하고 설비 상태, KPI, 가동률 등 운영 지표를 시각화하는 화면입니다. (메타넷 공식 홈페이지에서 제공된 예시 이미지)',
         imageUrl: 'projects/dmf/digital-twin-service.png',
         alt: '디지털 트윈 서비스 운영 화면',
       },
