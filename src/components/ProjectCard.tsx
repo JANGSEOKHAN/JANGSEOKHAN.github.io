@@ -39,6 +39,28 @@ const readVideoTime = (event: SyntheticEvent<HTMLVideoElement>): VideoTime => {
   };
 };
 
+const visualNoteHighlights = [
+  '공식 홈페이지/브로셔 제공 자료',
+  '직접 설계한 자료',
+  '보안상 실제 시스템명, 계정, IP 등은 제거 또는 블러 처리',
+];
+
+const renderVisualNote = (note: string) => {
+  const pattern = new RegExp(`(${visualNoteHighlights.map((text) => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`, 'g');
+
+  return note.split(pattern).map((part, index) => {
+    if (visualNoteHighlights.includes(part)) {
+      return (
+        <strong key={`${part}-${index}`} className="font-extrabold text-slate-800">
+          {part}
+        </strong>
+      );
+    }
+
+    return part;
+  });
+};
+
 export default function ProjectCard({ project }: ProjectCardProps) {
   const visuals = project.visuals ?? [];
   const [activeVisualIndex, setActiveVisualIndex] = useState(0);
@@ -151,7 +173,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </div>
           {project.visualNote ? (
             <p className="mb-3 rounded-md border border-slate-200 bg-white px-3 py-2 text-sm font-medium leading-6 text-slate-500">
-              {project.visualNote}
+              {renderVisualNote(project.visualNote)}
             </p>
           ) : null}
           <div className="rounded-2xl border border-slate-200 bg-slate-50 p-2 sm:p-4">
