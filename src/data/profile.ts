@@ -306,16 +306,7 @@ export const projects: Project[] = [
     result:
       'H100 GPU 서버에 CUDA와 vLLM 기반 로컬 LLM 서빙 환경을 구축하고, Qwen3 72B 모델을 안정적으로 구동할 수 있도록 구성했습니다. 기존 Ollama 환경을 vLLM으로 전환하고 tensor parallel 및 토큰 설정을 최적화하여 답변 속도를 개선했으며, Neo4j 기반 API 메타데이터와 MCP 서버 연동 로직을 적용해 설비 질문 시 필요한 API 흐름과 값을 추출하고 응답하는 업무형 디지털트윈 챗봇 환경을 구현했습니다.',
     techStack: ['Python', 'FastAPI', 'Docker', 'VLLM', 'CUDA', 'ReactAgent', 'Neo4j', 'MCP', 'Hugging Face'],
-    visualNote:
-      'Neo4j 화면은 PoC 테스트 환경에서 API 메타데이터 관계 모델링을 설명하기 위해 재구성한 화면입니다.',
-    visuals: [
-      {
-        title: 'Neo4j API 메타데이터 Graph',
-        description: 'API 메타데이터를 노드와 관계로 모델링해 유사 API, 선행/후속 API, 의존 관계를 LLM이 문맥에 맞게 조회할 수 있도록 구성',
-        imageUrl: 'projects/chatbot/neo4j-api-graph.png',
-        alt: 'Neo4j Graph DB 기반 API 메타데이터 관계 모델링',
-      },
-    ],
+    visuals: [],
   },
   {
     title: '삼성 SMD 제조 장비 자산화 RAG 구축 POC',
