@@ -656,27 +656,6 @@ export const certifications: CertificationItem[] = [
 
 export const notes: NoteItem[] = [
   {
-    title: 'Oracle Linux 업그레이드 및 Ceph 스토리지 운영 기록',
-    summary:
-      'Oracle Linux 업그레이드, Linux 기본 설정, HAProxy/Keepalived, Ceph 스토리지 구축 및 운영 흐름을 작업 기록 형태로 정리했습니다.',
-    status: 'GitHub',
-    href: 'https://github.com/JANGSEOKHAN/os-upgrade-ceph-operations',
-  },
-  {
-    title: 'Kafka KRaft 마이그레이션 및 Broker 업그레이드 Runbook',
-    summary:
-      'ZooKeeper 기반 Kafka를 KRaft 구조로 전환하는 절차와 controller/broker cutover, Kafka 4.x 업그레이드 흐름을 정리했습니다.',
-    status: 'GitHub',
-    href: 'https://github.com/JANGSEOKHAN/kafka-kraft-migration',
-  },
-  {
-    title: 'AWS Final Project HAMA MSA 구축 기록',
-    summary:
-      '육아제품 추천 및 가계부 서비스의 Frontend, Review API, Kustomize 배포 매니페스트를 정리하고 EKS 기반 MSA 운영 흐름을 담았습니다.',
-    status: 'GitHub',
-    href: 'https://github.com/JANGSEOKHAN/aws-finalproject-hama',
-  },
-  {
     title: '제조 데이터 RAG 파이프라인 PoC',
     summary:
       '제조 문서를 OCR, chunking, metadata, vector search 흐름으로 전환해 RAG PoC에 활용한 구성 사례입니다.',
@@ -696,5 +675,26 @@ export const notes: NoteItem[] = [
       'Prometheus, Grafana, Loki, Tempo 중심으로 로그/메트릭/트레이싱 관측성 환경을 구성한 설치 가이드입니다.',
     status: 'Velog',
     href: 'https://velog.io/@wkdtjrgks2/LGTM-%EC%84%A4%EC%B9%98',
+  },
+  {
+    title: 'Oracle Linux 업그레이드 및 Ceph 스토리지 운영 기록',
+    summary:
+      'Oracle Linux 업그레이드, Linux 기본 설정, HAProxy/Keepalived, Ceph 스토리지 구축 및 운영 흐름을 작업 기록 형태로 정리했습니다.',
+    status: 'GitHub',
+    href: 'https://github.com/JANGSEOKHAN/os-upgrade-ceph-operations',
+  },
+  {
+    title: 'Kafka KRaft 마이그레이션 및 Broker 업그레이드 Runbook',
+    summary:
+      'ZooKeeper 기반 Kafka를 KRaft 구조로 전환하는 절차와 controller/broker cutover, Kafka 4.x 업그레이드 흐름을 정리했습니다.',
+    status: 'GitHub',
+    href: 'https://github.com/JANGSEOKHAN/kafka-kraft-migration',
+  },
+  {
+    title: 'AWS Final Project HAMA MSA 구축 기록',
+    summary:
+      '육아제품 추천 및 가계부 서비스의 Frontend, Review API, Kustomize 배포 매니페스트를 정리하고 EKS 기반 MSA 운영 흐름을 담았습니다.',
+    status: 'GitHub',
+    href: 'https://github.com/JANGSEOKHAN/aws-finalproject-hama',
   },
 ];
