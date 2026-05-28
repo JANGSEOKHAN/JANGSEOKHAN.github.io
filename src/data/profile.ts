@@ -280,7 +280,7 @@ export const projects: Project[] = [
   {
     title: '삼성 구미 디지털트윈 솔루션 챗봇 환경 구축 POC',
     company: '메타넷디지털 주식회사',
-    period: '2025.12.15 ~ 2026.02.26, 3개월',
+    period: '2026.01.24 ~ 2026.02.26, 1개월',
     mainRole: 'AI 인프라 구축 담당',
     role: 'GPU 서버 운영, vLLM 로컬 서빙, Neo4j 기반 API 메타데이터 Graph DB 및 MCP 연계 흐름 구축',
     overview:
