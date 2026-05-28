@@ -41,8 +41,7 @@ const readVideoTime = (event: SyntheticEvent<HTMLVideoElement>): VideoTime => {
 
 const visualNoteHighlights = [
   '공식 홈페이지/브로셔 제공 자료',
-  '직접 설계한 자료',
-  '보안상 실제 시스템명, 계정, IP 등은 제거 또는 블러 처리',
+  '직접 설계',
 ];
 
 const renderVisualNote = (note: string) => {
