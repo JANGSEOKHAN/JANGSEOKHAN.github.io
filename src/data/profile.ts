@@ -280,7 +280,7 @@ export const projects: Project[] = [
   {
     title: '삼성 구미 디지털트윈 솔루션 챗봇 환경 구축 POC',
     company: '메타넷디지털 주식회사',
-    period: '2026.01.24 ~ 2026.02.26, 1개월',
+    period: '2026.01 ~ 2026.02, 1개월',
     mainRole: 'AI 인프라 구축 담당',
     role: 'GPU 서버 운영, vLLM 로컬 서빙, Neo4j 기반 API 메타데이터 Graph DB 및 MCP 연계 흐름 구축',
     overview:
@@ -311,7 +311,7 @@ export const projects: Project[] = [
   {
     title: '삼성 SMD 제조 장비 자산화 RAG 구축 POC',
     company: '메타넷디지털 주식회사',
-    period: '2025.11.03 ~ 2025.12.19, 2개월',
+    period: '2025.11 ~ 2025.12, 2개월',
     mainRole: 'RAG 구축 개발/인프라 담당',
     role: '문서 OCR/Markdown 변환, QdrantDB 기반 하이브리드 검색, VLLM/LLM 검증, 멀티턴 챗봇 구성',
     overview:
@@ -531,7 +531,7 @@ export const projects: Project[] = [
   {
     title: '육아제품 추천 및 가계부 서비스',
     company: 'AWS Cloud School',
-    period: '2025.01.17 ~ 2025.03.25, 2개월',
+    period: '2025.01 ~ 2025.03, 2개월',
     mainRole: 'Ops, EKS 인프라 구축, Architecture 설계, 팀장',
     role: 'On-premise Kubernetes 3-Tier 구성, AWS EKS 아키텍처 설계, 데이터 파이프라인 및 비용 관리',
     overview:
