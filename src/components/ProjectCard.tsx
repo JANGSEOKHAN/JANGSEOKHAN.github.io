@@ -64,26 +64,12 @@ const renderVisualNote = (note: string) => {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   const visuals = project.visuals ?? [];
-  const [activeVisualIndex, setActiveVisualIndex] = useState(0);
   const [modalIndex, setModalIndex] = useState<number | null>(null);
-  const [activeVideoTime, setActiveVideoTime] = useState<VideoTime>(initialVideoTime);
   const [modalVideoTime, setModalVideoTime] = useState<VideoTime>(initialVideoTime);
 
-  const activeVisual = visuals[activeVisualIndex];
   const modalVisual = modalIndex === null ? null : visuals[modalIndex];
   const hasMultipleVisuals = visuals.length > 1;
-  const activeVideoRemaining = Math.max(activeVideoTime.duration - activeVideoTime.current, 0);
   const modalVideoRemaining = Math.max(modalVideoTime.duration - modalVideoTime.current, 0);
-
-  const showPreviousVisual = () => {
-    if (visuals.length === 0) return;
-    setActiveVisualIndex((currentIndex) => (currentIndex - 1 + visuals.length) % visuals.length);
-  };
-
-  const showNextVisual = () => {
-    if (visuals.length === 0) return;
-    setActiveVisualIndex((currentIndex) => (currentIndex + 1) % visuals.length);
-  };
 
   const showPreviousModalVisual = () => {
     if (modalIndex === null || visuals.length === 0) return;
@@ -102,15 +88,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   };
 
   useEffect(() => {
-    setActiveVisualIndex(0);
     setModalIndex(null);
-    setActiveVideoTime(initialVideoTime);
     setModalVideoTime(initialVideoTime);
   }, [project.title]);
-
-  useEffect(() => {
-    setActiveVideoTime(initialVideoTime);
-  }, [activeVisualIndex]);
 
   useEffect(() => {
     setModalVideoTime(initialVideoTime);
@@ -164,102 +144,73 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </div>
 
-      {activeVisual ? (
+      {visuals.length > 0 ? (
         <section className="screen-visuals mt-5">
           <div className="mb-3 flex items-center justify-between gap-3">
             <h4 className="text-sm font-semibold text-slate-950">이미지 / 수행 내역</h4>
-            <p className="text-xs font-semibold text-slate-400">
-              {activeVisualIndex + 1} / {visuals.length}
-            </p>
+            <p className="text-xs font-semibold text-slate-400">{visuals.length}개 자료</p>
           </div>
           {project.visualNote ? (
             <p className="mb-3 rounded-md border border-slate-200 bg-white px-3 py-2 text-sm font-medium leading-6 text-slate-500">
               {renderVisualNote(project.visualNote)}
             </p>
           ) : null}
-          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-2 sm:p-4">
-            <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-white">
-              {activeVisual.videoUrl ? (
-                <>
-                  <video
-                    key={activeVisual.videoUrl}
-                    src={activeVisual.videoUrl}
-                    className="aspect-[4/3] w-full object-contain p-1.5 sm:aspect-video sm:p-3"
-                    aria-label={`${activeVisual.title} 영상`}
-                    controls
-                    muted
-                    playsInline
-                    preload="metadata"
-                    onDurationChange={(event) => setActiveVideoTime(readVideoTime(event))}
-                    onLoadedMetadata={(event) => setActiveVideoTime(readVideoTime(event))}
-                    onTimeUpdate={(event) => setActiveVideoTime(readVideoTime(event))}
-                  />
-                  <button
-                    type="button"
-                    onClick={() => setModalIndex(activeVisualIndex)}
-                    className="absolute right-3 top-3 inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white/95 text-slate-700 shadow-sm outline-none transition hover:border-signal-cyan hover:text-signal-cyan focus-visible:ring-2 focus-visible:ring-signal-cyan"
-                    aria-label={`${activeVisual.title} 크게 보기`}
-                  >
-                    <Maximize2 aria-hidden="true" size={17} />
-                  </button>
-                </>
-              ) : (
-                <button
-                  type="button"
-                  onClick={() => activeVisual.imageUrl && setModalIndex(activeVisualIndex)}
-                  disabled={!activeVisual.imageUrl}
-                  className="block w-full cursor-zoom-in outline-none disabled:cursor-default focus-visible:ring-2 focus-visible:ring-signal-cyan focus-visible:ring-offset-2"
-                  aria-label={`${activeVisual.title} 크게 보기`}
-                >
-                  {activeVisual.imageUrl ? (
-                    <img
-                      src={activeVisual.imageUrl}
-                      alt={activeVisual.alt ?? activeVisual.title}
-                      className="aspect-[4/3] w-full object-contain p-1.5 sm:aspect-video sm:p-3"
-                      loading="eager"
-                      decoding="sync"
-                    />
+          <div className={visuals.length === 1 ? 'grid gap-4' : 'grid gap-4 md:grid-cols-2'}>
+            {visuals.map((visual, index) => (
+              <article key={`${visual.title}-${index}`} className="rounded-2xl border border-slate-200 bg-slate-50 p-2 shadow-sm sm:p-3">
+                <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-white">
+                  {visual.videoUrl ? (
+                    <>
+                      <video
+                        key={visual.videoUrl}
+                        src={visual.videoUrl}
+                        className="aspect-[4/3] w-full object-contain p-1.5 sm:aspect-video sm:p-3"
+                        aria-label={`${visual.title} 영상`}
+                        controls
+                        muted
+                        playsInline
+                        preload="metadata"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setModalIndex(index)}
+                        className="absolute right-3 top-3 inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white/95 text-slate-700 shadow-sm outline-none transition hover:border-signal-cyan hover:text-signal-cyan focus-visible:ring-2 focus-visible:ring-signal-cyan"
+                        aria-label={`${visual.title} 크게 보기`}
+                      >
+                        <Maximize2 aria-hidden="true" size={17} />
+                      </button>
+                    </>
                   ) : (
-                    <div className="flex aspect-video w-full items-center justify-center text-sm font-bold text-slate-400">
-                      Media Slot {activeVisualIndex + 1}
-                    </div>
+                    <button
+                      type="button"
+                      onClick={() => visual.imageUrl && setModalIndex(index)}
+                      disabled={!visual.imageUrl}
+                      className="block w-full cursor-zoom-in outline-none disabled:cursor-default focus-visible:ring-2 focus-visible:ring-signal-cyan focus-visible:ring-offset-2"
+                      aria-label={`${visual.title} 크게 보기`}
+                    >
+                      {visual.imageUrl ? (
+                        <img
+                          src={visual.imageUrl}
+                          alt={visual.alt ?? visual.title}
+                          className="aspect-[4/3] w-full object-contain p-1.5 sm:aspect-video sm:p-3"
+                          loading={index === 0 ? 'eager' : 'lazy'}
+                          decoding={index === 0 ? 'sync' : 'async'}
+                        />
+                      ) : (
+                        <div className="flex aspect-video w-full items-center justify-center text-sm font-bold text-slate-400">
+                          Media Slot {index + 1}
+                        </div>
+                      )}
+                    </button>
                   )}
-                </button>
-              )}
+                </div>
 
-              {hasMultipleVisuals ? (
-                <>
-                  <button
-                    type="button"
-                    onClick={showPreviousVisual}
-                    className="absolute left-2 top-1/2 inline-flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-slate-200 bg-white/90 text-slate-700 shadow-sm outline-none transition hover:border-signal-cyan hover:text-signal-cyan focus-visible:ring-2 focus-visible:ring-signal-cyan sm:left-3 sm:h-10 sm:w-10"
-                    aria-label="이전 이미지 보기"
-                  >
-                    <ChevronLeft aria-hidden="true" size={22} />
-                  </button>
-                  <button
-                    type="button"
-                    onClick={showNextVisual}
-                    className="absolute right-2 top-1/2 inline-flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-slate-200 bg-white/90 text-slate-700 shadow-sm outline-none transition hover:border-signal-cyan hover:text-signal-cyan focus-visible:ring-2 focus-visible:ring-signal-cyan sm:right-3 sm:h-10 sm:w-10"
-                    aria-label="다음 이미지 보기"
-                  >
-                    <ChevronRight aria-hidden="true" size={22} />
-                  </button>
-                </>
-              ) : null}
-            </div>
-
-            <div className="mt-4">
-              <h5 className="text-sm font-extrabold text-slate-950 sm:text-base">{activeVisual.title}</h5>
-              <p className="mt-1 text-xs font-semibold leading-5 text-slate-500 sm:text-sm sm:leading-6">{activeVisual.description}</p>
-              {activeVisual.videoUrl ? (
-                <p className="mt-2 text-xs font-semibold text-slate-400 sm:text-sm">
-                  {formatMediaTime(activeVideoTime.current)} / {formatMediaTime(activeVideoTime.duration)}
-                  <span className="mx-2 text-slate-300">/</span>
-                  남은 시간 {formatMediaTime(activeVideoRemaining)}
-                </p>
-              ) : null}
-            </div>
+                <div className="px-1 pb-1 pt-3">
+                  <h5 className="break-keep text-sm font-extrabold leading-6 text-slate-950 sm:text-base sm:leading-7">{visual.title}</h5>
+                  <p className="mt-1 break-keep text-xs font-semibold leading-5 text-slate-500 sm:text-sm sm:leading-6">{visual.description}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
       ) : null}
