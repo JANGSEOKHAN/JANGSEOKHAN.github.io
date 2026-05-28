@@ -409,16 +409,11 @@ export const projects: Project[] = [
       '보안상 실제 시스템명, 계정, IP 등은 제거 또는 블러 처리했으며, 이관 작업 일부만 공개했습니다.',
     visuals: [
       {
-        title: 'SAN Zoning / WWN 구성',
-        description: '서버 HBA WWN과 스토리지 Port WWN을 기준으로 Zone 구성 및 SAN 연결 경로 구축 수행',
-        imageUrl: 'projects/datacenter/san-zoning-wwn-v2.png',
-        alt: 'SAN Zoning 및 WWN 구성',
-      },
-      {
-        title: 'vMotion 기반 스토리지 이관',
-        description: '기존 스토리지의 VM 데이터를 신규 스토리지 Datastore로 이관하며 서비스 영향도를 줄인 migration 수행',
+        title: 'SAN Zoning / WWN 구성 및 vMotion 기반 스토리지 이관',
+        description:
+          '서버 HBA WWN과 스토리지 Port WWN을 기준으로 Zone 구성 및 SAN 연결 경로를 구축하고, 기존 스토리지의 VM 데이터를 신규 스토리지 Datastore로 이관 수행',
         imageUrl: 'projects/datacenter/vmotion-storage-migration.png',
-        alt: 'vMotion 기반 스토리지 이관',
+        alt: 'SAN Zoning 및 vMotion 기반 스토리지 이관',
       },
       {
         title: 'Datastore 인식 확인',
