@@ -293,14 +293,13 @@ export const projects: Project[] = [
         items: [
           'H100 GPU 서버 환경에 CUDA/VLLM을 구성하고 Qwen3 72B 로컬 서빙 PoC 수행',
           'Ollama에서 VLLM으로 전환해 응답 속도를 개선하고 tensor parallel/token 설정 조정',
-          'Neo4j Graph DB와 MCP 서버를 연계해 API 메타데이터 기반 답변 흐름 구성',
         ],
       },
       {
-        title: 'Neo4j Graph DB 기반 API 메타데이터 연계',
+        title: 'API 관계도 기반 답변 흐름 구성',
         items: [
-          'API 메타데이터와 호출 관계를 Neo4j Graph DB로 구성',
-          'MCP 서버와 연계해 질의 목적에 맞는 API 흐름 조회',
+          'API 간 호출 관계와 의존성을 Neo4j Graph DB로 구성',
+          'MCP 서버와 연계해 질의 목적에 맞는 API 흐름 조회 및 답변 생성',
         ],
       },
     ],
