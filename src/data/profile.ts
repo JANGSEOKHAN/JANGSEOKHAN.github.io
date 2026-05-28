@@ -339,7 +339,7 @@ export const projects: Project[] = [
     visuals: [
       {
         title: 'Dify SMD 챗봇 워크플로우',
-        description: '질문 분류, 이미지/텍스트 분기, 지식 검색, 답변 생성, 검증 단계를 Dify workflow로 구성해 RAG PoC 반복 개선 속도를 높임',
+        description: '질문 분류, 이미지/텍스트 분기, 지식 검색, 답변 생성, 검증 단계를 Dify workflow로 연결해 RAG 응답 처리 흐름 자동화',
         imageUrl: 'projects/rag/dify-chatbot-workflow.png',
         alt: '삼성 SMD 제조 장비 자산화 RAG 구축 POC Dify 챗봇 워크플로우',
       },
