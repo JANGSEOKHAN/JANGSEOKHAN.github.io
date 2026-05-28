@@ -165,7 +165,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       </div>
 
       {activeVisual ? (
-        <section className="mt-5">
+        <section className="screen-visuals mt-5">
           <div className="mb-3 flex items-center justify-between gap-3">
             <h4 className="text-sm font-semibold text-slate-950">이미지 / 수행 내역</h4>
             <p className="text-xs font-semibold text-slate-400">
@@ -260,6 +260,26 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 </p>
               ) : null}
             </div>
+          </div>
+        </section>
+      ) : null}
+
+      {visuals.length > 0 ? (
+        <section className="print-visuals" aria-label={`${project.title} PDF 이미지 목록`}>
+          <h4>이미지 / 수행 내역</h4>
+          {project.visualNote ? <p className="print-visuals__note">{renderVisualNote(project.visualNote)}</p> : null}
+          <div className="print-visuals__grid">
+            {visuals.map((visual, index) => (
+              <div key={`${visual.title}-${index}`} className="print-visuals__item">
+                {visual.imageUrl ? (
+                  <img src={visual.imageUrl} alt={visual.alt ?? visual.title} loading="eager" decoding="sync" />
+                ) : (
+                  <div className="print-visuals__video">영상 자료</div>
+                )}
+                <p className="print-visuals__title">{visual.title}</p>
+                <p className="print-visuals__description">{visual.description}</p>
+              </div>
+            ))}
           </div>
         </section>
       ) : null}

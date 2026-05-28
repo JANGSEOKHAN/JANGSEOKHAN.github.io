@@ -37,6 +37,10 @@ a {
   color: #0f172a;
 }
 
+.print-visuals {
+  display: none;
+}
+
 @layer base {
   * {
     border-color: rgba(15, 23, 42, 0.1);
@@ -251,8 +255,91 @@ a {
     page-break-inside: auto;
   }
 
-  #experience article > section {
+  #experience article > section.screen-visuals {
     display: none !important;
+  }
+
+  .print-visuals {
+    display: block !important;
+    margin-top: 3mm !important;
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .print-visuals h4 {
+    margin: 0 0 2mm !important;
+    font-size: 9.5pt !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+  }
+
+  .print-visuals__note {
+    margin: 0 0 2mm !important;
+    padding: 2mm !important;
+    border: 1px solid #d8e3ef !important;
+    border-radius: 3mm !important;
+    background: #ffffff !important;
+    font-size: 8pt !important;
+    line-height: 1.45 !important;
+    color: #475569 !important;
+  }
+
+  .print-visuals__grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 3mm !important;
+  }
+
+  .print-visuals__item {
+    display: block !important;
+    padding: 2.5mm !important;
+    border: 1px solid #d8e3ef !important;
+    border-radius: 4mm !important;
+    background: #ffffff !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .print-visuals__item img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 52mm !important;
+    object-fit: contain !important;
+    padding: 0 !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 3mm !important;
+    background: #ffffff !important;
+  }
+
+  .print-visuals__video {
+    display: flex !important;
+    min-height: 24mm !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 3mm !important;
+    background: #f8fafc !important;
+    color: #64748b !important;
+    font-size: 9pt !important;
+    font-weight: 700 !important;
+  }
+
+  .print-visuals__title {
+    margin: 2mm 0 0 !important;
+    font-size: 8.5pt !important;
+    font-weight: 800 !important;
+    line-height: 1.35 !important;
+    color: #0f172a !important;
+  }
+
+  .print-visuals__description {
+    margin: 1mm 0 0 !important;
+    font-size: 7.8pt !important;
+    line-height: 1.45 !important;
+    color: #475569 !important;
+    word-break: keep-all !important;
+    overflow-wrap: anywhere !important;
   }
 
   #experience article [class*="lg:grid-cols-2"] {
