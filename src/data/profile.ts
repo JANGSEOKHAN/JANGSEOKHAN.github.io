@@ -299,8 +299,7 @@ export const projects: Project[] = [
       {
         title: 'Neo4j Graph DB 기반 API 메타데이터 연계',
         items: [
-          '유사 API, 선행/후속 API, 의존 관계를 Graph DB로 모델링',
-          'API 메타데이터와 호출 관계를 Neo4j 노드/관계로 저장',
+          'API 메타데이터와 호출 관계를 Neo4j Graph DB로 구성',
           'MCP 서버와 연계해 질의 목적에 맞는 API 흐름 조회',
         ],
       },
