@@ -216,8 +216,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                       src={activeVisual.imageUrl}
                       alt={activeVisual.alt ?? activeVisual.title}
                       className="aspect-[4/3] w-full object-contain p-1.5 sm:aspect-video sm:p-3"
-                      loading="lazy"
-                      decoding="async"
+                      loading="eager"
+                      decoding="sync"
                     />
                   ) : (
                     <div className="flex aspect-video w-full items-center justify-center text-sm font-bold text-slate-400">

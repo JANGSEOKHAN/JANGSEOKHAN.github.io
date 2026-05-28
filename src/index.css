@@ -38,7 +38,14 @@ a {
 }
 
 .print-visuals {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 @layer base {
@@ -81,16 +88,41 @@ a {
     color: #0f172a !important;
   }
 
-  header,
   footer,
-  button,
   button.absolute,
   video,
   [role="dialog"],
-  [class*="fixed"],
-  [class*="bg-grid"],
-  [class*="bg-gradient"],
   [class*="pointer-events-none"][class*="absolute"] {
+    display: none !important;
+  }
+
+  header {
+    position: static !important;
+    display: block !important;
+    border-bottom: 1px solid #d8e3ef !important;
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+  }
+
+  header nav {
+    height: 12mm !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  header button {
+    display: none !important;
+  }
+
+  header a {
+    font-size: 9pt !important;
+  }
+
+  header [class*="lg:flex"] {
+    display: flex !important;
+  }
+
+  #home > .absolute {
     display: none !important;
   }
 
@@ -260,8 +292,15 @@ a {
   }
 
   .print-visuals {
+    position: static !important;
     display: block !important;
+    width: auto !important;
+    height: auto !important;
     margin-top: 3mm !important;
+    overflow: visible !important;
+    clip: auto !important;
+    clip-path: none !important;
+    white-space: normal !important;
     break-inside: auto;
     page-break-inside: auto;
   }
