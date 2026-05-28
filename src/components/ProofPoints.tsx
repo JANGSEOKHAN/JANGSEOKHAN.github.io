@@ -20,7 +20,7 @@ const proofStories = [
     title: '데이터 파이프라인과 AI 인프라까지 폭넓은 인프라 경험',
     description:
       'Kafka Broker 업그레이드, SCRAM/ACL 보안 적용, Consumer Lag 점검을 수행했고 VLLM/RAG PoC도 운영 관점에서 구성했습니다.',
-    bullets: ['64개 Kafka Broker 운영/보안 적용', 'H100 GPU 4장 기반 VLLM 서빙', 'QdrantDB/Neo4j RAG 흐름 구성'],
+    bullets: ['64개 Kafka Broker 운영/보안 적용', 'H100 GPU 서버 기반 VLLM 서빙', 'QdrantDB/Neo4j RAG 흐름 구성'],
   },
 ];
 

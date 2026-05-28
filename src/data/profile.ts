@@ -134,7 +134,7 @@ export const proofPoints: ProofPoint[] = [
     accent: 'cyan',
   },
   {
-    value: 'H100 GPU 4장',
+    value: 'H100 GPU 서버',
     label: 'VLLM 기반 LLM 로컬 서빙 PoC',
     description: 'CUDA/VLLM, Qwen3, RAG 검색/검증 흐름 구성',
     accent: 'green',
@@ -284,12 +284,12 @@ export const projects: Project[] = [
     overview:
       '제조 설비와 API 메타데이터를 활용하는 업무형 챗봇 PoC에서 GPU 서버와 로컬 LLM 서빙 환경을 구성했습니다.',
     publicNote: '사업장명과 내부 API 명칭은 공개용으로 익명화했습니다.',
-    highlights: ['H100 GPU 4장 기반 PoC', 'Ollama → VLLM 전환', 'Neo4j + MCP 기반 API 응답 흐름 구성'],
+    highlights: ['H100 GPU 서버 기반 PoC', 'Ollama → VLLM 전환', 'Neo4j + MCP 기반 API 응답 흐름 구성'],
     detailSections: [
       {
         title: 'GPU 서버 운영 및 로컬 서빙 환경 구축',
         items: [
-          'H100 GPU 4장 환경에 CUDA/VLLM을 구성하고 Qwen3 72B 로컬 서빙 PoC 수행',
+          'H100 GPU 서버 환경에 CUDA/VLLM을 구성하고 Qwen3 72B 로컬 서빙 PoC 수행',
           'Ollama에서 VLLM으로 전환해 응답 속도를 개선하고 tensor parallel/token 설정 조정',
           'Neo4j Graph DB와 MCP 서버를 연계해 API 메타데이터 기반 답변 흐름 구성',
         ],
