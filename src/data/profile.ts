@@ -269,9 +269,9 @@ export const projects: Project[] = [
       },
       {
         title: '엑셈원 모니터링 / Kubernetes 컨테이너 관리',
-        description: 'Kubernetes Pod/Container와 Kafka, DBMS 상태를 모니터링하며 디지털 트윈 서비스 운영 상태 점검',
+        description: 'Kubernetes Pod/Container와 Kafka, DBMS 상태 모니터링을 통해 디지털 트윈 서비스 운영 상태 점검 수행',
         imageUrl: 'projects/dmf/k8s-monitoring.png',
-        alt: '디지털 트윈 서비스 Kubernetes 컨테이너 관리 및 모니터링 화면',
+        alt: '디지털 트윈 서비스 Kubernetes 컨테이너 관리 및 모니터링 수행',
       },
     ],
   },
