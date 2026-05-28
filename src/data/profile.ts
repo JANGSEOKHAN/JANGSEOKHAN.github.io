@@ -656,9 +656,9 @@ export const certifications: CertificationItem[] = [
 
 export const notes: NoteItem[] = [
   {
-    title: 'Oracle Linux 업그레이드 및 Ceph 스토리지 운영 가이드',
+    title: 'Oracle Linux 업그레이드 및 Ceph 스토리지 운영 기록',
     summary:
-      'Oracle Linux 업그레이드, Linux 기본 설정, HAProxy/Keepalived, Ceph 스토리지 운영 체크포인트를 운영 가이드 형태로 정리했습니다.',
+      'Oracle Linux 업그레이드, Linux 기본 설정, HAProxy/Keepalived, Ceph 스토리지 구축 및 운영 흐름을 작업 기록 형태로 정리했습니다.',
     status: 'GitHub',
     href: 'https://github.com/JANGSEOKHAN/os-upgrade-ceph-operations',
   },
