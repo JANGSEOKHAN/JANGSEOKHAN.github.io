@@ -361,7 +361,8 @@ export const projects: Project[] = [
       },
       {
         title: 'QdrantDB 메타데이터 필터링',
-        description: '문서 유형, 장비 정보, 섹션 단위 메타데이터 필터링과 벡터 유사도 검색을 함께 사용해 필요한 근거 청크를 더 좁혀 검색',
+        description:
+          '문서 유형, 장비 정보, 섹션 단위 메타데이터 필터링과 벡터 유사도 검색을 결합한 하이브리드 서치로 근거 청크를 좁혀 검색하고 답변 품질 개선',
         imageUrl: 'projects/rag/qdrant-web.png',
         alt: 'QdrantDB 메타데이터 필터링 및 벡터 검색 구성',
       },
@@ -417,14 +418,16 @@ export const projects: Project[] = [
         alt: 'SAN Zoning 및 vMotion 기반 스토리지 이관',
       },
       {
-        title: 'Datastore 인식 확인',
-        description: '이관 후 ESXi/vCenter에서 Datastore 용량, 연결 상태, 인식 여부 점검 수행',
+        title: 'vSphere 7.0 Datastore 인식 확인',
+        description:
+          'vSphere 7.0 업그레이드 이후 ESXi/vCenter에서 Datastore 용량, 연결 상태, 인식 여부를 점검해 스토리지 이관 후 VM 운영 가능 상태 검증',
         imageUrl: 'projects/datacenter/datastore-recognition.png',
         alt: 'VMware vSphere Datastore 인식 확인',
       },
       {
-        title: '신규 vCenter Datastore VM 등록',
-        description: '신규 vCenter에서 Datastore 내 VM 파일 경로 확인, VM 등록, 기동 점검 수행',
+        title: 'vCenter 7.0 Datastore VM 등록',
+        description:
+          'vCenter 7.0 환경에서 Datastore 내 VM 파일 경로를 확인하고 VM 등록과 기동 점검을 수행해 업그레이드 후 VM 재등록 및 서비스 기동 안정성 개선',
         imageUrl: 'projects/datacenter/vm-registration-datastore.png',
         alt: '신규 vCenter Datastore VM 등록 및 데이터 마이그레이션',
       },
