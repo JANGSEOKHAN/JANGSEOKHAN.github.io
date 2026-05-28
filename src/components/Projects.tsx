@@ -7,14 +7,14 @@ const companyGroups = [
     title: '메타넷디지털',
     summary: '총 1년 2개월, 재직중',
     description:
-      'DevOps 운영 파트에서 Linux/Kubernetes/Kafka/CI/CD 운영과 AI Infra/RAG PoC를 담당했습니다.',
+      'DevOps 운영 파트에서 Linux, Kubernetes, Kafka 운영과 CI/CD 자동화, AI Infra 및 RAG PoC를 담당했습니다.',
   },
   {
     company: '대신정보통신',
     title: '대신정보통신',
     summary: '총 3년 5개월',
     description:
-      '서울특별시데이터센터 인프라 구축과 VMware/SAN, RHEL/CentOS, 물리 인프라 운영 지원 경험을 쌓았습니다.',
+      '서울특별시데이터센터 인프라 구축을 중심으로 VMware, SAN Storage, RHEL 및 CentOS 서버, 물리 인프라 운영 지원 경험을 쌓았습니다.',
   },
   {
     company: 'AWS Cloud School',
