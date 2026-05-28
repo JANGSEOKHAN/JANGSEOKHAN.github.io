@@ -41,6 +41,7 @@ const readVideoTime = (event: SyntheticEvent<HTMLVideoElement>): VideoTime => {
 
 const visualNoteHighlights = [
   '공식 홈페이지/브로셔 제공 자료',
+  '보안상 더미데이터로 재구성한 화면',
   '직접 설계',
 ];
 

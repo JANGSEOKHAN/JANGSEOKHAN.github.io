@@ -353,7 +353,7 @@ export const projects: Project[] = [
       '제조 장비 PDF 매뉴얼을 OCR 기반 Markdown 구조로 변환하고, 청크, 메타데이터, 임베딩 자동화를 통해 QdrantDB 기반 지식베이스를 구축했습니다. 메타데이터 필터링, 유사도 검색, Qwen3-VL 검증, Redis 세션 저장을 적용해 텍스트/이미지 기반 멀티턴 RAG 챗봇 PoC에 기여했으며, 비정형 문서를 AI 서비스용 데이터 자산으로 전환하는 경험을 쌓았습니다.',
     techStack: ['QdrantDB', 'RAG', 'Docker', 'LLM', 'CUDA', 'VLLM', 'LangChain', 'Dify', 'Redis'],
     visualNote:
-      'Dify는 OCR/검색/답변/검증 흐름을 빠르게 조합하고 반복 개선하기 위해 사용했고, QdrantDB는 메타데이터 필터링과 벡터 검색을 함께 적용하기 위해 구성했습니다.',
+      '보안상 더미데이터로 재구성한 화면입니다. Dify는 OCR/검색/답변/검증 흐름을 빠르게 조합하고 반복 개선하기 위해 사용했고, QdrantDB는 메타데이터 필터링과 벡터 검색을 함께 적용하기 위해 구성했습니다.',
     visuals: [
       {
         title: 'Dify SMD 챗봇 워크플로우',
