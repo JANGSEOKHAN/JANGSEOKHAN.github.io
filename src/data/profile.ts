@@ -683,7 +683,7 @@ export const notes: NoteItem[] = [
     href: 'https://github.com/JANGSEOKHAN/AI-Appliance-Pack-PoC',
   },
   {
-    title: 'LGTM 관측성 스택 구축 가이드',
+    title: 'LGTM 기반 모니터링 환경 구축',
     summary:
       'Prometheus, Grafana, Loki, Tempo 중심으로 로그/메트릭/트레이싱 관측성 환경을 구성한 설치 가이드입니다.',
     status: 'Velog',
