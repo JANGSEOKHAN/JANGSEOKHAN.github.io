@@ -257,7 +257,7 @@ export const projects: Project[] = [
       },
       {
         title: '데이터 파이프라인 운영',
-        description: 'MES/AGV/PLC Edge Data를 Kafka 기반 수집/처리 흐름으로 연결하고 Consumer Lag와 저장소 유입 상태를 함께 점검',
+        description: 'MES Edge Data를 Kafka 기반 수집/처리 흐름으로 연결하고 Consumer Lag와 저장소 유입 상태를 함께 점검 수행',
         imageUrl: 'projects/dmf/data-pipeline.png',
         alt: '디지털 트윈 서비스 데이터 파이프라인 운영 구조',
       },
@@ -269,7 +269,7 @@ export const projects: Project[] = [
       },
       {
         title: '엑셈원 모니터링 / Kubernetes 컨테이너 관리',
-        description: 'Kubernetes Pod/Container와 Kafka, DBMS 상태를 함께 모니터링해 장애 징후와 리소스 이상 여부를 조기에 확인',
+        description: '디지털 트윈 기반 K8s 클러스터 리소스와 Kafka, DBMS 상태를 함께 모니터링해 장애 징후와 리소스 이상 여부를 조기에 확인하여 시스템 안정화',
         imageUrl: 'projects/dmf/k8s-monitoring.png',
         alt: '디지털 트윈 서비스 Kubernetes 컨테이너 관리 및 모니터링 수행',
       },
