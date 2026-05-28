@@ -73,7 +73,7 @@ export const profile = {
   nameEn: 'Seokhan Jang',
   role: 'Infrastructure / DevOps Engineer',
   headline:
-    '온프레미스 구축부터 MSA 운영, AI 인프라까지 경험을 확장하며 새로운 기술을 탐구하고 이를 서비스 안정화와 운영 고도화로 연결하는 엔지니어입니다.',
+    '온프레미스 구축부터 MSA 운영, AI 인프라까지 경험을 확장하며 새로운 기술을 탐구하고 실제 운영 환경의 안정화와 고도화로 연결하는 엔지니어입니다.',
   tagLine: 'Infrastructure / DevOps / Cloud / AI Infra',
   photoUrl: 'profile-photo.jpg',
   githubUrl: 'https://github.com/JANGSEOKHAN',
@@ -631,37 +631,37 @@ export const skillCategories: SkillCategory[] = [
 
 export const certifications: CertificationItem[] = [
   {
-    date: '2026.04',
+    date: '2026.04.30',
     name: 'AI-POT(AI프롬프트활용능력) 1급',
     issuer: '한국생산성본부',
   },
   {
-    date: '2025.01',
+    date: '2025.01.27',
     name: 'Certified Kubernetes Administrator (CKA)',
     issuer: 'Linux Foundation',
   },
   {
-    date: '2025.01',
+    date: '2025.01.04',
     name: 'AWS Certified Solutions Architect - Associate',
     issuer: 'Amazon AWS',
   },
   {
-    date: '2025.01',
+    date: '2025.01.03',
     name: '리눅스마스터 2급',
     issuer: '한국정보통신진흥협회',
   },
   {
-    date: '2024.12',
+    date: '2024.12.13',
     name: 'SQL 개발자',
     issuer: '한국데이터산업진흥원',
   },
   {
-    date: '2024.12',
+    date: '2024.12.10',
     name: '네트워크관리사 2급',
     issuer: '한국정보통신자격협회',
   },
   {
-    date: '2020.11',
+    date: '2020.11.12',
     name: '정보처리기사',
     issuer: '한국산업인력공단',
   },
