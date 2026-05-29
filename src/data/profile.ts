@@ -249,7 +249,7 @@ export const projects: Project[] = [
       '디지털 트윈 서비스 SFTP 수작업 배포를 CI/CD로 전환하여 2GB 기준 배포 시간을 30분 이상에서 약 5분으로 단축했습니다. MSA 운영 환경에서 디지털트윈 Backend Pod, ConfigMap/Secret, PVC 및 데이터 파이프라인 상태를 점검하고 해외 23개 법인의 운영 로그 확인 체계를 구축하여 디지털트윈 서비스 안정화에 기여했습니다.',
     techStack: ['Linux', 'Kubernetes', 'Docker', 'Kafka', 'MongoDB', 'Jenkins', 'PlasticSCM', 'GitHub', 'Ceph', 'Nginx', 'HAProxy'],
     visualNote:
-      '디지털 트윈 서비스 화면과 엑셈원 모니터링 이미지는 공식 홈페이지/브로셔 제공 자료를 활용했고, 직접 작업한 아키텍처 이미지는 직접 설계한 사진입니다.',
+      '디지털 트윈 서비스 화면과 엑셈원 모니터링 이미지는 공식 홈페이지 및 브로셔 제공 자료를 활용했으며, 아키텍처 구성도는 실제 직접 수행한 업무 내용을 기반으로 재구성하여 설계/작성했습니다.',
     visuals: [
       {
         title: '디지털 트윈 서비스 화면',
