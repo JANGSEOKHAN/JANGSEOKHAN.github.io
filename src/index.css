@@ -48,7 +48,7 @@ a {
   white-space: nowrap;
 }
 
-.print-note-url {
+.print-note-link {
   display: none;
 }
 
@@ -364,7 +364,7 @@ a {
   }
 
   #skills article span,
-  #notes a div > span:not(.print-note-url) {
+  #notes a div > span:not(.print-note-link) {
     min-height: 0 !important;
     padding: 0.7mm 1.65mm !important;
     border-radius: 999px !important;
@@ -655,6 +655,32 @@ a {
     overflow-wrap: break-word !important;
   }
 
+  .pdf-compact-project .project-card {
+    padding: 2.4mm !important;
+  }
+
+  .pdf-compact-project .project-summary p:not(:first-child),
+  .pdf-compact-project .project-details p,
+  .pdf-compact-project .project-details li,
+  .pdf-compact-project .project-result p {
+    font-size: 7pt !important;
+    line-height: 1.32 !important;
+  }
+
+  .pdf-compact-project .project-details {
+    margin-top: 2mm !important;
+  }
+
+  .pdf-compact-project .project-details [class*="lg:grid-cols-2"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 2mm !important;
+  }
+
+  .pdf-compact-project .project-details [class*="rounded-md"],
+  .pdf-compact-project .project-result {
+    padding: 2mm !important;
+  }
+
   #experience .project-tech-stack span {
     min-height: 0 !important;
     padding: 0.65mm 1.5mm !important;
@@ -685,12 +711,29 @@ a {
     display: none !important;
   }
 
-  .print-note-url {
-    display: block !important;
+  .print-note-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 1.1mm !important;
     margin-top: 2mm !important;
+    max-width: 100% !important;
     font-size: 6.8pt !important;
     font-weight: 700 !important;
     line-height: 1.35 !important;
+    color: #0284c7 !important;
+  }
+
+  .print-note-link svg {
+    display: inline-block !important;
+    width: 3.1mm !important;
+    height: 3.1mm !important;
+    flex: 0 0 auto !important;
+    color: #0284c7 !important;
+    stroke: currentColor !important;
+  }
+
+  .print-note-link span {
+    min-width: 0 !important;
     color: #0284c7 !important;
     text-decoration: underline !important;
     text-underline-offset: 1.2pt !important;

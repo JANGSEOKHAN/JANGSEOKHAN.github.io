@@ -82,11 +82,21 @@ export default function Projects() {
                 <div className="grid gap-4 sm:gap-6">
                   {groupProjects.map((project) => {
                     const shouldStartNewPdfPage =
-                      group.company === '메타넷디지털 주식회사' &&
-                      project.title === '삼성 구미 디지털트윈 솔루션 챗봇 환경 구축 POC';
+                      (group.company === '메타넷디지털 주식회사' &&
+                        project.title === '삼성 구미 디지털트윈 솔루션 챗봇 환경 구축 POC') ||
+                      project.title === '2021년 서울특별시데이터센터 정보자원통합 사업';
+                    const shouldUseCompactPdf =
+                      project.title === '2021년 서울특별시데이터센터 정보자원통합 사업' ||
+                      project.title === '에프앤가이드(주) 망분리 및 보안 솔루션 구축 사업';
+                    const projectClassName = [
+                      shouldStartNewPdfPage ? 'pdf-project-break-before' : '',
+                      shouldUseCompactPdf ? 'pdf-compact-project' : '',
+                    ]
+                      .filter(Boolean)
+                      .join(' ');
 
                     return (
-                      <div key={project.title} className={shouldStartNewPdfPage ? 'pdf-project-break-before' : undefined}>
+                      <div key={project.title} className={projectClassName || undefined}>
                         <ProjectCard project={project} />
                       </div>
                     );

@@ -73,6 +73,7 @@ const renderHighlightedText = (note: string) => {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   const visuals = project.visuals ?? [];
+  const showMediaHint = project.title === '육아제품 추천 및 가계부 서비스';
   const [modalIndex, setModalIndex] = useState<number | null>(null);
   const [modalVideoTime, setModalVideoTime] = useState<VideoTime>(initialVideoTime);
 
@@ -158,10 +159,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex flex-wrap items-center gap-2">
               <h4 className="text-sm font-semibold text-slate-950">이미지 / 수행 내역</h4>
-              <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-slate-500">
-                <Maximize2 aria-hidden="true" size={12} />
-                사진은 확대, 영상은 재생됩니다
-              </span>
+              {showMediaHint ? (
+                <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-slate-500">
+                  <Maximize2 aria-hidden="true" size={12} />
+                  사진 클릭 시 확대, 영상 클릭 시 재생
+                </span>
+              ) : null}
             </div>
             <p className="text-xs font-semibold text-slate-400">{visuals.length}개 자료</p>
           </div>
@@ -248,7 +251,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <section className="print-visuals" aria-label={`${project.title} PDF 이미지 목록`}>
           <div className="print-visuals__heading">
             <h4>이미지 / 수행 내역</h4>
-            <p>사진 클릭 시 원본 보기, 영상 클릭 시 재생</p>
+            {showMediaHint ? <p>사진 클릭 시 원본 보기, 영상 클릭 시 재생</p> : null}
           </div>
           {project.visualNote ? <p className="print-visuals__note">{renderHighlightedText(project.visualNote)}</p> : null}
           <div className="print-visuals__grid">
