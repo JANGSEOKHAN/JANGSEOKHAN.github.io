@@ -464,11 +464,6 @@ a {
     page-break-inside: auto !important;
   }
 
-  .project-card:has(.print-visuals) .project-details {
-    break-before: page;
-    page-break-before: always;
-  }
-
   .project-summary > div > div span {
     min-height: 0 !important;
     padding: 0.95mm 1.8mm !important;
@@ -628,7 +623,6 @@ a {
   }
 
   #experience .project-details [class*="rounded-md"],
-  #experience .project-details [class*="grid"],
   #experience .project-result,
   #experience .project-tech-stack,
   #certifications article,
