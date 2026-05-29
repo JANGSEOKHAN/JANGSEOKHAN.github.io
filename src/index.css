@@ -166,7 +166,7 @@ a {
   li,
   span {
     word-break: keep-all !important;
-    overflow-wrap: anywhere !important;
+    overflow-wrap: break-word !important;
   }
 
   h1 {
@@ -283,12 +283,13 @@ a {
     display: inline-flex !important;
     align-items: center !important;
     gap: 1.5mm !important;
-    margin-right: 5mm !important;
-    padding: 0 !important;
-    border: 0 !important;
+    margin-right: 3mm !important;
+    padding: 1.3mm 2mm !important;
+    border: 1px solid #d8e3ef !important;
+    border-radius: 1.8mm !important;
     box-shadow: none !important;
-    background: transparent !important;
-    font-size: 7.6pt !important;
+    background: #ffffff !important;
+    font-size: 7.2pt !important;
     font-weight: 700 !important;
     white-space: nowrap !important;
   }
@@ -365,9 +366,9 @@ a {
   #skills article span,
   #notes a div > span:not(.print-note-url) {
     min-height: 0 !important;
-    padding: 0.65mm 1.55mm !important;
+    padding: 0.7mm 1.65mm !important;
     border-radius: 999px !important;
-    font-size: 6.25pt !important;
+    font-size: 6.7pt !important;
     line-height: 1.2 !important;
     font-weight: 700 !important;
   }
@@ -394,7 +395,7 @@ a {
   }
 
   #skills article {
-    min-height: 27mm !important;
+    min-height: 21mm !important;
     display: flex !important;
     flex-direction: column !important;
   }
@@ -439,6 +440,14 @@ a {
   #experience .pdf-project-break-before {
     break-before: page;
     page-break-before: always;
+  }
+
+  .education-topic-list span {
+    padding: 0.75mm 1.55mm !important;
+    border-radius: 999px !important;
+    font-size: 6.8pt !important;
+    line-height: 1.2 !important;
+    font-weight: 700 !important;
   }
 
   .project-card {
@@ -508,11 +517,26 @@ a {
     page-break-inside: auto;
   }
 
-  .print-visuals h4 {
+  .print-visuals__heading {
+    display: flex !important;
+    align-items: baseline !important;
+    gap: 2mm !important;
     margin: 0 0 2mm !important;
+  }
+
+  .print-visuals h4 {
+    margin: 0 !important;
     font-size: 8.5pt !important;
     font-weight: 800 !important;
     color: #0f172a !important;
+  }
+
+  .print-visuals__heading p {
+    margin: 0 !important;
+    font-size: 6.9pt !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    color: #64748b !important;
   }
 
   .print-visuals__note {
@@ -592,7 +616,7 @@ a {
     line-height: 1.38 !important;
     color: #475569 !important;
     word-break: keep-all !important;
-    overflow-wrap: anywhere !important;
+    overflow-wrap: break-word !important;
   }
 
   #experience article [class*="lg:grid-cols-2"] {
@@ -604,6 +628,11 @@ a {
   #experience .project-details [class*="lg:grid-cols-2"] > div {
     break-inside: avoid;
     page-break-inside: avoid;
+  }
+
+  #experience .project-details [class*="lg:grid-cols-2"] {
+    grid-template-columns: 1fr !important;
+    gap: 2.3mm !important;
   }
 
   #experience .project-details p,
@@ -618,6 +647,12 @@ a {
   #experience .project-result h4 {
     font-size: 8.2pt !important;
     line-height: 1.25 !important;
+  }
+
+  #experience .project-details p,
+  #experience .project-details li {
+    word-break: keep-all !important;
+    overflow-wrap: break-word !important;
   }
 
   #experience .project-tech-stack span {

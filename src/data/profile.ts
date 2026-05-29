@@ -218,8 +218,8 @@ export const projects: Project[] = [
       {
         title: 'Linux 서버 및 스토리지 운영',
         items: [
-          'Oracle Linux 7.9 → 8.10 업그레이드와 LVM/NTP/NFS/Metric 기본 환경 운영',
-          'Ceph 데이터 이중화와 Keepalived/Nginx/HAProxy 기반 프록시 환경 구성',
+          'Oracle Linux 7.9에서 8.10으로 업그레이드하고 LVM, NTP, NFS, Metric 기본 환경 운영',
+          'Ceph 기반 데이터 이중화와 Keepalived, Nginx, HAProxy 프록시 환경 운영',
         ],
       },
       {
@@ -359,7 +359,7 @@ export const projects: Project[] = [
       {
         title: 'Dify SMD 챗봇 워크플로우',
         description:
-          '질문 분류, 이미지/텍스트 분기, 지식 검색, 답변 생성, 검증 단계를 Dify workflow로 연결해 RAG 응답 처리 흐름 자동화 (직접 임시로 재구축한 테스트 화면)',
+          '질문 분류, 이미지/텍스트 분기, 지식 검색, 답변 생성과 검증을 Dify workflow로 연결해 RAG 응답 처리 흐름 자동화 (직접 재구축한 테스트 화면)',
         imageUrl: 'projects/rag/dify-chatbot-workflow.png',
         alt: '삼성 SMD 제조 장비 자산화 RAG 구축 POC Dify 챗봇 워크플로우',
       },
@@ -606,14 +606,14 @@ export const projects: Project[] = [
         title: 'Monitoring',
         description: 'Kiali와 LGTM 계열 도구로 서비스 메트릭, API 흐름, 로그를 확인하며 운영 상태 점검',
         videoUrl: 'projects/aws-finalproject/monitoring-demo.mp4',
-        posterUrl: 'projects/aws-finalproject/cloud-architecture.png',
+        posterUrl: 'projects/aws-finalproject/monitoring-thumbnail.png',
         alt: 'AWS Cloud School 프로젝트 모니터링 시연 영상',
       },
       {
         title: '서비스 시연',
         description: '육아제품 추천, 가계부, 영수증 OCR 등 사용자 기능과 AI 요약/추천 흐름 검증',
         videoUrl: 'projects/aws-finalproject/service-demo.mp4',
-        posterUrl: 'projects/aws-finalproject/receipt-ocr-expense.png',
+        posterUrl: 'projects/aws-finalproject/service-thumbnail.png',
         alt: '육아제품 추천 및 가계부 서비스 시연 영상',
       },
     ],

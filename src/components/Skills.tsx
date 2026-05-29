@@ -10,7 +10,7 @@ export default function Skills() {
           </h2>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid items-start gap-4 md:grid-cols-2 xl:grid-cols-3">
           {skillCategories.map((category) => (
             <article key={category.title} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
               <h3 className="text-lg font-extrabold text-slate-950 sm:text-xl">{category.title}</h3>

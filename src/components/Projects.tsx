@@ -68,7 +68,7 @@ export default function Projects() {
                     <h3 className="mt-2 text-2xl font-extrabold text-slate-950 sm:text-4xl">{group.title}</h3>
                     <p className="mt-3 max-w-4xl whitespace-pre-line text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">{group.description}</p>
                     {'topics' in group && group.topics ? (
-                      <div className="mt-4 flex flex-wrap gap-2">
+                      <div className="education-topic-list mt-4 flex flex-wrap gap-2">
                         {group.topics.map((topic) => (
                           <span key={topic} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-semibold text-slate-700 sm:text-sm">
                             {topic}

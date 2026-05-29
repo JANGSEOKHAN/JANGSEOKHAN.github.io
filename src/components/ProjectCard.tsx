@@ -160,7 +160,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               <h4 className="text-sm font-semibold text-slate-950">이미지 / 수행 내역</h4>
               <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-slate-500">
                 <Maximize2 aria-hidden="true" size={12} />
-                사진·영상 클릭 시 확대됩니다
+                사진은 확대, 영상은 재생됩니다
               </span>
             </div>
             <p className="text-xs font-semibold text-slate-400">{visuals.length}개 자료</p>
@@ -246,7 +246,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
       {visuals.length > 0 ? (
         <section className="print-visuals" aria-label={`${project.title} PDF 이미지 목록`}>
-          <h4>이미지 / 수행 내역</h4>
+          <div className="print-visuals__heading">
+            <h4>이미지 / 수행 내역</h4>
+            <p>사진 클릭 시 원본 보기, 영상 클릭 시 재생</p>
+          </div>
           {project.visualNote ? <p className="print-visuals__note">{renderHighlightedText(project.visualNote)}</p> : null}
           <div className="print-visuals__grid">
             {visuals.map((visual, index) => (
