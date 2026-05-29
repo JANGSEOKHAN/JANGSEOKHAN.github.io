@@ -269,9 +269,9 @@ export const projects: Project[] = [
         alt: 'SFTP 수동 배포를 CI/CD 자동화 배포로 전환',
       },
       {
-        title: 'Ceph 이관 및 배포 클러스터 구성',
+        title: '배포 클러스터 구성 및 Ceph 스토리지 이관 작업 수행',
         description:
-          'GlusterFS EOS 대응으로 디지털 트윈 소스 저장 영역을 Ceph 기반 데이터 구조로 이관하고, Keepalived/Nginx/HAProxy 프록시와 Jenkins/PlasticSCM Unity Build 파이프라인을 연계해 배포 안정성과 운영 효율 개선',
+          'GlusterFS EOS로 인한 디지털 트윈 소스를 Ceph 기반 데이터 구조로 이관하고, Keepalived/Nginx/HAProxy 프록시 미들웨어 운영과 Jenkins/PlasticSCM Unity Build 파이프라인 구축·운영으로 배포 안정성과 운영 효율 개선',
         imageUrl: 'projects/dmf/deploy-cluster-architecture.png',
         alt: '디지털 트윈 배포 클러스터 및 Ceph 이관 구성도',
       },
