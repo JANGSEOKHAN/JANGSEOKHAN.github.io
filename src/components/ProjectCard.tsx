@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight, Maximize2, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Maximize2, PlayCircle, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import type { SyntheticEvent } from 'react';
 import type { Project } from '../data/profile';
@@ -175,26 +175,40 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               <article key={`${visual.title}-${index}`} className="rounded-2xl border border-slate-200 bg-slate-50 p-2 shadow-sm sm:p-3">
                 <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-white">
                   {visual.videoUrl ? (
-                    <>
-                      <video
-                        key={visual.videoUrl}
-                        src={visual.videoUrl}
-                        className="aspect-[4/3] w-full object-contain p-1.5 sm:aspect-video sm:p-3"
-                        aria-label={`${visual.title} 영상`}
-                        controls
-                        muted
-                        playsInline
-                        preload="metadata"
-                      />
-                      <button
-                        type="button"
-                        onClick={() => setModalIndex(index)}
-                        className="absolute right-3 top-3 inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white/95 text-slate-700 shadow-sm outline-none transition hover:border-signal-cyan hover:text-signal-cyan focus-visible:ring-2 focus-visible:ring-signal-cyan"
-                        aria-label={`${visual.title} 크게 보기`}
-                      >
+                    <button
+                      type="button"
+                      onClick={() => setModalIndex(index)}
+                      className="group relative block w-full cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-signal-cyan focus-visible:ring-offset-2"
+                      aria-label={`${visual.title} 영상 크게 보기`}
+                    >
+                      {visual.posterUrl ? (
+                        <img
+                          src={visual.posterUrl}
+                          alt={visual.alt ?? visual.title}
+                          className="aspect-[4/3] w-full object-contain p-1.5 sm:aspect-video sm:p-3"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      ) : (
+                        <video
+                          key={visual.videoUrl}
+                          src={visual.videoUrl}
+                          className="aspect-[4/3] w-full object-contain p-1.5 sm:aspect-video sm:p-3"
+                          aria-label={`${visual.title} 영상`}
+                          muted
+                          playsInline
+                          preload="metadata"
+                        />
+                      )}
+                      <span className="absolute inset-0 flex items-center justify-center bg-slate-950/0 transition group-hover:bg-slate-950/10">
+                        <span className="inline-flex h-14 w-14 items-center justify-center rounded-full border border-white/70 bg-slate-950/75 text-white shadow-lg transition group-hover:scale-105">
+                          <PlayCircle aria-hidden="true" size={30} />
+                        </span>
+                      </span>
+                      <span className="absolute right-3 top-3 inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white/95 text-slate-700 shadow-sm transition group-hover:border-signal-cyan group-hover:text-signal-cyan">
                         <Maximize2 aria-hidden="true" size={17} />
-                      </button>
-                    </>
+                      </span>
+                    </button>
                   ) : (
                     <button
                       type="button"
@@ -237,15 +251,15 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <div className="print-visuals__grid">
             {visuals.map((visual, index) => (
               <div key={`${visual.title}-${index}`} className="print-visuals__item">
-                {visual.imageUrl ? (
+                {visual.imageUrl || visual.posterUrl ? (
                   <a
-                    href={visual.imageUrl}
+                    href={visual.videoUrl ?? visual.imageUrl ?? visual.posterUrl}
                     target="_blank"
                     rel="noreferrer"
                     className="print-visuals__image-link"
-                    aria-label={`${visual.title} 원본 이미지 열기`}
+                    aria-label={`${visual.title} 원본 자료 열기`}
                   >
-                    <img src={visual.imageUrl} alt={visual.alt ?? visual.title} loading="eager" decoding="sync" />
+                    <img src={visual.imageUrl ?? visual.posterUrl ?? ''} alt={visual.alt ?? visual.title} loading="eager" decoding="sync" />
                   </a>
                 ) : (
                   <div className="print-visuals__video">영상 자료</div>
@@ -317,8 +331,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                   className="max-h-[70vh] w-full object-contain sm:max-h-[78vh]"
                   aria-label={`${modalVisual.title} 영상`}
                   controls
+                  autoPlay
                   muted
                   playsInline
+                  poster={modalVisual.posterUrl}
                   preload="metadata"
                   onDurationChange={(event) => setModalVideoTime(readVideoTime(event))}
                   onLoadedMetadata={(event) => setModalVideoTime(readVideoTime(event))}

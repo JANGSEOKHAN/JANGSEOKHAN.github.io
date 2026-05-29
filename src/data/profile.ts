@@ -45,6 +45,7 @@ export type Project = {
     description: string;
     imageUrl?: string;
     videoUrl?: string;
+    posterUrl?: string;
     alt?: string;
   }[];
 };
@@ -598,18 +599,21 @@ export const projects: Project[] = [
         title: 'Data Pipeline',
         description: 'Python 크롤링 데이터를 Kafka Topic으로 전달하고 Bedrock 기반 AI 리뷰 요약, MongoDB/DynamoDB 저장소로 연결한 데이터 흐름',
         videoUrl: 'projects/aws-finalproject/data-pipeline-demo.mp4',
+        posterUrl: 'projects/aws-finalproject/crawling-data-pipeline.png',
         alt: '육아제품 추천 서비스 데이터 파이프라인 시연 영상',
       },
       {
         title: 'Monitoring',
         description: 'Kiali와 LGTM 계열 도구로 서비스 메트릭, API 흐름, 로그를 확인하며 운영 상태 점검',
         videoUrl: 'projects/aws-finalproject/monitoring-demo.mp4',
+        posterUrl: 'projects/aws-finalproject/cloud-architecture.png',
         alt: 'AWS Cloud School 프로젝트 모니터링 시연 영상',
       },
       {
         title: '서비스 시연',
         description: '육아제품 추천, 가계부, 영수증 OCR 등 사용자 기능과 AI 요약/추천 흐름 검증',
         videoUrl: 'projects/aws-finalproject/service-demo.mp4',
+        posterUrl: 'projects/aws-finalproject/receipt-ocr-expense.png',
         alt: '육아제품 추천 및 가계부 서비스 시연 영상',
       },
     ],
