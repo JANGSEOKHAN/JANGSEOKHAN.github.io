@@ -114,6 +114,7 @@ a {
     height: 10mm !important;
     max-width: 100% !important;
     padding: 0 !important;
+    justify-content: flex-start !important;
   }
 
   header button {
@@ -125,7 +126,7 @@ a {
   }
 
   header [class*="lg:flex"] {
-    display: flex !important;
+    display: none !important;
   }
 
   #home > .absolute {
@@ -248,18 +249,30 @@ a {
 
   #home .grid {
     display: grid !important;
-    grid-template-columns: 24mm 1fr !important;
-    gap: 5mm !important;
+    grid-template-columns: 34mm 1fr !important;
+    gap: 7mm !important;
+    align-items: center !important;
   }
 
   #home .snap-x {
     display: block !important;
     overflow: visible !important;
     padding-bottom: 0 !important;
+    width: 34mm !important;
   }
 
   #home .snap-x > article:not(:first-child) {
     display: none !important;
+  }
+
+  #home .snap-x > article {
+    min-width: 34mm !important;
+    padding: 2mm !important;
+  }
+
+  #home .snap-x img {
+    width: 100% !important;
+    max-height: none !important;
   }
 
   #home a[href^="#"] {
