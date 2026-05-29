@@ -232,7 +232,15 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             {visuals.map((visual, index) => (
               <div key={`${visual.title}-${index}`} className="print-visuals__item">
                 {visual.imageUrl ? (
-                  <img src={visual.imageUrl} alt={visual.alt ?? visual.title} loading="eager" decoding="sync" />
+                  <a
+                    href={visual.imageUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="print-visuals__image-link"
+                    aria-label={`${visual.title} 원본 이미지 열기`}
+                  >
+                    <img src={visual.imageUrl} alt={visual.alt ?? visual.title} loading="eager" decoding="sync" />
+                  </a>
                 ) : (
                   <div className="print-visuals__video">영상 자료</div>
                 )}
