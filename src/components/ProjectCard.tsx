@@ -44,9 +44,11 @@ const visualNoteHighlights = [
   '보안상 더미데이터로 재구성한 화면',
   '보안상 실제 시스템명, 계정, IP 등은 제거 또는 블러 처리',
   '직접 설계',
+  '(메타넷 공식 홈페이지에서 제공된 예시 이미지)',
+  '(사진은 엑셈원 브로셔 제공 자료)',
 ];
 
-const renderVisualNote = (note: string) => {
+const renderHighlightedText = (note: string) => {
   const pattern = new RegExp(`(${visualNoteHighlights.map((text) => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`, 'g');
 
   return note.split(pattern).map((part, index) => {
@@ -152,7 +154,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </div>
           {project.visualNote ? (
             <p className="mb-3 rounded-md border border-slate-200 bg-white px-3 py-2 text-sm font-medium leading-6 text-slate-500">
-              {renderVisualNote(project.visualNote)}
+              {renderHighlightedText(project.visualNote)}
             </p>
           ) : null}
           <div className={visuals.length === 1 ? 'grid gap-4' : 'grid gap-4 md:grid-cols-2'}>
@@ -207,7 +209,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
                 <div className="px-1 pb-1 pt-3">
                   <h5 className="break-keep text-sm font-extrabold leading-6 text-slate-950 sm:text-base sm:leading-7">{visual.title}</h5>
-                  <p className="mt-1 break-keep text-xs font-semibold leading-5 text-slate-500 sm:text-sm sm:leading-6">{visual.description}</p>
+                  <p className="mt-1 break-keep text-xs font-semibold leading-5 text-slate-500 sm:text-sm sm:leading-6">{renderHighlightedText(visual.description)}</p>
                 </div>
               </article>
             ))}
@@ -218,7 +220,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       {visuals.length > 0 ? (
         <section className="print-visuals" aria-label={`${project.title} PDF 이미지 목록`}>
           <h4>이미지 / 수행 내역</h4>
-          {project.visualNote ? <p className="print-visuals__note">{renderVisualNote(project.visualNote)}</p> : null}
+          {project.visualNote ? <p className="print-visuals__note">{renderHighlightedText(project.visualNote)}</p> : null}
           <div className="print-visuals__grid">
             {visuals.map((visual, index) => (
               <div key={`${visual.title}-${index}`} className="print-visuals__item">
@@ -228,7 +230,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                   <div className="print-visuals__video">영상 자료</div>
                 )}
                 <p className="print-visuals__title">{visual.title}</p>
-                <p className="print-visuals__description">{visual.description}</p>
+                <p className="print-visuals__description">{renderHighlightedText(visual.description)}</p>
               </div>
             ))}
           </div>
@@ -317,7 +319,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
             <div className="mt-3 pr-12 sm:mt-4">
               <p className="text-base font-extrabold text-slate-950 sm:text-lg">{modalVisual.title}</p>
-              <p className="mt-1 text-xs font-semibold leading-5 text-slate-500 sm:text-sm sm:leading-6">{modalVisual.description}</p>
+              <p className="mt-1 text-xs font-semibold leading-5 text-slate-500 sm:text-sm sm:leading-6">{renderHighlightedText(modalVisual.description)}</p>
               {modalVisual.videoUrl ? (
                 <p className="mt-2 text-xs font-semibold text-slate-400 sm:text-sm">
                   {formatMediaTime(modalVideoTime.current)} / {formatMediaTime(modalVideoTime.duration)}
