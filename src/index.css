@@ -136,7 +136,9 @@ a {
     padding-top: 0 !important;
   }
 
+  #proof,
   #certifications,
+  #skills,
   #experience,
   #notes {
     break-before: page;
@@ -281,6 +283,14 @@ a {
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
 
+  #proof,
+  #skills,
+  #proof .grid,
+  #skills .grid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
   #experience > div > div {
     display: block !important;
   }
@@ -337,11 +347,6 @@ a {
     white-space: normal !important;
     break-inside: auto;
     page-break-inside: auto;
-  }
-
-  .project-card .print-visuals {
-    break-before: page;
-    page-break-before: always;
   }
 
   .print-visuals h4 {
