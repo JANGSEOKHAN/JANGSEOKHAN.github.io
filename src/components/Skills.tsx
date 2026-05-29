@@ -17,7 +17,7 @@ export default function Skills() {
               <p className="mt-2 text-sm leading-6 text-slate-600 sm:text-base sm:leading-7">{category.description}</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {category.items.map((item) => (
-                  <span key={item} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-semibold text-slate-700 sm:text-sm">
+                  <span key={item} className="rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-700">
                     {item}
                   </span>
                 ))}
