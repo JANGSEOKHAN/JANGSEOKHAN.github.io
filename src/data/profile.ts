@@ -357,7 +357,8 @@ export const projects: Project[] = [
     visuals: [
       {
         title: 'Dify SMD 챗봇 워크플로우',
-        description: '질문 분류, 이미지/텍스트 분기, 지식 검색, 답변 생성, 검증 단계를 Dify workflow로 연결해 RAG 응답 처리 흐름 자동화',
+        description:
+          '질문 분류, 이미지/텍스트 분기, 지식 검색, 답변 생성, 검증 단계를 Dify workflow로 연결해 RAG 응답 처리 흐름 자동화 (직접 임시로 재구축한 테스트 화면)',
         imageUrl: 'projects/rag/dify-chatbot-workflow.png',
         alt: '삼성 SMD 제조 장비 자산화 RAG 구축 POC Dify 챗봇 워크플로우',
       },
@@ -370,7 +371,7 @@ export const projects: Project[] = [
       {
         title: 'QdrantDB 메타데이터 필터링',
         description:
-          '문서 유형, 장비 정보, 섹션 단위 메타데이터 필터링과 벡터 유사도 검색을 결합한 하이브리드 서치로 근거 청크를 좁혀 검색하고 답변 품질 개선',
+          '문서 유형, 장비 정보, 섹션 단위 메타데이터 필터링과 벡터 유사도 검색을 결합한 하이브리드 서치로 근거 청크를 좁혀 검색하고 답변 품질 개선 (직접 구성한 더미데이터 화면)',
         imageUrl: 'projects/rag/qdrant-web.png',
         alt: 'QdrantDB 메타데이터 필터링 및 벡터 검색 구성',
       },
