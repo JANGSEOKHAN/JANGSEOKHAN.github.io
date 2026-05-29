@@ -389,6 +389,23 @@ a {
     gap: 2.5mm !important;
   }
 
+  #skills .grid {
+    align-items: stretch !important;
+  }
+
+  #skills article {
+    min-height: 27mm !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  #skills article > div {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 1.3mm !important;
+    align-content: flex-start !important;
+  }
+
   #proof,
   #certifications,
   #skills,

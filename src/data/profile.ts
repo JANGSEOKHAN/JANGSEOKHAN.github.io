@@ -625,7 +625,7 @@ export const skillCategories: SkillCategory[] = [
   {
     title: 'DevOps / CI/CD',
     description: '배포 자동화와 소스/권한 운영',
-    items: ['Jenkins', 'PlasticSCM', 'GitHub', 'Shell Script', 'Docker'],
+    items: ['Jenkins', 'PlasticSCM', 'GitHub', 'Shell Script', 'Docker', 'Harbor'],
   },
   {
     title: 'Kubernetes / Messaging',
