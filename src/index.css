@@ -540,7 +540,9 @@ a {
     font-size: 6.8pt !important;
     font-weight: 700 !important;
     line-height: 1.35 !important;
-    color: #475569 !important;
+    color: #0284c7 !important;
+    text-decoration: underline !important;
+    text-underline-offset: 1.2pt !important;
     word-break: break-all !important;
     overflow-wrap: anywhere !important;
   }

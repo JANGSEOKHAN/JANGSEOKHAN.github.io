@@ -15,8 +15,6 @@ export default function BlogNotes() {
         </div>
         <div className="mt-7 grid gap-4 sm:mt-8 md:grid-cols-2 xl:grid-cols-3">
           {notes.map((note) => {
-            const printUrl = note.href.replace(/^https?:\/\//, '').replace(/\/$/, '');
-
             return (
               <a
                 key={note.title}
@@ -39,7 +37,7 @@ export default function BlogNotes() {
                   <span className="mt-4 inline-flex rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-600">
                     {note.status}
                   </span>
-                  <span className="print-note-url">{printUrl}</span>
+                  <span className="print-note-url">Link: {note.href}</span>
                 </div>
               </a>
             );
