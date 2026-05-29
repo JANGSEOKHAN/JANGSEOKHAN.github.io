@@ -278,7 +278,7 @@ export const projects: Project[] = [
       {
         title: '엑셈원 모니터링 / Kubernetes 컨테이너 관리',
         description:
-          '디지털 트윈 기반 K8s 클러스터 리소스와 Kafka, DBMS 상태를 함께 모니터링해 장애 징후와 리소스 이상 여부를 조기에 확인하여 시스템 안정화. (사진은 엑셈원 브로셔 제공 자료)',
+          '디지털 트윈 기반 K8s 클러스터 리소스 배포 상태와 Kafka, DBMS 상태를 함께 모니터링해 장애 징후와 리소스 이상 여부를 조기에 확인하여 시스템 안정화. (사진은 엑셈원 브로셔 제공 자료)',
         imageUrl: 'projects/dmf/k8s-monitoring.png',
         alt: '디지털 트윈 서비스 Kubernetes 컨테이너 관리 및 모니터링 수행',
       },
