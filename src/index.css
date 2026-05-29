@@ -143,6 +143,11 @@ a {
     page-break-before: always;
   }
 
+  #skills {
+    break-after: page;
+    page-break-after: always;
+  }
+
   h1,
   h2,
   h3,
@@ -287,6 +292,35 @@ a {
     page-break-inside: auto;
   }
 
+  #experience > div > div > section + section {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .project-card {
+    padding: 4mm !important;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  .project-card + .project-card {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .project-summary,
+  .project-result,
+  .project-tech-stack {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .project-details {
+    break-before: auto;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
   #experience article > section.screen-visuals {
     display: none !important;
   }
@@ -303,6 +337,11 @@ a {
     white-space: normal !important;
     break-inside: auto;
     page-break-inside: auto;
+  }
+
+  .project-card .print-visuals {
+    break-before: page;
+    page-break-before: always;
   }
 
   .print-visuals h4 {
@@ -327,6 +366,11 @@ a {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 3mm !important;
+  }
+
+  .print-visuals__item:nth-child(2n + 1):not(:first-child) {
+    break-before: auto;
+    page-break-before: auto;
   }
 
   .print-visuals__item {
@@ -385,6 +429,11 @@ a {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 3mm !important;
+  }
+
+  #experience .project-details [class*="lg:grid-cols-2"] > div {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
   #experience article [class*="bg-amber"],

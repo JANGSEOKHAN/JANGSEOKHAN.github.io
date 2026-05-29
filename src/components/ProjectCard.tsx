@@ -140,8 +140,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   }, [modalIndex, visuals.length]);
 
   return (
-    <article className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
-      <div>
+    <article className="project-card rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+      <div className="project-summary">
         <div>
           <p className="mb-2 text-xs font-extrabold text-signal-cyan sm:text-sm">PROJECT</p>
           <h3 className="break-words text-xl font-semibold leading-7 text-slate-950 sm:text-2xl sm:leading-8">{project.title}</h3>
@@ -244,7 +244,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </section>
       ) : null}
 
-      <div className="mt-5 rounded-xl border border-slate-200 bg-slate-50 p-3 sm:mt-6 sm:p-4">
+      <div className="project-details mt-5 rounded-xl border border-slate-200 bg-slate-50 p-3 sm:mt-6 sm:p-4">
         <h4 className="text-sm font-semibold text-signal-green">상세 수행 내용</h4>
         <div className="mt-4 grid gap-3 lg:grid-cols-2">
           {project.detailSections.map((section) => (
@@ -263,13 +263,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       </div>
 
       {project.result ? (
-        <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 p-3 sm:p-4">
+        <div className="project-result mt-4 rounded-xl border border-amber-200 bg-amber-50 p-3 sm:p-4">
           <h4 className="text-sm font-semibold text-signal-amber">Result</h4>
           <p className="mt-2 text-sm leading-7 text-slate-700 sm:text-base sm:leading-8">{project.result}</p>
         </div>
       ) : null}
 
-      <div className="mt-5 flex flex-wrap gap-2">
+      <div className="project-tech-stack mt-5 flex flex-wrap gap-2">
         {project.techStack.map((tech) => (
           <span key={tech} className="rounded-md bg-slate-100 px-2.5 py-1.5 text-xs font-medium text-slate-700">
             {tech}
