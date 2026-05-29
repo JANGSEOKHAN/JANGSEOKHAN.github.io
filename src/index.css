@@ -712,7 +712,7 @@ a {
   }
 
   .print-note-link {
-    display: inline-flex !important;
+    display: flex !important;
     align-items: center !important;
     gap: 1.1mm !important;
     margin-top: 2mm !important;

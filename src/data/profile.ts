@@ -99,7 +99,7 @@ export const aboutParagraphs = [
 
 export const proofPoints: ProofPoint[] = [
   {
-    value: '4년 7개월+',
+    value: '총 4년 8개월 경력',
     label: '인프라/시스템 운영 및 구축 경력',
     description: 'Linux, VMware/SAN, Kubernetes, CI/CD 운영 경험',
     accent: 'cyan',
@@ -207,7 +207,7 @@ export const projects: Project[] = [
   {
     title: '삼성전자 DX MES 디지털 트윈 운영 사업',
     company: '메타넷디지털 주식회사',
-    period: '2025.04 ~ 2026.05, 1년 2개월, 진행중',
+    period: '2025.04 ~ 2026.06, 1년 3개월, 진행중',
     mainRole: 'DevOps 운영 파트',
     role: 'Linux 서버/스토리지 운영, CI/CD 구축/운영, Kubernetes MSA 운영, Kafka 클러스터 운영 및 보안 고도화',
     overview:
@@ -431,7 +431,7 @@ export const projects: Project[] = [
         title: 'vSphere 7.0 Datastore 인식 확인',
         description:
           'vSphere 7.0 업그레이드 이후 ESXi/vCenter에서 Datastore 용량, 연결 상태, 인식 여부를 점검해 스토리지 이관 후 VM 운영 가능 상태 검증 (업그레이드 후 스토리지 연결 정상화 확인)',
-        imageUrl: 'projects/datacenter/datastore-recognition.png',
+        imageUrl: 'projects/datacenter/datastore-recognition-card.png',
         alt: 'VMware vSphere Datastore 인식 확인',
       },
       {

@@ -5,7 +5,7 @@ const companyGroups = [
   {
     company: '메타넷디지털 주식회사',
     title: '메타넷디지털',
-    summary: '총 1년 2개월, 재직중',
+    summary: '총 1년 3개월, 재직중',
     description:
       'DevOps 운영 파트에서 Linux, Kubernetes, Kafka 운영과 CI/CD 자동화, AI Infra 및 RAG PoC를 담당했습니다.',
   },
