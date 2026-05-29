@@ -155,8 +155,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
       {visuals.length > 0 ? (
         <section className="screen-visuals mt-5">
-          <div className="mb-3 flex items-center justify-between gap-3">
-            <h4 className="text-sm font-semibold text-slate-950">이미지 / 수행 내역</h4>
+          <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex flex-wrap items-center gap-2">
+              <h4 className="text-sm font-semibold text-slate-950">이미지 / 수행 내역</h4>
+              <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-slate-500">
+                <Maximize2 aria-hidden="true" size={12} />
+                이미지 클릭 시 확대 보기
+              </span>
+            </div>
             <p className="text-xs font-semibold text-slate-400">{visuals.length}개 자료</p>
           </div>
           {project.visualNote ? (
