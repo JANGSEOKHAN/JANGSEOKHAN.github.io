@@ -33,8 +33,8 @@ export default function Hero() {
       <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-b from-transparent to-white" />
       <div className="relative mx-auto max-w-6xl px-4 pb-12 sm:px-6 sm:pb-16 lg:px-8 lg:pb-20">
         <div className="rounded-2xl border border-slate-200 bg-white/90 p-4 shadow-glow sm:rounded-[1.75rem] sm:p-8 lg:p-10">
-          <div className="grid gap-6 sm:gap-8 lg:grid-cols-[10rem_1fr] lg:items-center">
-            <div className="mx-auto w-full max-w-[9rem] sm:max-w-[11rem] lg:mx-0">
+          <div className="grid gap-6 sm:gap-8 lg:grid-cols-[9.5rem_1fr] lg:items-start">
+            <div className="mx-auto w-full max-w-[9rem] sm:max-w-[10rem] lg:mx-0 lg:mt-12">
               <div className="flex snap-x gap-3 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                 {visualSlots.map((slot) => {
                   return (
