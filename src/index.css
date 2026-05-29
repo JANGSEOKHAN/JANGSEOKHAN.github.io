@@ -77,6 +77,8 @@ a {
     line-height: 1.38;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+    orphans: 3;
+    widows: 3;
   }
 
   #root,
@@ -273,9 +275,14 @@ a {
     border: 0 !important;
     box-shadow: none !important;
     background: transparent !important;
-    font-size: 8.2pt !important;
+    font-size: 7.6pt !important;
     font-weight: 700 !important;
     white-space: nowrap !important;
+  }
+
+  #home a[href^="http"] svg {
+    width: 3.2mm !important;
+    height: 3.2mm !important;
   }
 
   #about .grid,
@@ -314,16 +321,53 @@ a {
   #certifications p,
   #skills p,
   #notes p {
-    font-size: 7.4pt !important;
-    line-height: 1.35 !important;
+    font-size: 7.2pt !important;
+    line-height: 1.32 !important;
   }
 
   #proof h3,
   #certifications h3,
   #skills h3,
   #notes h3 {
-    font-size: 9.2pt !important;
+    font-size: 8.6pt !important;
     line-height: 1.25 !important;
+  }
+
+  #certifications article p:first-child {
+    font-size: 7pt !important;
+    line-height: 1.2 !important;
+  }
+
+  #certifications article h3 {
+    font-size: 8.2pt !important;
+    line-height: 1.25 !important;
+  }
+
+  #skills article h3,
+  #notes a h3 {
+    font-size: 8.4pt !important;
+    line-height: 1.25 !important;
+  }
+
+  #skills article span,
+  #notes a div > span:not(.print-note-url) {
+    min-height: 0 !important;
+    padding: 0.8mm 1.8mm !important;
+    border-radius: 999px !important;
+    font-size: 6.7pt !important;
+    line-height: 1.2 !important;
+    font-weight: 700 !important;
+  }
+
+  #notes a > span:first-child {
+    width: 8mm !important;
+    height: 8mm !important;
+    border-radius: 2mm !important;
+  }
+
+  #notes a > span:first-child svg {
+    width: 4mm !important;
+    height: 4mm !important;
   }
 
   #certifications .grid,
@@ -385,8 +429,17 @@ a {
 
   .project-details {
     break-before: auto;
-    break-inside: auto !important;
-    page-break-inside: auto !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .project-summary > div > div span {
+    min-height: 0 !important;
+    padding: 1.2mm 2.2mm !important;
+    border-radius: 1.5mm !important;
+    font-size: 7.2pt !important;
+    line-height: 1.2 !important;
+    font-weight: 800 !important;
   }
 
   #experience article > section.screen-visuals {
@@ -509,11 +562,21 @@ a {
   #experience .project-details li,
   #experience .project-result p,
   #experience .project-tech-stack span {
-    font-size: 7.3pt !important;
-    line-height: 1.35 !important;
+    font-size: 7pt !important;
+    line-height: 1.32 !important;
+  }
+
+  #experience .project-tech-stack span {
+    min-height: 0 !important;
+    padding: 0.7mm 1.8mm !important;
+    border-radius: 1.2mm !important;
+    font-size: 6.6pt !important;
+    line-height: 1.2 !important;
+    font-weight: 700 !important;
   }
 
   #experience .project-details [class*="rounded-md"],
+  #experience .project-details [class*="grid"],
   #experience .project-result,
   #experience .project-tech-stack,
   #certifications article,
