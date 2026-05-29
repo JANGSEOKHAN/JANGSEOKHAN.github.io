@@ -48,9 +48,13 @@ export default function Projects() {
         <div className="space-y-6 sm:space-y-8">
           {companyGroups.map((group) => {
             const groupProjects = projects.filter((project) => project.company === group.company);
+            const isEducationProject = group.company === 'AWS Cloud School';
 
             return (
-              <section key={group.company} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:rounded-[1.75rem] sm:p-7">
+              <section
+                key={group.company}
+                className={`${isEducationProject ? 'education-project-group ' : ''}rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:rounded-[1.75rem] sm:p-7`}
+              >
                 <div className="mb-5 flex flex-col gap-4 border-b border-slate-200 pb-5 sm:mb-7 sm:pb-6 lg:flex-row lg:items-end lg:justify-between">
                   <div>
                     <p className="text-base font-extrabold text-signal-cyan sm:text-lg">{group.summary}</p>

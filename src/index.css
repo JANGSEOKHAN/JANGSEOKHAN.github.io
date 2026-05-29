@@ -434,6 +434,11 @@ a {
     page-break-before: auto;
   }
 
+  #experience .education-project-group {
+    break-before: page;
+    page-break-before: always;
+  }
+
   .project-card {
     padding: 3mm !important;
     break-inside: auto !important;
