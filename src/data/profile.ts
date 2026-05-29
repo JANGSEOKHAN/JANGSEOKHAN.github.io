@@ -231,8 +231,8 @@ export const projects: Project[] = [
       {
         title: 'MSA 인프라 운영/관리',
         items: [
-          'Namespace, Pod, PVC, ConfigMap, Secret 운영과 Pending/Error Pod 리소스 재산정',
-          'API Server, Calico, etcd 백업 상태 점검 및 Helm API 기반 Backend Pod 배포 관리',
+          '디지털 트윈 기반 Kubernetes 리소스(Namespace, Pod, PVC, ConfigMap, Secret) 운영과 Pending/Error Pod 리소스 재산정',
+          'Kubernetes API Server, Calico, etcd 백업 상태 점검 및 Helm API, Jenkins/Harbor 기반 Backend Pod 배포 관리',
         ],
       },
       {
