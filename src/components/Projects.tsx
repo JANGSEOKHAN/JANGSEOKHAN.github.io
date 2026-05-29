@@ -40,7 +40,7 @@ export default function Projects() {
     <section id="experience" className="scroll-mt-20 py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-7 sm:mb-10">
-          <h2 className="inline-block border-b-2 border-signal-cyan pb-3 text-3xl font-extrabold text-signal-cyan sm:text-5xl">
+          <h2 className="inline-block border-b-2 border-signal-cyan pb-1.5 text-3xl font-extrabold text-signal-cyan sm:text-5xl">
             EXPERIENCE
           </h2>
         </div>

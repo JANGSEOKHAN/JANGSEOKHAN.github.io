@@ -5,7 +5,7 @@ export default function Skills() {
     <section id="skills" className="scroll-mt-20 pt-8 pb-12 sm:pb-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-7 sm:mb-10">
-          <h2 className="inline-block border-b-2 border-signal-cyan pb-3 text-3xl font-extrabold text-signal-cyan sm:text-5xl">
+          <h2 className="inline-block border-b-2 border-signal-cyan pb-1.5 text-3xl font-extrabold text-signal-cyan sm:text-5xl">
             Skills
           </h2>
         </div>
