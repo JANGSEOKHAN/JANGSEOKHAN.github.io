@@ -255,33 +255,33 @@ export const projects: Project[] = [
         title: '디지털 트윈 서비스 화면',
         description:
           '실제 제조 라인을 3D 가상 공장으로 표현하고 설비 상태, KPI, 가동률 등 운영 지표를 시각화하는 화면입니다. (메타넷 공식 홈페이지에서 제공된 예시 이미지)',
-        imageUrl: 'projects/dmf/digital-twin-service.png',
+        imageUrl: 'projects/manufacturing-digital-twin/digital-twin-service.png',
         alt: '디지털 트윈 서비스 운영 화면',
       },
       {
         title: '데이터 파이프라인 운영',
         description: 'MES Edge Data를 Kafka 기반 수집/처리 흐름으로 연결하고 Consumer Lag와 저장소 유입 상태를 함께 점검 수행',
-        imageUrl: 'projects/dmf/data-pipeline.png',
+        imageUrl: 'projects/manufacturing-digital-twin/data-pipeline.png',
         alt: '디지털 트윈 서비스 데이터 파이프라인 운영 구조',
       },
       {
         title: 'SFTP를 CI/CD 자동화 배포로 전환',
         description: '작업자 PC/SFTP 수동 배포를 PlasticSCM commit, Jenkins build, 배포 서버 자동 배포 흐름으로 전환해 2GB 기준 30분 이상 걸리던 배포를 약 5분으로 단축',
-        imageUrl: 'projects/dmf/cicd-transition.png',
+        imageUrl: 'projects/manufacturing-digital-twin/cicd-transition.png',
         alt: 'SFTP 수동 배포를 CI/CD 자동화 배포로 전환',
       },
       {
         title: '배포 클러스터 구성 및 Ceph 스토리지 이관 작업 수행',
         description:
           'GlusterFS EOS로 인한 디지털 트윈 소스를 Ceph 기반 데이터 구조로 이관하고, Keepalived/Nginx/HAProxy 프록시 미들웨어 운영과 Jenkins/PlasticSCM Unity Build 파이프라인 구축·운영으로 배포 안정성과 운영 효율 개선',
-        imageUrl: 'projects/dmf/deploy-cluster-architecture.png',
+        imageUrl: 'projects/manufacturing-digital-twin/deploy-cluster-architecture.png',
         alt: '디지털 트윈 배포 클러스터 및 Ceph 이관 구성도',
       },
       {
         title: '엑셈원 모니터링 / Kubernetes 컨테이너 관리',
         description:
           '디지털 트윈 기반 K8s 클러스터 리소스 배포 상태와 Kafka, DBMS 상태를 함께 모니터링해 장애 징후와 리소스 이상 여부를 조기에 확인하여 시스템 안정화. (사진은 엑셈원 브로셔 제공 자료)',
-        imageUrl: 'projects/dmf/k8s-monitoring.png',
+        imageUrl: 'projects/manufacturing-digital-twin/k8s-monitoring.png',
         alt: '디지털 트윈 서비스 Kubernetes 컨테이너 관리 및 모니터링 수행',
       },
     ],
