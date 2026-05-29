@@ -249,7 +249,7 @@ export const projects: Project[] = [
       '디지털 트윈 서비스 SFTP 수작업 배포를 CI/CD로 전환하여 2GB 기준 배포 시간을 30분 이상에서 약 5분으로 단축했습니다. MSA 운영 환경에서 디지털트윈 Backend Pod, ConfigMap/Secret, PVC 및 데이터 파이프라인 상태를 점검하고 해외 23개 법인의 운영 로그 확인 체계를 구축하여 디지털트윈 서비스 안정화에 기여했습니다.',
     techStack: ['Linux', 'Kubernetes', 'Docker', 'Kafka', 'MongoDB', 'Jenkins', 'PlasticSCM', 'GitHub', 'Ceph', 'Nginx', 'HAProxy'],
     visualNote:
-      '디지털 트윈 서비스 화면과 엑셈원 모니터링 이미지는 공식 홈페이지/브로셔 제공 자료를 활용했고, 아키텍처는 직접 설계했습니다.',
+      '디지털 트윈 서비스 화면과 엑셈원 모니터링 이미지는 공식 홈페이지/브로셔 제공 자료를 활용했고, 직접 작업한 아키텍처 이미지는 직접 설계한 사진입니다.',
     visuals: [
       {
         title: '디지털 트윈 서비스 화면',
@@ -416,7 +416,7 @@ export const projects: Project[] = [
       'VMware vSphere 기반 신규 VM 구성, OS 및 네트워크 초기 설정, Datastore 마이그레이션 후 기동 점검까지 수행해 가상화 운영 환경을 안정화했습니다. Brocade SAN 스위치 이관 과정에서는 Config 백업, WWN 기반 Zone 정리, 약 150건의 SAN Zoning, LUN 및 Datastore 인식 점검을 담당하며 서버와 스토리지 연동 상태를 끝까지 확인했습니다.',
     techStack: ['VMware vSphere', 'RHEL', 'SAN Storage'],
     visualNote:
-      '보안상 실제 시스템명, 계정, IP 등은 제거 또는 블러 처리했으며, 이관 작업 일부만 공개했습니다.',
+      '시스템명, 계정, IP 등은 제거 또는 블러 처리했으며, 직접 테스트한 이관 작업과 아키텍처 사진만 사용했습니다. (테스트용 사진)',
     visuals: [
       {
         title: 'SAN Zoning / WWN 구성 및 vMotion 기반 스토리지 이관',
@@ -428,7 +428,7 @@ export const projects: Project[] = [
       {
         title: 'vSphere 7.0 Datastore 인식 확인',
         description:
-          'vSphere 7.0 업그레이드 이후 ESXi/vCenter에서 Datastore 용량, 연결 상태, 인식 여부를 점검해 스토리지 이관 후 VM 운영 가능 상태 검증',
+          'vSphere 7.0 업그레이드 이후 ESXi/vCenter에서 Datastore 용량, 연결 상태, 인식 여부를 점검해 스토리지 이관 후 VM 운영 가능 상태 검증 (업그레이드 후 스토리지 연결 정상화 확인)',
         imageUrl: 'projects/datacenter/datastore-recognition.png',
         alt: 'VMware vSphere Datastore 인식 확인',
       },
