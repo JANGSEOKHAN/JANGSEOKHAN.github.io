@@ -262,7 +262,7 @@ export const projects: Project[] = [
       {
         title: '데이터 파이프라인 운영',
         description: 'MES Edge Data를 Kafka 기반 수집/처리 흐름으로 연결하고 Consumer Lag와 저장소 유입 상태를 함께 점검 수행',
-        imageUrl: 'projects/manufacturing-digital-twin/data-pipeline.png',
+        imageUrl: 'projects/manufacturing-digital-twin/data-pipeline-card.png',
         alt: '디지털 트윈 서비스 데이터 파이프라인 운영 구조',
       },
       {
