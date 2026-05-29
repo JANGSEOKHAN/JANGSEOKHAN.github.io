@@ -48,12 +48,19 @@ export default function Projects() {
         <div className="space-y-6 sm:space-y-8">
           {companyGroups.map((group) => {
             const groupProjects = projects.filter((project) => project.company === group.company);
+            const isDaeshinProject = group.company === '대신정보통신';
             const isEducationProject = group.company === 'AWS Cloud School';
+            const groupClassName = [
+              isDaeshinProject ? 'daeshin-project-group' : '',
+              isEducationProject ? 'education-project-group' : '',
+            ]
+              .filter(Boolean)
+              .join(' ');
 
             return (
               <section
                 key={group.company}
-                className={`${isEducationProject ? 'education-project-group ' : ''}rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:rounded-[1.75rem] sm:p-7`}
+                className={`${groupClassName ? `${groupClassName} ` : ''}rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:rounded-[1.75rem] sm:p-7`}
               >
                 <div className="mb-5 flex flex-col gap-4 border-b border-slate-200 pb-5 sm:mb-7 sm:pb-6 lg:flex-row lg:items-end lg:justify-between">
                   <div>
@@ -73,9 +80,17 @@ export default function Projects() {
                 </div>
 
                 <div className="grid gap-4 sm:gap-6">
-                  {groupProjects.map((project) => (
-                    <ProjectCard key={project.title} project={project} />
-                  ))}
+                  {groupProjects.map((project) => {
+                    const shouldStartNewPdfPage =
+                      group.company === '메타넷디지털 주식회사' &&
+                      project.title === '삼성 구미 디지털트윈 솔루션 챗봇 환경 구축 POC';
+
+                    return (
+                      <div key={project.title} className={shouldStartNewPdfPage ? 'pdf-project-break-before' : undefined}>
+                        <ProjectCard project={project} />
+                      </div>
+                    );
+                  })}
                 </div>
               </section>
             );

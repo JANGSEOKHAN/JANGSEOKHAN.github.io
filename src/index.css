@@ -434,7 +434,9 @@ a {
     page-break-before: auto;
   }
 
-  #experience .education-project-group {
+  #experience .daeshin-project-group,
+  #experience .education-project-group,
+  #experience .pdf-project-break-before {
     break-before: page;
     page-break-before: always;
   }
