@@ -1,6 +1,5 @@
 import { BookOpen, ExternalLink, Github } from 'lucide-react';
 import { notes } from '../data/profile';
-import SectionTitle from './SectionTitle';
 
 const formatNoteUrl = (href: string) => {
   try {
@@ -15,14 +14,12 @@ export default function BlogNotes() {
   return (
     <section id="notes" className="scroll-mt-20 py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div>
-          <SectionTitle
-            eyebrow="기술 노트"
-            title="운영 경험을 기술 노트로 정리합니다."
-            watermark="Notes"
-          />
+        <div className="mb-7 sm:mb-10">
+          <h2 className="inline-block border-b-2 border-signal-cyan pb-3 text-3xl font-extrabold text-signal-cyan sm:text-5xl">
+            기술 노트
+          </h2>
         </div>
-        <div className="mt-7 grid gap-4 sm:mt-8 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {notes.map((note) => {
             const LinkIcon = note.status === 'GitHub' ? Github : BookOpen;
 

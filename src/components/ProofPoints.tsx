@@ -28,13 +28,12 @@ export default function ProofPoints() {
   return (
     <section id="proof" className="py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="relative">
-          <span className="pointer-events-none absolute -top-10 left-0 hidden text-8xl font-black uppercase text-slate-900/[0.045] sm:block lg:text-9xl">
-            Proof
-          </span>
-          <h2 className="relative text-3xl font-extrabold text-slate-950 sm:text-5xl">Proof Points</h2>
+        <div className="mb-7 sm:mb-10">
+          <h2 className="inline-block border-b-2 border-signal-cyan pb-3 text-3xl font-extrabold text-signal-cyan sm:text-5xl">
+            Proof Points
+          </h2>
         </div>
-        <div className="mt-7 grid items-stretch gap-4 sm:mt-8 lg:grid-cols-3 lg:gap-5">
+        <div className="grid items-stretch gap-4 lg:grid-cols-3 lg:gap-5">
           {proofStories.map((point) => (
             <article key={point.kicker} className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
               <p className="text-xs font-semibold uppercase text-signal-cyan">{point.kicker}</p>

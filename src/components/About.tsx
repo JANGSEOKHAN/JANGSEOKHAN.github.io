@@ -1,15 +1,14 @@
 import { aboutParagraphs } from '../data/profile';
-import SectionTitle from './SectionTitle';
 
 export default function About() {
   return (
     <section id="about" className="scroll-mt-20 py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionTitle
-          eyebrow="About"
-          title="About Me"
-          watermark="About"
-        />
+        <div className="mb-7 sm:mb-10">
+          <h2 className="inline-block border-b-2 border-signal-cyan pb-3 text-3xl font-extrabold text-signal-cyan sm:text-5xl">
+            About Me
+          </h2>
+        </div>
         <div className="mt-7 grid gap-4 sm:mt-8 lg:grid-cols-3">
           {aboutParagraphs.map((paragraph, index) => (
             <article key={paragraph} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
