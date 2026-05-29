@@ -269,6 +269,13 @@ export const projects: Project[] = [
         alt: 'SFTP 수동 배포를 CI/CD 자동화 배포로 전환',
       },
       {
+        title: 'Ceph 이관 및 배포 클러스터 구성',
+        description:
+          'GlusterFS EOS 대응으로 디지털 트윈 소스 저장 영역을 Ceph 기반 데이터 구조로 이관하고, Keepalived/Nginx/HAProxy 프록시와 Jenkins/PlasticSCM Unity Build 파이프라인을 연계해 배포 안정성과 운영 효율 개선',
+        imageUrl: 'projects/dmf/deploy-cluster-architecture.png',
+        alt: '디지털 트윈 배포 클러스터 및 Ceph 이관 구성도',
+      },
+      {
         title: '엑셈원 모니터링 / Kubernetes 컨테이너 관리',
         description:
           '디지털 트윈 기반 K8s 클러스터 리소스와 Kafka, DBMS 상태를 함께 모니터링해 장애 징후와 리소스 이상 여부를 조기에 확인하여 시스템 안정화. (사진은 엑셈원 브로셔 제공 자료)',
