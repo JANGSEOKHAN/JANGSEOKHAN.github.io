@@ -136,18 +136,14 @@ a {
     padding-top: 0 !important;
   }
 
-  #proof,
-  #certifications,
-  #skills,
-  #experience,
-  #notes {
+  #experience {
     break-before: page;
     page-break-before: always;
   }
 
   #skills {
-    break-after: page;
-    page-break-after: always;
+    break-after: auto;
+    page-break-after: auto;
   }
 
   h1,
@@ -261,12 +257,22 @@ a {
   }
 
   #home a[href^="http"] {
-    display: inline !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 1.5mm !important;
+    margin-right: 5mm !important;
     padding: 0 !important;
     border: 0 !important;
     box-shadow: none !important;
     background: transparent !important;
+    font-size: 9pt !important;
     font-weight: 700 !important;
+    white-space: nowrap !important;
+  }
+
+  #home a[href^="http"] svg,
+  #notes svg {
+    display: none !important;
   }
 
   #about .grid,
@@ -284,11 +290,15 @@ a {
   }
 
   #proof,
+  #certifications,
   #skills,
+  #notes,
   #proof .grid,
-  #skills .grid {
-    break-inside: avoid;
-    page-break-inside: avoid;
+  #certifications .grid,
+  #skills .grid,
+  #notes .grid {
+    break-inside: auto;
+    page-break-inside: auto;
   }
 
   #experience > div > div {
@@ -314,8 +324,8 @@ a {
   }
 
   .project-card + .project-card {
-    break-before: page;
-    page-break-before: always;
+    break-before: auto;
+    page-break-before: auto;
   }
 
   .project-summary,
@@ -447,13 +457,8 @@ a {
   }
 
   #notes a[href]::after {
-    content: attr(href);
-    display: block;
-    margin-top: 2mm;
-    font-size: 7.5pt;
-    line-height: 1.35;
-    color: #475569;
-    word-break: break-all !important;
+    content: none !important;
+    display: none !important;
   }
 
   article,
